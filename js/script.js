@@ -107,8 +107,9 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   //modals
-  const myModal = new HystModal({
+  const Modal = new HystModal({
     linkAttributeName: "data-hystmodal",
+    backscroll:false,
   });
 
   //visit modal
