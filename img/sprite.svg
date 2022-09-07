@@ -26,4 +26,8 @@
   <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 15" id="left-arrow">
     <path d="M18.1111 7.5L0.999973 7.5M0.999973 7.5L7.27405 0.5M0.999973 7.5L7.27405 14.5" stroke="currentColor"></path>
   </symbol>
+  <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 25" id="download">
+    <path d="M12 0.5L12 20.5M12 20.5L23 10.9667M12 20.5L1 10.9667" stroke="currentColor"></path>
+    <line x1="1" y1="24" x2="23" y2="24" stroke="currentColor"></line>
+  </symbol>
 </svg>
