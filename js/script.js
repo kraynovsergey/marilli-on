@@ -50,34 +50,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
       //submenu
       let headerMenuControls = menu.querySelectorAll('.menu__mobile-control');
-
       for (button of headerMenuControls) {
-        button.addEventListener('click', function () {
-          const header = this.closest('.header');
+        button.addEventListener('click', function() {
           let headerMenuDropdown = this.closest('.menu__item--dropdown');
-          let headerMenuSubmenuClose = this.closest('.menu--main').querySelector('.menu__submenu-close');
-          if (headerMenuDropdown.classList.contains('menu__item--open')) {
-            headerMenuDropdown.classList.remove('menu__item--open');
-          } else {
-            for (el of headerMenuControls) {
-              let item = el.closest('.menu__item--dropdown');
-              item.classList.remove('menu__item--open');
+          headerMenuDropdown.classList.add('menu__item--open');
+        });
+      }
 
-              document.addEventListener('click', function (evt) {
-                const isClickedOutside = !menu.querySelector('.menu__list').contains(evt.target);
-                if (isClickedOutside) {
-                  header.classList.remove('header--bg');
-                  item.classList.remove('menu__item--open');
-                  headerMenuSubmenuClose.classList.remove('menu__submenu-close--active');
-                }
-              });
-            }
-            header.classList.add('header--bg');
-            headerMenuDropdown.classList.add('menu__item--open');
-            headerMenuSubmenuClose.classList.add('menu__submenu-close--active');
-          }
-        })
-      }    
+      let headerItemClose = menu.querySelectorAll('.menu__item-close');
+      for (button of headerItemClose) {
+        button.addEventListener('click', function() {
+          let headerMenuDropdownOpen = this.closest('.menu__item--dropdown.menu__item--open');
+          headerMenuDropdownOpen.classList.remove('menu__item--open');
+        });
+      } 
   });
 
   //header height
