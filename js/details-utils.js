@@ -98,8 +98,8 @@ class DetailsUtilsForceState {
 class DetailsUtilsAnimateDetails {
 	constructor(detail) {
 		this.duration = {
-			open: 200,
-			close: 150
+			open: 350,
+			close: 250
 		};
 		this.detail = detail;
 		this.summary = this.detail.querySelector(":scope > summary");
