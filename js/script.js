@@ -121,7 +121,7 @@ document.addEventListener('DOMContentLoaded', function() {
     (function () {
       const tabbed = document.querySelector('.tabbed');
       const tablist = tabbed.querySelector('ul');
-      const tabs = tablist.querySelectorAll('a');
+      const tabs = tablist.querySelectorAll('a:not(.tag)');
       const panels = tabbed.querySelectorAll('[id^="section"]');
 
       const switchTab = (oldTab, newTab) => {
