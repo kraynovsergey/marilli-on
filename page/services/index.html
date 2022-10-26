@@ -42,16 +42,14 @@
         <img class="logo__img" src="/img/logo.svg" alt="Логотип Мариллион" width="272" height="38">
       </a>
       <nav class="menu menu--main" aria-label="Основное меню" itemscope="itemscope" itemtype="http://www.schema.org/SiteNavigationElement">
-        <button class="menu__submenu-close" type="button">
-          <svg aria-hidden="true" width="19" height="15">
-            <use xlink:href="/img/sprite.svg#left-arrow"></use>
-          </svg>
-          <span>Назад</span>
-        </button>
         <ul class="menu__list menu__list--main" id="menu__list" role="list">
+          <!-- самая первая выпадашка (у выпадашек всегда есть модификатор dropdown) -->
           <li class="menu__item menu__item--dropdown" itemprop="name">
+            <!-- хедер со ссылкой для декстопа и кнопкой для разворачивания меню на мобилках -->
             <div class="menu__item-header">
+              <!-- ссылка для декстопов -->
               <a class="menu__link menu__link--main" href="/page/services/">Услуги</a>
+              <!-- кнопка для разворачивания меню  на мобилках -->
               <button class="menu__mobile-control" type="button">
                 <span class="sr-only">Развернуть меню</span>
                 <svg class="menu__mobile-icon" aria-hidden="true" width="12" height="11">
@@ -59,20 +57,77 @@
                 </svg>
               </button>
             </div>
+            <!-- вложенное меню -->
             <ul class="menu__list menu__list--nested menu__list--lvl1" role="list">
+              <!-- хедер для общего раздела-->
+              <li class="menu__item menu__item--mobile">
+                <!-- хедер с кнопкой назад и заголовком для выезжающего меню (заголовок может быть ссылкой на мобилках) -->
+                <div class="menu__item-top">
+                  <!-- кнопка закрывает выезжающее меню -->
+                  <button class="menu__item-close" title="назад">
+                    <svg aria-hidden="true" width="19" height="15">
+                      <use xlink:href="/img/sprite.svg#left-arrow"></use>
+                    </svg>
+                    <span>Назад</span>
+                  </button>
+                  <h3 class="menu__item-title">
+                    <a href="/page/services/">Услуги</a>
+                  </h3>
+                </div>
+              </li>
               <li class="menu__item menu__item--dropdown" itemprop="name">
                 <div class="menu__item-header">
+                  <!-- ссылка для декстопов -->
                   <a class="menu__link" href="/page/services/audit/">
                     Аудит
                     <svg aria-hidden="true" width="12" height="11">
                       <use xlink:href="/img/sprite.svg#right-arrow"></use>
                     </svg>
                   </a>
+                  <!-- кнопка для разворачивания меню  на мобилках -->
+                  <button class="menu__mobile-control" type="button">
+                    <span class="sr-only">Развернуть меню</span>
+                    <svg class="menu__mobile-icon" aria-hidden="true" width="12" height="11">
+                      <use xlink:href="/img/sprite.svg#right-arrow"></use>
+                    </svg>
+                  </button>
                 </div>
+                <!-- это контентная часть третий и последний уровень вложенности,  
+                    у нее есть свой хедер для навигации назад и любой контент, новости, ссылки, описания -->
                 <div class="menu__item-content">
-                  <h3 class="menu__item-title">Аудит</h3>
-                  <p class="menu__item-desc">Гарантируем оказание услуг на высоком профессиональном уровне, с соблюдением принципа независимости и профессиональной этики.</p>
-                  <p class="menu__item-desc">В нашей работе мы руководствуемся принципами технического совершенства и независимости суждений. Наша команда высококвалифицированных специалистов гарантирует эффективные решения для всех отраслей бизнеса. Сочетание богатого опыта работы на международном и российском рынке позволяет нам соответствовать самым строгим стандартам и предоставлять специализированные услуги как транснациональным корпорациям, так и предприятиям малого и среднего бизнеса.</p>
+                  <!-- хедер с навигацией контентной части-->
+                  <div class="menu__item-top">
+                    <button class="menu__item-close" title="назад">
+                      <svg aria-hidden="true" width="19" height="15">
+                        <use xlink:href="/img/sprite.svg#left-arrow"></use>
+                      </svg>
+                      <span>Назад</span>
+                    </button>
+                    <h3 class="menu__item-title">
+                      <a href="">Аудит</a>
+                    </h3>
+                  </div>
+                  <!-- любой контент, ссылки, описание, новости -->
+                  <ul class="menu__links" role="list">
+                    <li class="menu__links-item" itemprop="name">
+                      <a class="menu__links-link" href="" itemprop="url">Аудит финансовой отчетности</a>
+                    </li>
+                    <li class="menu__links-item" itemprop="name">
+                      <a class="menu__links-link" href="" itemprop="url">Обязательный аудит</a>
+                    </li>
+                    <li class="menu__links-item" itemprop="name">
+                      <a class="menu__links-link" href="" itemprop="url">Обзорная проверка финансовой отчетности</a>
+                    </li>
+                    <li class="menu__links-item" itemprop="name">
+                      <a class="menu__links-link" href="" itemprop="url">Корпоративная отчетность</a>
+                    </li>
+                    <li class="menu__links-item" itemprop="name">
+                      <a class="menu__links-link" href="" itemprop="url">Аудит отчетности и актуарная оценка для страховых  организаций</a>
+                    </li>
+                    <li class="menu__links-item" itemprop="name">
+                      <a class="menu__links-link" href="" itemprop="url">Аудит отчетности управляющих компаний, НПФ и ПИФ</a>
+                    </li>
+                  </ul>
                 </div>
               </li>
               <li class="menu__item menu__item--dropdown" itemprop="name">
@@ -83,9 +138,25 @@
                       <use xlink:href="/img/sprite.svg#right-arrow"></use>
                     </svg>
                   </a>
+                  <button class="menu__mobile-control" type="button">
+                    <span class="sr-only">Развернуть меню</span>
+                    <svg class="menu__mobile-icon" aria-hidden="true" width="12" height="11">
+                      <use xlink:href="/img/sprite.svg#right-arrow"></use>
+                    </svg>
+                  </button>
                 </div>
                 <div class="menu__item-content">
-                  <h3 class="menu__item-title">Аутсорсинг</h3>
+                  <div class="menu__item-top">
+                    <button class="menu__item-close" title="назад">
+                      <svg aria-hidden="true" width="19" height="15">
+                        <use xlink:href="/img/sprite.svg#left-arrow"></use>
+                      </svg>
+                      <span>Назад</span>
+                    </button>
+                    <h3 class="menu__item-title">
+                      <a href="">Аутсорсинг</a>
+                    </h3>
+                  </div>
                   <p class="menu__item-desc">Партнер по аутсорсингу, который помогает вам раскрыть свои сильные стороны.</p>
                 </div>
               </li>
@@ -97,9 +168,25 @@
                       <use xlink:href="/img/sprite.svg#right-arrow"></use>
                     </svg>
                   </a>
+                  <button class="menu__mobile-control" type="button">
+                    <span class="sr-only">Развернуть меню</span>
+                    <svg class="menu__mobile-icon" aria-hidden="true" width="12" height="11">
+                      <use xlink:href="/img/sprite.svg#right-arrow"></use>
+                    </svg>
+                  </button>
                 </div>
                 <div class="menu__item-content">
-                  <h3 class="menu__item-title">Налоговое консультирование</h3>
+                  <div class="menu__item-top">
+                    <button class="menu__item-close" title="назад">
+                      <svg aria-hidden="true" width="19" height="15">
+                        <use xlink:href="/img/sprite.svg#left-arrow"></use>
+                      </svg>
+                      <span>Назад</span>
+                    </button>
+                    <h3 class="menu__item-title">
+                      <a href="">Налоговое консультирование</a>
+                    </h3>
+                  </div>
                   <p class="menu__item-desc">Качественные и индивидуальные решения в области налогообложения, которые соответствуют Вашим требованиям и бюджету</p>
                 </div>
               </li>
@@ -111,9 +198,25 @@
                       <use xlink:href="/img/sprite.svg#right-arrow"></use>
                     </svg>
                   </a>
+                  <button class="menu__mobile-control" type="button">
+                    <span class="sr-only">Развернуть меню</span>
+                    <svg class="menu__mobile-icon" aria-hidden="true" width="12" height="11">
+                      <use xlink:href="/img/sprite.svg#right-arrow"></use>
+                    </svg>
+                  </button>
                 </div>
                 <div class="menu__item-content">
-                  <h3 class="menu__item-title">Антикризисная поддержка бизнеса</h3>
+                  <div class="menu__item-top">
+                    <button class="menu__item-close" title="назад">
+                      <svg aria-hidden="true" width="19" height="15">
+                        <use xlink:href="/img/sprite.svg#left-arrow"></use>
+                      </svg>
+                      <span>Назад</span>
+                    </button>
+                    <h3 class="menu__item-title">
+                      <a href="">Антикризисная поддержка бизнеса</a>
+                    </h3>
+                  </div>
                   <p class="menu__item-desc">Мы делаем все возможное, чтобы решать насущные проблемы и адаптироваться под нужды клиентов и рынка. Для того, чтобы в это непростое время помочь Вам и Вашему бизнесу ориентироваться в стремительно изменяющейся бизнес-среде, команда Мариллион сформировала практику по антикризисной консультационной поддержке.</p>
                 </div>
               </li>
@@ -125,9 +228,25 @@
                       <use xlink:href="/img/sprite.svg#right-arrow"></use>
                     </svg>
                   </a>
+                  <button class="menu__mobile-control" type="button">
+                    <span class="sr-only">Развернуть меню</span>
+                    <svg class="menu__mobile-icon" aria-hidden="true" width="12" height="11">
+                      <use xlink:href="/img/sprite.svg#right-arrow"></use>
+                    </svg>
+                  </button>
                 </div>
                 <div class="menu__item-content">
-                  <h3 class="menu__item-title">Юридические услуги</h3>
+                  <div class="menu__item-top">
+                    <button class="menu__item-close" title="назад">
+                      <svg aria-hidden="true" width="19" height="15">
+                        <use xlink:href="/img/sprite.svg#left-arrow"></use>
+                      </svg>
+                      <span>Назад</span>
+                    </button>
+                    <h3 class="menu__item-title">
+                      <a href="">Юридические услуги</a>
+                    </h3>
+                  </div>
                   <p class="menu__item-desc">Оказание юридических услуг, чтобы помочь вам принимать решения в соответствии с нормами российского и зарубежного законодательства.</p>
                 </div>
               </li>
@@ -139,9 +258,25 @@
                       <use xlink:href="/img/sprite.svg#right-arrow"></use>
                     </svg>
                   </a>
+                  <button class="menu__mobile-control" type="button">
+                    <span class="sr-only">Развернуть меню</span>
+                    <svg class="menu__mobile-icon" aria-hidden="true" width="12" height="11">
+                      <use xlink:href="/img/sprite.svg#right-arrow"></use>
+                    </svg>
+                  </button>
                 </div>
                 <div class="menu__item-content">
-                  <h3 class="menu__item-title">Финансовое консультационие и оценка</h3>
+                  <div class="menu__item-top">
+                    <button class="menu__item-close" title="назад">
+                      <svg aria-hidden="true" width="19" height="15">
+                        <use xlink:href="/img/sprite.svg#left-arrow"></use>
+                      </svg>
+                      <span>Назад</span>
+                    </button>
+                    <h3 class="menu__item-title">
+                      <a href="">Финансовое консультационие и оценка</a>
+                    </h3>
+                  </div>
                   <p class="menu__item-desc">Мариллион предоставляет услуги по сопровождению сделок, содействие в проектах по инвестированию и финансированию посредством проведения дью дилидженс со стороны покупателя и продавца, совершат независимый обзор бизнеса, окажут практическую поддержку после проведения сделки.</p>
                 </div>
               </li>
@@ -158,6 +293,20 @@
               </button>
             </div>
             <ul class="menu__list menu__list--nested menu__list--lvl1" role="list">
+              <!-- хедер для общего раздела-->
+              <li class="menu__item menu__item--mobile">
+                <div class="menu__item-top">
+                  <button class="menu__item-close" title="назад">
+                    <svg aria-hidden="true" width="19" height="15">
+                      <use xlink:href="/img/sprite.svg#left-arrow"></use>
+                    </svg>
+                    <span>Назад</span>
+                  </button>
+                  <h3 class="menu__item-title">
+                    <a href="/page/news/">Новости</a>
+                  </h3>
+                </div>
+              </li>
               <li class="menu__item menu__item--dropdown" itemprop="name">
                 <div class="menu__item-header">
                   <a class="menu__link" href="/page/news/">
@@ -166,10 +315,44 @@
                       <use xlink:href="/img/sprite.svg#right-arrow"></use>
                     </svg>
                   </a>
+                  <button class="menu__mobile-control" type="button">
+                    <span class="sr-only">Развернуть меню</span>
+                    <svg class="menu__mobile-icon" aria-hidden="true" width="12" height="11">
+                      <use xlink:href="/img/sprite.svg#right-arrow"></use>
+                    </svg>
+                  </button>
                 </div>
                 <div class="menu__item-content">
-                  <h3 class="menu__item-title">Новости компании</h3>
-                  <p class="menu__item-desc">Программа развития молодых специалистов в сфере аудита. Начни свою карьеру в аудите на программе M-Talent! </p>
+                  <div class="menu__item-top">
+                    <button class="menu__item-close" title="назад">
+                      <svg aria-hidden="true" width="19" height="15">
+                        <use xlink:href="/img/sprite.svg#left-arrow"></use>
+                      </svg>
+                      <span>Назад</span>
+                    </button>
+                    <h3 class="menu__item-title">
+                      <a href="">Новости компании</a>
+                    </h3>
+                  </div>
+                  <ul class="articles articles--menu" role="list">
+                    <li class="articles__item">
+                      <article class="article-card article-card--menu">
+                        <a class="article-card__tag article-card__tag--menu" href="#">Новости компании</a>
+                        <h3 class="article-card__title article-card__title--menu">
+                          <a href="/page/news/2">Мы объявляем о ребрендинге и продолжаем работу под брендом «Мариллион»</a>
+                        </h3>
+                      </article>
+                    </li>
+                    <li class="articles__item">
+                      <article class="article-card article-card--menu">
+                        <a class="article-card__tag article-card__tag--menu" href="#">Новости компании</a>
+                        <h3 class="article-card__title article-card__title--menu">
+                          <a href="/page/news/2">Изменения в структуре управления</a>
+                        </h3>
+                      </article>
+                    </li>
+                  </ul>
+                  <a class="button button--white" href="/page/news/">Показать еще</a>
                 </div>
               </li>
               <li class="menu__item menu__item--dropdown" itemprop="name">
@@ -180,10 +363,44 @@
                       <use xlink:href="/img/sprite.svg#right-arrow"></use>
                     </svg>
                   </a>
+                  <button class="menu__mobile-control" type="button">
+                    <span class="sr-only">Развернуть меню</span>
+                    <svg class="menu__mobile-icon" aria-hidden="true" width="12" height="11">
+                      <use xlink:href="/img/sprite.svg#right-arrow"></use>
+                    </svg>
+                  </button>
                 </div>
                 <div class="menu__item-content">
-                  <h3 class="menu__item-title">Мероприятия</h3>
-                  <p class="menu__item-desc">Программа развития молодых специалистов в сфере аудита. Начни свою карьеру в аудите на программе M-Talent! </p>
+                  <div class="menu__item-top">
+                    <button class="menu__item-close" title="назад">
+                      <svg aria-hidden="true" width="19" height="15">
+                        <use xlink:href="/img/sprite.svg#left-arrow"></use>
+                      </svg>
+                      <span>Назад</span>
+                    </button>
+                    <h3 class="menu__item-title">
+                      <a href="">Мероприятия</a>
+                    </h3>
+                  </div>
+                  <ul class="articles articles--menu" role="list">
+                    <li class="articles__item">
+                      <article class="article-card article-card--menu">
+                        <a class="article-card__tag article-card__tag--menu" href="#">Мероприятия</a>
+                        <h3 class="article-card__title article-card__title--menu">
+                          <a href="/page/news/2">«Мариллион» — партнер конференции ИД Коммерсантъ «Аудит и консалтинг: тренды, прогнозы, итоги полугодия»</a>
+                        </h3>
+                      </article>
+                    </li>
+                    <li class="articles__item">
+                      <article class="article-card article-card--menu">
+                        <a class="article-card__tag article-card__tag--menu" href="#">Мероприятия</a>
+                        <h3 class="article-card__title article-card__title--menu">
+                          <a href="/page/news/2">«Мариллион» выступила партнером конференции ИД Коммерсантъ «Трудовое право – 2022»</a>
+                        </h3>
+                      </article>
+                    </li>
+                  </ul>
+                  <a class="button button--white" href="/page/news/">Показать еще</a>
                 </div>
               </li>
               <li class="menu__item menu__item--dropdown" itemprop="name">
@@ -194,9 +411,25 @@
                       <use xlink:href="/img/sprite.svg#right-arrow"></use>
                     </svg>
                   </a>
+                  <button class="menu__mobile-control" type="button">
+                    <span class="sr-only">Развернуть меню</span>
+                    <svg class="menu__mobile-icon" aria-hidden="true" width="12" height="11">
+                      <use xlink:href="/img/sprite.svg#right-arrow"></use>
+                    </svg>
+                  </button>
                 </div>
                 <div class="menu__item-content">
-                  <h3 class="menu__item-title">Экспертное мнение</h3>
+                  <div class="menu__item-top">
+                    <button class="menu__item-close" title="назад">
+                      <svg aria-hidden="true" width="19" height="15">
+                        <use xlink:href="/img/sprite.svg#left-arrow"></use>
+                      </svg>
+                      <span>Назад</span>
+                    </button>
+                    <h3 class="menu__item-title">
+                      <a href="">Экспертное мнение</a>
+                    </h3>
+                  </div>
                   <p class="menu__item-desc">Программа развития молодых специалистов в сфере аудита. Начни свою карьеру в аудите на программе M-Talent! </p>
                 </div>
               </li>
@@ -213,6 +446,20 @@
               </button>
             </div>
             <ul class="menu__list menu__list--nested menu__list--lvl1" role="list">
+              <!-- хедер для общего раздела-->
+              <li class="menu__item menu__item--mobile">
+                <div class="menu__item-top">
+                  <button class="menu__item-close" title="назад">
+                    <svg aria-hidden="true" width="19" height="15">
+                      <use xlink:href="/img/sprite.svg#left-arrow"></use>
+                    </svg>
+                    <span>Назад</span>
+                  </button>
+                  <h3 class="menu__item-title">
+                    <a href="/page/about/">О нас</a>
+                  </h3>
+                </div>
+              </li>
               <li class="menu__item menu__item--dropdown" itemprop="name">
                 <div class="menu__item-header">
                   <a class="menu__link" href="/page/about/">
@@ -221,9 +468,25 @@
                       <use xlink:href="/img/sprite.svg#right-arrow"></use>
                     </svg>
                   </a>
+                  <button class="menu__mobile-control" type="button">
+                    <span class="sr-only">Развернуть меню</span>
+                    <svg class="menu__mobile-icon" aria-hidden="true" width="12" height="11">
+                      <use xlink:href="/img/sprite.svg#right-arrow"></use>
+                    </svg>
+                  </button>
                 </div>
                 <div class="menu__item-content">
-                  <h3 class="menu__item-title">О компании</h3>
+                  <div class="menu__item-top">
+                    <button class="menu__item-close" title="назад">
+                      <svg aria-hidden="true" width="19" height="15">
+                        <use xlink:href="/img/sprite.svg#left-arrow"></use>
+                      </svg>
+                      <span>Назад</span>
+                    </button>
+                    <h3 class="menu__item-title">
+                      <a href="">О компании</a>
+                    </h3>
+                  </div>
                   <p class="menu__item-desc">30 лет динамичного и устойчивого развития превратили компанию в серьезного игрока на российском рынке, предоставляющего независимые профессиональные услуги высочайшего качества.</p>
                 </div>
               </li>
@@ -235,10 +498,25 @@
                       <use xlink:href="/img/sprite.svg#right-arrow"></use>
                     </svg>
                   </a>
-
+                  <button class="menu__mobile-control" type="button">
+                    <span class="sr-only">Развернуть меню</span>
+                    <svg class="menu__mobile-icon" aria-hidden="true" width="12" height="11">
+                      <use xlink:href="/img/sprite.svg#right-arrow"></use>
+                    </svg>
+                  </button>
                 </div>
                 <div class="menu__item-content">
-                  <h3 class="menu__item-title">Наше руководство</h3>
+                  <div class="menu__item-top">
+                    <button class="menu__item-close" title="назад">
+                      <svg aria-hidden="true" width="19" height="15">
+                        <use xlink:href="/img/sprite.svg#left-arrow"></use>
+                      </svg>
+                      <span>Назад</span>
+                    </button>
+                    <h3 class="menu__item-title">
+                      <a href="">Наше руководство</a>
+                    </h3>
+                  </div>
                   <p class="menu__item-desc">Многообразие опыта, компетенций и специализаций наших сотрудников гарантируют клиенту получение высококвалифицированных аудиторских, аутсорсинговых, налоговых и юридических услуг, а также услуг по сопровождению сделок.</p>
                 </div>
               </li>
@@ -250,9 +528,25 @@
                       <use xlink:href="/img/sprite.svg#right-arrow"></use>
                     </svg>
                   </a>
+                  <button class="menu__mobile-control" type="button">
+                    <span class="sr-only">Развернуть меню</span>
+                    <svg class="menu__mobile-icon" aria-hidden="true" width="12" height="11">
+                      <use xlink:href="/img/sprite.svg#right-arrow"></use>
+                    </svg>
+                  </button>
                 </div>
                 <div class="menu__item-content">
-                  <h3 class="menu__item-title">Сведения ООО Мазар Аудит</h3>
+                  <div class="menu__item-top">
+                    <button class="menu__item-close" title="назад">
+                      <svg aria-hidden="true" width="19" height="15">
+                        <use xlink:href="/img/sprite.svg#left-arrow"></use>
+                      </svg>
+                      <span>Назад</span>
+                    </button>
+                    <h3 class="menu__item-title">
+                      <a href="">Сведения ООО Мазар Аудит</a>
+                    </h3>
+                  </div>
                   <p class="menu__item-desc">Программа развития молодых специалистов в сфере аудита. Начни свою карьеру в аудите на программе M-Talent! </p>
                 </div>
               </li>
@@ -263,9 +557,25 @@
                       <use xlink:href="/img/sprite.svg#right-arrow"></use>
                     </svg>
                   </a>
+                  <button class="menu__mobile-control" type="button">
+                    <span class="sr-only">Развернуть меню</span>
+                    <svg class="menu__mobile-icon" aria-hidden="true" width="12" height="11">
+                      <use xlink:href="/img/sprite.svg#right-arrow"></use>
+                    </svg>
+                  </button>
                 </div>
                 <div class="menu__item-content">
-                  <h3 class="menu__item-title">Сведения АО Мазар Аудиторские услуги</h3>
+                  <div class="menu__item-top">
+                    <button class="menu__item-close" title="назад">
+                      <svg aria-hidden="true" width="19" height="15">
+                        <use xlink:href="/img/sprite.svg#left-arrow"></use>
+                      </svg>
+                      <span>Назад</span>
+                    </button>
+                    <h3 class="menu__item-title">
+                      <a href="">Сведения АО Мазар Аудиторские услуги</a>
+                    </h3>
+                  </div>
                   <p class="menu__item-desc">Программа развития молодых специалистов в сфере аудита. Начни свою карьеру в аудите на программе M-Talent! </p>
                 </div>
               </li>
@@ -273,14 +583,7 @@
                 <div class="menu__item-header">
                   <a class="menu__link" href="/page/data-marillion/">
                     Сведения ООО АК Мариллион
-                    <svg aria-hidden="true" width="12" height="11">
-                      <use xlink:href="/img/sprite.svg#right-arrow"></use>
-                    </svg>
                   </a>
-                </div>
-                <div class="menu__item-content">
-                  <h3 class="menu__item-title">Сведения ООО АК Мариллион</h3>
-                  <p class="menu__item-desc">Программа развития молодых специалистов в сфере аудита. Начни свою карьеру в аудите на программе M-Talent! </p>
                 </div>
               </li>
             </ul>
@@ -288,25 +591,35 @@
           <li class="menu__item" itemprop="name">
             <a class="menu__link menu__link--main" href="/page/career/" itemprop="url">Карьера</a>
           </li>
-          <li class="menu__item menu__item--dropdown" itemprop="name">
+          <li class="menu__item" itemprop="name">
             <a class="menu__link menu__link--main" href="/page/contacts/" itemprop="url">Контакты</a>
           </li>
         </ul>
-        <div class="header__lang language-dropdown">
-          <button class="language-dropdown__control btn-reset">
-            <span class="language-dropdown__selected">Рус</span>
-            <svg class="language-dropdown__arrow" aria-hidden="true" width="10" height="6"> 
-              <use xlink:href="/img/sprite.svg#down-arrow"></use>
+        <!-- обертка для новых элементов верстки -->
+        <div class="header__actions">
+          <a class="header__button header__button--form" href="#" data-hystmodal="#modal-form">Свяжитесь с нами</a>
+          <div class="header__lang language-dropdown">
+            <button class="language-dropdown__control btn-reset">
+              <span class="language-dropdown__selected sr-only">Рус</span>
+              <svg aria-hidden="true" width="19" height="19">
+                <use xlink:href="/img/sprite.svg#globe"></use>
+              </svg>
+            </button>
+            <ul class="language-dropdown__list" role="list">
+              <li class="language-dropdown__item">
+                <a class="language-dropdown__link language-dropdown__link--current">Ru</a>
+              </li>
+              <li class="language-dropdown__item">
+                <a class="language-dropdown__link" href="/page/en/" title="Переключить язык на английский">Eng</a>
+              </li>
+            </ul>
+          </div>
+          <a class="header__search" href="/search" title="Поиск">
+            <span class="sr-only">Поиск</span>
+            <svg aria-hidden="true" width="19" height="19">
+              <use xlink:href="/img/sprite.svg#search"></use>
             </svg>
-          </button>
-          <ul class="language-dropdown__list" role="list">
-            <li class="language-dropdown__item">
-              <a class="language-dropdown__link language-dropdown__link--current">Ru</a>
-            </li>
-            <li class="language-dropdown__item">
-              <a class="language-dropdown__link" href="/page/en/" title="Переключить язык на английский">Eng</a>
-            </li>
-          </ul>
+          </a>
         </div>
       </nav>
       <button class="menu-button" type="button" aria-expanded="false" aria-controls="menu__list" aria-label="Открыть меню">
@@ -317,7 +630,8 @@
     </div>
   </header>
   <main class="main">
-    <div class="hero-block hero-block--min-height">
+    <!-- передаем в переменную --background: цвет фона (по умолчанию белый), --color: цвет текста (по умолчанию наследуется дефолтный или от родителя) -->
+    <div class="hero-block hero-block--min-height" style="--background:#7E99A8;--color:#fff;">
       <div class="hero-block__text-wrap clamp-offset">
         <nav class="hero-block__breadcrumb breadcrumb" aria-label="Breadcrumb">
           <ol class="breadcrumb__list" role="list">
@@ -329,224 +643,403 @@
             </li>
             </ol>
         </nav>
-        <h1 class="hero-block__title title title--primary accent-color">Услуги</h1>
-        <p class="hero-block__desc">Адаптированные под нужды клиента услуги в области аудита, аутсорсинга,  бухгалтерского учета, финансового, налогового и юридического консультирования</p>
+        <h1 class="hero-block__title title title--primary">Услуги</h1>
+      </div>
+      <div class="hero-block__image-wrap">
+        <img class="hero-block__image lazy entered loaded" data-src="/img/services/cover.jpg" width="759" height="300" alt="фон">
       </div>
     </div>
-    <section class="main__section main__section--p-0 services-section">
-      <div class="services-section__menu">
-        <div class="tabbed tabbed--grid">
-          <div class="tabbed__tablist tablist">
-            <ul class="tablist__nav">
-              <li class="tablist__item">
-                <a class="tablist__link" href="#section1">
-                  <span>Аудит</span>
-                  <svg aria-hidden="true" width="11" height="9">
-                    <use xlink:href="/img/sprite.svg#right-arrow"></use>
-                  </svg>
-                </a>
+    <div class="tabbed tabbed--grid tabbed--services tabbed--maxwidth">
+      <div class="tabbed__tablist tablist tablist--services">
+        <ul class="tablist__nav tablist__nav--services">
+          <li class="tablist__item tablist__item--services" hidden>
+            <a class="tablist__link tablist__link--services" href="#section0">
+              <span>Услуги</span>
+              <svg aria-hidden="true" width="26" height="22">
+                <use xlink:href="/img/sprite.svg#right-arrow"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="tablist__item tablist__item--services tablist__item--has-tags">
+            <a class="tablist__link tablist__link--services" href="#section1">
+              <span>Аудит</span>
+              <svg aria-hidden="true" width="26" height="22">
+                <use xlink:href="/img/sprite.svg#right-arrow"></use>
+              </svg>
+            </a>
+            <ul class="tags-list tags-list--services" role="list">
+              <li class="tags-list__item">
+                <a class="tag" href="">Аудит финансовой отчетности</a>
               </li>
-              <li class="tablist__item">
-                <a class="tablist__link" href="#section2">
-                  <span>Аутсорсинг</span>
-                  <svg aria-hidden="true" width="11" height="9">
-                    <use xlink:href="/img/sprite.svg#right-arrow"></use>
-                  </svg>
-                </a>
+              <li class="tags-list__item">
+                <a class="tag" href="">Обязательный аудит</a>
               </li>
-              <li class="tablist__item">
-                <a class="tablist__link" href="#section3">
-                  <span>Налоговое консультирование</span>
-                  <svg aria-hidden="true" width="11" height="9">
-                    <use xlink:href="/img/sprite.svg#right-arrow"></use>
-                  </svg>
-                </a>
+              <li class="tags-list__item">
+                <a class="tag" href="">Обзорная проверка финансовой отчетности</a>
               </li>
-              <li class="tablist__item">
-                <a class="tablist__link" href="#section4">
-                  <span>Антикризисная поддержка бизнеса</span>
-                  <svg aria-hidden="true" width="11" height="9">
-                    <use xlink:href="/img/sprite.svg#right-arrow"></use>
-                  </svg>
-                </a>
+              <li class="tags-list__item">
+                <a class="tag" href="">Корпоративная отчетность</a>
               </li>
-              <li class="tablist__item">
-                <a class="tablist__link" href="#section4">
-                  <span>Финансовое консультирование и оценка</span>
-                  <svg aria-hidden="true" width="11" height="9">
-                    <use xlink:href="/img/sprite.svg#right-arrow"></use>
-                  </svg>
-                </a>
+              <li class="tags-list__item">
+                <a class="tag" href="">Аудит отчетности и актуарная оценка для страховых  организаций</a>
               </li>
-              <li class="tablist__item">
-                <a class="tablist__link" href="#section4">
-                  <span>Юридические услуги</span>
-                  <svg aria-hidden="true" width="11" height="9">
-                    <use xlink:href="/img/sprite.svg#right-arrow"></use>
-                  </svg>
-                </a>
+              <li class="tags-list__item">
+                <a class="tag" href="">Аудит отчетности управляющих компаний, НПФ и ПИФ</a>
               </li>
             </ul>
-          </div>
-          <div class="tabbed__tabpanel tabpanel clamp-offset-right">
-            <section class="tabpanel__section" id="section1">
-              <h2 class="tabpanel__title title title--primary accent-color">Аудит</h2>
-              <p>Гарантируем оказание услуг на высоком профессиональном уровне, с соблюдением принципа независимости и профессиональной этики.</p>
-              <p>В нашей работе мы руководствуемся принципами технического совершенства и независимости суждений. Наша команда высококвалифицированных специалистов гарантирует эффективные решения для всех отраслей бизнеса. Сочетание богатого опыта работы на международном и российском рынке позволяет нам соответствовать самым строгим стандартам и предоставлять специализированные услуги как транснациональным корпорациям, так и предприятиям малого и среднего бизнеса.</p>
-              <a class="tabpanel__button button button--sm-p" href="/page/services/audit/">Подробнее</a>
-            </section>
-            <section class="tabpanel__section" id="section2">
-              <h2 class="tabpanel__title title title--primary accent-color">Аутсорсинг</h2>
-              <p>Партнер по аутсорсингу, который помогает вам раскрыть свои сильные стороны.</p>
-              <p>По версии рейтингового агентства RAEX, Мариллион представлена в рейтинге крупнейших компаний по бухгалтерскому аутсорсингу учетных функций, в частности, Мариллион входит в ТОП-5 лучших компаний России в области подготовки отчетности по МСФО и РСБУ.</p>
-              <a class="tabpanel__button button button--sm-p" href="/page/services/outsourcing/">Подробнее</a>
-            </section>
-            <section class="tabpanel__section" id="section3">
-              <h2 class="tabpanel__title title title--primary accent-color">Налоговое <br> консультирование</h2>
-              <p>Качественные и индивидуальные решения в области налогообложения, которые соответствуют Вашим требованиям и бюджету</p>
-              <p>Наших клиентов лично обслуживают специалисты, имеющие многолетний опыт консультирования по вопросам налогообложения. Сочетая опыт в аудите, бухгалтерском учете, налогах и правовой поддержке, мы обладаем знаниями в отношении лучших практик, применяемых компаниями, и предпочитаем предоставлять решения, а не теорию, которая далека от реальности.</p>
-              <a class="tabpanel__button button button--sm-p" href="/page/services/tax/">Подробнее</a>
-            </section>
-            <section class="tabpanel__section" id="section4">
-              <h2 class="tabpanel__title title title--primary accent-color">Антикризисная <br> поддержка бизнеса</h2>
-              <p>Мы делаем все возможное, чтобы решать насущные проблемы и адаптироваться под нужды клиентов и рынка. Для того, чтобы в это непростое время помочь Вам и Вашему бизнесу ориентироваться в стремительно изменяющейся бизнес-среде, команда Мариллион сформировала практику по антикризисной консультационной поддержке. Мы оказываем поддержку компаниям в сферах производства, строительства, энергетики и сырья, сектора услуг, товаров массового потребления, транспорта и логистики, IT, фармацевтики и производства медицинских изделий при изменении структуры бизнеса, цепочек поставок и операционной деятельности, анализе санкций, ограничений и управлении рисками, связанными с возникшей ситуацией.</p>
-              <a class="tabpanel__button button button--sm-p" href="/page/services/anti-crisis-support-and-sanctions-consulting/">Подробнее</a>
-            </section>
-            <section class="tabpanel__section" id="section5">
-              <h2 class="tabpanel__title title title--primary accent-color">Финансовое <br> консультирование и оценка</h2>
-              <p>Мариллион предоставляет услуги по сопровождению сделок, содействие в проектах по инвестированию и финансированию посредством проведения дью дилидженс со стороны покупателя и продавца, совершат независимый обзор бизнеса, окажут практическую поддержку после проведения сделки.</p>
-              <a class="tabpanel__button button button--sm-p" href="/page/services/financial-advisory/">Подробнее</a>
-            </section>
-            <section class="tabpanel__section" id="section6">
-              <h2 class="tabpanel__title title title--primary accent-color">Юридические услуги</h2>
-              <p>Оказание юридических услуг, чтобы помочь вам принимать решения в соответствии с нормами российского и зарубежного законодательства.</p>
-              <p>Наши клиенты могут обращаться к нам для получения практических советов и помощи в выработке стратегии в следующих областях:</p>
-              <a class="tabpanel__button button button--sm-p" href="/page/services/legal/">Подробнее</a>
-            </section>
-          </div>
-        </div>
-        <ul class="services-section__accordion accordion" role="list" aria-roledescription="accordion">
-          <li>
-            <details-utils animate>
-              <details class="accordion__details">
-                <summary class="accordion__summary">
-                  <span class="accordion__title">Аудит</span>
-                  <svg class="accordion__icon" aria-hidden="true" width="22" height="22">
-                    <use xlink:href="/img/sprite.svg#arrow-down"></use>
-                  </svg>
-                </summary>
-                <div class="accordion__content">
-                  <h2 class="accordion__content-title title--primary">Аудит</h2>
-                  <p>Гарантируем оказание услуг на высоком профессиональном уровне, с соблюдением принципа независимости и профессиональной этики.</p>
-                  <p>В нашей работе мы руководствуемся принципами технического совершенства и независимости суждений. Наша команда высококвалифицированных специалистов гарантирует эффективные решения для всех отраслей бизнеса. Сочетание богатого опыта работы на международном и российском рынке позволяет нам соответствовать самым строгим стандартам и предоставлять специализированные услуги как транснациональным корпорациям, так и предприятиям малого и среднего бизнеса.</p>
-                  <a class="accordion__button button button--sm-p" href="/page/services/audit/">Подробнее</a>
-                </div>
-              </details>
-            </details-utils>
           </li>
-          <li>
-            <details-utils animate>
-              <details class="accordion__details">
-                <summary class="accordion__summary">
-                  <span class="accordion__title">Аутсорсинг</span>
-                  <svg class="accordion__icon" aria-hidden="true" width="22" height="22">
-                    <use xlink:href="/img/sprite.svg#arrow-down"></use>
-                  </svg>
-                </summary>
-                <div class="accordion__content">
-                  <h2 class="accordion__content-title title title--primary">Аутсорсинг</h2>
-                  <p>Партнер по аутсорсингу, который помогает вам раскрыть свои сильные стороны.</p>
-                  <p>По версии рейтингового агентства RAEX, Мариллион представлена в рейтинге крупнейших компаний по бухгалтерскому аутсорсингу учетных функций, в частности, Мариллион входит в ТОП-5 лучших компаний России в области подготовки отчетности по МСФО и РСБУ.</p>
-                  <a class="accordion__button button button--sm-p" href="/page/services/outsourcing/">Подробнее</a>
-                </div>
-              </details>
-            </details-utils>
+          <li class="tablist__item tablist__item--services tablist__item--has-tags">
+            <a class="tablist__link tablist__link--services" href="#section2">
+              <span>Аутсорсинг</span>
+              <svg aria-hidden="true" width="26" height="22">
+                <use xlink:href="/img/sprite.svg#right-arrow"></use>
+              </svg>
+            </a>
+            <ul class="tags-list tags-list--services" role="list">
+              <li class="tags-list__item">
+                <a class="tag" href="">Бухгалтерское сопровождение</a>
+              </li>
+              <li class="tags-list__item">
+                <a class="tag" href="">Расчет заработной платы</a>
+              </li>
+              <li class="tags-list__item">
+                <a class="tag" href="">Воинский учет</a>
+              </li>
+              <li class="tags-list__item">
+                <a class="tag" href="">HR-портал</a>
+              </li>
+              <li class="tags-list__item">
+                <a class="tag" href="">Тестирование кандидатов</a>
+              </li>
+            </ul>
           </li>
-          <li>
-            <details-utils animate>
-              <details class="accordion__details">
-                <summary class="accordion__summary">
-                  <span class="accordion__title">Налоговое консультирование</span>
-                  <svg class="accordion__icon" aria-hidden="true" width="22" height="22">
-                    <use xlink:href="/img/sprite.svg#arrow-down"></use>
-                  </svg>
-                </summary>
-                <div class="accordion__content">
-                  <h2 class="accordion__content-title title title--primary">Налоговое <br> консультирование</h2>
-                  <p>Качественные и индивидуальные решения в области налогообложения, которые соответствуют Вашим требованиям и бюджету</p>
-                  <p>Наших клиентов лично обслуживают специалисты, имеющие многолетний опыт консультирования по вопросам налогообложения. Сочетая опыт в аудите, бухгалтерском учете, налогах и правовой поддержке, мы обладаем знаниями в отношении лучших практик, применяемых компаниями, и предпочитаем предоставлять решения, а не теорию, которая далека от реальности.</p>
-                  <a class="accordion__button button button--sm-p" href="/page/services/tax/">Подробнее</a>
-                </div>
-              </details>
-            </details-utils>
+          <li class="tablist__item tablist__item--services tablist__item--has-tags">
+            <a class="tablist__link tablist__link--services" href="#section3">
+              <span>Налоговое консультирование</span>
+              <svg aria-hidden="true" width="26" height="22">
+                <use xlink:href="/img/sprite.svg#right-arrow"></use>
+              </svg>
+            </a>
+            <ul class="tags-list tags-list--services" role="list">
+              <li class="tags-list__item">
+                <a class="tag" href="">Трансфертное ценообразование</a>
+              </li>
+              <li class="tags-list__item">
+                <a class="tag" href="">Разрешение налоговых споров</a>
+              </li>
+              <li class="tags-list__item">
+                <a class="tag" href="">Налогообложение физических лиц</a>
+              </li>
+              <li class="tags-list__item">
+                <a class="tag" href="">КИК</a>
+              </li>
+            </ul>
           </li>
-          <li>
-            <details-utils animate>
-              <details class="accordion__details">
-                <summary class="accordion__summary">
-                  <span class="accordion__title">Антикризисная поддержка бизнеса</span>
-                  <svg class="accordion__icon" aria-hidden="true" width="22" height="22">
-                    <use xlink:href="/img/sprite.svg#arrow-down"></use>
-                  </svg>
-                </summary>
-                <div class="accordion__content">
-                  <h2 class="accordion__content-title title title--primary">Антикризисная <br> поддержка бизнеса</h2>
-                  <p>Мы делаем все возможное, чтобы решать насущные проблемы и адаптироваться под нужды клиентов и рынка. Для того, чтобы в это непростое время помочь Вам и Вашему бизнесу ориентироваться в стремительно изменяющейся бизнес-среде, команда Мариллион сформировала практику по антикризисной консультационной поддержке. Мы оказываем поддержку компаниям в сферах производства, строительства, энергетики и сырья, сектора услуг, товаров массового потребления, транспорта и логистики, IT, фармацевтики и производства медицинских изделий при изменении структуры бизнеса, цепочек поставок и операционной деятельности, анализе санкций, ограничений и управлении рисками, связанными с возникшей ситуацией.</p>
-                  <a class="accordion__button button button--sm-p" href="/page/services/anti-crisis-support-and-sanctions-consulting/">Подробнее</a>
-                </div>
-              </details>
-            </details-utils>
+          <li class="tablist__item tablist__item--services tablist__item--has-tags">
+            <a class="tablist__link tablist__link--services" href="#section4">
+              <span>Антикризисная поддержка бизнеса</span>
+              <svg aria-hidden="true" width="26" height="22">
+                <use xlink:href="/img/sprite.svg#right-arrow"></use>
+              </svg>
+            </a>
+            <ul class="tags-list tags-list--services" role="list">
+              <li class="tags-list__item">
+                <a class="tag" href="">Включение в МСП</a>
+              </li>
+            </ul>
           </li>
-          <li>
-            <details-utils animate>
-              <details class="accordion__details">
-                <summary class="accordion__summary">
-                  <span class="accordion__title">Финансовое консультирование и оценка</span>
-                  <svg class="accordion__icon" aria-hidden="true" width="22" height="22">
-                    <use xlink:href="/img/sprite.svg#arrow-down"></use>
-                  </svg>
-                </summary>
-                <div class="accordion__content">
-                  <h2 class="accordion__content-title title title--primary">Финансовое <br> консультирование и оценка</h2>
-                  <p>Мариллион предоставляет услуги по сопровождению сделок, содействие в проектах по инвестированию и финансированию посредством проведения дью дилидженс со стороны покупателя и продавца, совершат независимый обзор бизнеса, окажут практическую поддержку после проведения сделки.</p>
-                  <a class="accordion__button button button--sm-p" href="/page/services/financial-advisory/">Подробнее</a>
-                </div>
-              </details>
-            </details-utils>
+          <li class="tablist__item tablist__item--services tablist__item--has-tags">
+            <a class="tablist__link tablist__link--services" href="#section4">
+              <span>Финансовое консультирование и оценка</span>
+              <svg aria-hidden="true" width="26" height="22">
+                <use xlink:href="/img/sprite.svg#right-arrow"></use>
+              </svg>
+            </a>
+            <ul class="tags-list tags-list--services" role="list">
+              <li class="tags-list__item">
+                <a class="tag" href="">Консультирование по проектам слияний и поглощений</a>
+              </li>
+              <li class="tags-list__item">
+                <a class="tag" href="">Сопровождение сделок</a>
+              </li>
+              <li class="tags-list__item">
+                <a class="tag" href="">Оценка</a>
+              </li>
+              <li class="tags-list__item">
+                <a class="tag" href="">Количественные финансы (МСФО (IFRS) 9, IRB, Скоринг)</a>
+              </li>
+            </ul>
           </li>
-          <li>
-            <details-utils animate>
-              <details class="accordion__details">
-                <summary class="accordion__summary">
-                  <span class="accordion__title">Юридические услуги</span>
-                  <svg class="accordion__icon" aria-hidden="true" width="22" height="22">
-                    <use xlink:href="/img/sprite.svg#arrow-down"></use>
-                  </svg>
-                </summary>
-                <div class="accordion__content">
-                  <h2 class="accordion__content-title title title--primary">Юридические услуги</h2>
-                  <p>Оказание юридических услуг, чтобы помочь вам принимать решения в соответствии с нормами российского и зарубежного законодательства.</p>
-                  <p>Наши клиенты могут обращаться к нам для получения практических советов и помощи в выработке стратегии в следующих областях:</p>
-                  <a class="accordion__button button button--sm-p" href="/page/services/legal/">Подробнее</a>
-                </div>
-              </details>
-            </details-utils>
+          <li class="tablist__item tablist__item--services ">
+            <a class="tablist__link tablist__link--services" href="#section4">
+              <span>Юридические услуги</span>
+              <svg aria-hidden="true" width="26" height="22">
+                <use xlink:href="/img/sprite.svg#right-arrow"></use>
+              </svg>
+            </a>
           </li>
         </ul>
       </div>
-    </section>
-    <div class="contacts-card">
-      <div class="contacts-card__content clamp-offset">
-        <h2 class="contacts-card__title title title--primary">Связаться с нами</h2>
-        <a class="contacts-card__tel" href="tel:+74957925245">+7 (495) 792 52 45 </a>
-        <a class="contacts-card__email" href="mailto:bd@marillion.ru">bd@marillion.ru </a>
-        <a class="contacts-card__location" href="https://www.google.com/maps/place/Mazars/@55.7592523,37.6658805,19z/data=!4m5!3m4!1s0x46b54a6b80482ced:0x198f0075f6770477!8m2!3d55.7594076!4d37.6656047" target="_blank" rel="noopener">Москва, Нижний Сусальный пер. 5, стр. 19</a>
-        <a class="contacts-card__button button button--sm-p" href="#request-form" data-hystmodal="#modal-form">Форма запроса</a>
-      </div>
-      <div class="contacts-card__figure">
-        <img class="contacts-card__image lazy" data-src="/img/contact-section/contacts-card.jpg" alt="" width="684" height="459">
+      <div class="tabbed__tabpanel tabpanel tabpanel--services">
+        <section class="tabpanel__section tabpanel__section--services" id="section0">
+          <div class="tabpanel__content">
+            <h2 class="tabpanel__title title title--primary accent-color">Услуги</h2>
+            <p>Профессиональные, адаптированные под нужды клиента услуги в области аудита, аутсорсинга бухгалтерского учета, финансового, налогового и юридического консультирования, которые соответствуют вашим требованиям и бюджету.</p>
+          </div>
+          <div class="tabpanel__figure">
+            <img class="tabpanel__image lazy" data-src="/img/services/0.jpg" alt="картинка" width="758" height="468">
+          </div>
+        </section>
+        <section class="tabpanel__section tabpanel__section--services" id="section1">
+          <div class="tabpanel__content">
+            <h2 class="tabpanel__title title title--primary accent-color">Аудит</h2>
+            <p>Гарантируем оказание услуг на высоком профессиональном уровне, с соблюдением принципа независимости и профессиональной этики.</p>
+            <p>В нашей работе мы руководствуемся принципами технического совершенства и независимости суждений. Наша команда высококвалифицированных специалистов гарантирует эффективные решения для всех отраслей бизнеса. Сочетание богатого опыта работы на международном и российском рынке позволяет нам соответствовать самым строгим стандартам и предоставлять специализированные услуги как транснациональным корпорациям, так и предприятиям малого и среднего бизнеса.</p>
+            <a class="tabpanel__button button button--sm-p" href="/page/services/audit/">Подробнее</a>
+          </div>
+          <div class="tabpanel__figure">
+            <img class="tabpanel__image lazy" data-src="/img/services/1.jpg" alt="картинка" width="758" height="468">
+          </div>
+        </section>
+        <section class="tabpanel__section tabpanel__section--services" id="section2">
+          <div class="tabpanel__content">
+            <h2 class="tabpanel__title title title--primary accent-color">Аутсорсинг</h2>
+            <p>Партнер по аутсорсингу, который помогает вам раскрыть свои сильные стороны.</p>
+            <p>По версии рейтингового агентства RAEX, Мариллион представлена в рейтинге крупнейших компаний по бухгалтерскому аутсорсингу учетных функций, в частности, Мариллион входит в ТОП-5 лучших компаний России в области подготовки отчетности по МСФО и РСБУ.</p>
+            <a class="tabpanel__button button button--sm-p" href="/page/services/outsourcing/">Подробнее</a>
+          </div>
+          <div class="tabpanel__figure">
+            <img class="tabpanel__image lazy" data-src="/img/services/2.jpg" alt="картинка" width="758" height="468">
+          </div>
+        </section>
+        <section class="tabpanel__section tabpanel__section--services" id="section3">
+          <div class="tabpanel__content">
+            <h2 class="tabpanel__title title title--primary accent-color">Налоговое <br> консультирование</h2>
+            <p>Качественные и индивидуальные решения в области налогообложения, которые соответствуют Вашим требованиям и бюджету</p>
+            <p>Наших клиентов лично обслуживают специалисты, имеющие многолетний опыт консультирования по вопросам налогообложения. Сочетая опыт в аудите, бухгалтерском учете, налогах и правовой поддержке, мы обладаем знаниями в отношении лучших практик, применяемых компаниями, и предпочитаем предоставлять решения, а не теорию, которая далека от реальности.</p>
+            <a class="tabpanel__button button button--sm-p" href="/page/services/tax/">Подробнее</a>
+          </div>
+          <div class="tabpanel__figure">
+            <img class="tabpanel__image lazy" data-src="/img/services/3.jpg" alt="картинка" width="758" height="468">
+          </div>
+        </section>
+        <section class="tabpanel__section tabpanel__section--services" id="section4">
+          <div class="tabpanel__content">
+            <h2 class="tabpanel__title title title--primary accent-color">Антикризисная <br> поддержка бизнеса</h2>
+            <p>Мы делаем все возможное, чтобы решать насущные проблемы и адаптироваться под нужды клиентов и рынка. Для того, чтобы в это непростое время помочь Вам и Вашему бизнесу ориентироваться в стремительно изменяющейся бизнес-среде, команда Мариллион сформировала практику по антикризисной консультационной поддержке. Мы оказываем поддержку компаниям в сферах производства, строительства, энергетики и сырья, сектора услуг, товаров массового потребления, транспорта и логистики, IT, фармацевтики и производства медицинских изделий при изменении структуры бизнеса, цепочек поставок и операционной деятельности, анализе санкций, ограничений и управлении рисками, связанными с возникшей ситуацией.</p>
+            <a class="tabpanel__button button button--sm-p" href="/page/services/anti-crisis-support-and-sanctions-consulting/">Подробнее</a>
+          </div>
+          <div class="tabpanel__figure">
+            <img class="tabpanel__image lazy" data-src="/img/services/4.jpg" alt="картинка" width="758" height="468">
+          </div>
+        </section>
+        <section class="tabpanel__section tabpanel__section--services" id="section5">
+          <div class="tabpanel__content">
+            <h2 class="tabpanel__title title title--primary accent-color">Финансовое <br> консультирование и оценка</h2>
+            <p>Мариллион предоставляет услуги по сопровождению сделок, содействие в проектах по инвестированию и финансированию посредством проведения дью дилидженс со стороны покупателя и продавца, совершат независимый обзор бизнеса, окажут практическую поддержку после проведения сделки.</p>
+            <a class="tabpanel__button button button--sm-p" href="/page/services/financial-advisory/">Подробнее</a>
+          </div>
+          <div class="tabpanel__figure">
+            <img class="tabpanel__image lazy" data-src="/img/services/5.jpg" alt="картинка" width="758" height="468">
+          </div>
+        </section>
+        <section class="tabpanel__section tabpanel__section--services" id="section6">
+          <div class="tabpanel__content">
+            <h2 class="tabpanel__title title title--primary accent-color">Юридические услуги</h2>
+            <p>Оказание юридических услуг, чтобы помочь вам принимать решения в соответствии с нормами российского и зарубежного законодательства.</p>
+            <p>Наши клиенты могут обращаться к нам для получения практических советов и помощи в выработке стратегии в следующих областях:</p>
+            <a class="tabpanel__button button button--sm-p" href="/page/services/legal/">Подробнее</a>
+          </div>
+          <div class="tabpanel__figure">
+            <img class="tabpanel__image lazy" data-src="/img/services/6.jpg" alt="картинка" width="758" height="468">
+          </div>
+        </section>
       </div>
     </div>
+    <ul class="accordion accordion--services" role="list" aria-roledescription="accordion">
+      <li class="accordion__item accordion__item--services">
+        <details-utils animate>
+          <details class="accordion__details accordion__details--services">
+            <summary class="accordion__summary accordion__summary--services">
+              <span class="accordion__title accordion__title--services">Аудит</span>
+              <svg class="accordion__icon accordion__icon--services" aria-hidden="true" width="22" height="22">
+                <use xlink:href="/img/sprite.svg#arrow-down"></use>
+              </svg>
+            </summary>
+            <div class="accordion__content accordion__content--services">
+              <img class="accordion__content-image lazy" data-src="/img/services/1.jpg" alt="картинка" width="848" height="524">
+              <h2 class="accordion__content-title accordion__content-title--services title title--primary">Аудит</h2>
+              <p>Гарантируем оказание услуг на высоком профессиональном уровне, с соблюдением принципа независимости и профессиональной этики.</p>
+              <p>В нашей работе мы руководствуемся принципами технического совершенства и независимости суждений. Наша команда высококвалифицированных специалистов гарантирует эффективные решения для всех отраслей бизнеса. Сочетание богатого опыта работы на международном и российском рынке позволяет нам соответствовать самым строгим стандартам и предоставлять специализированные услуги как транснациональным корпорациям, так и предприятиям малого и среднего бизнеса.</p>
+              <ul class="tags-list tags-list--accordion" role="list">
+                <li class="tags-list__item">
+                  <a class="tag" href="">Аудит финансовой отчетности</a>
+                </li>
+                <li class="tags-list__item">
+                  <a class="tag" href="">Обязательный аудит</a>
+                </li>
+                <li class="tags-list__item">
+                  <a class="tag" href="">Обзорная проверка финансовой отчетности</a>
+                </li>
+                <li class="tags-list__item">
+                  <a class="tag" href="">Корпоративная отчетность</a>
+                </li>
+                <li class="tags-list__item">
+                  <a class="tag" href="">Аудит отчетности и актуарная оценка для страховых  организаций</a>
+                </li>
+                <li class="tags-list__item">
+                  <a class="tag" href="">Аудит отчетности управляющих компаний, НПФ и ПИФ</a>
+                </li>
+              </ul>
+              <a class="accordion__button accordion__button--services button button--sm-p" href="/page/services/audit/">Подробнее</a>
+            </div>
+          </details>
+        </details-utils>
+      </li>
+      <li class="accordion__item accordion__item--services">
+        <details-utils animate>
+          <details class="accordion__details accordion__details--services">
+            <summary class="accordion__summary accordion__summary--services">
+              <span class="accordion__title accordion__title--services">Аутсорсинг</span>
+              <svg class="accordion__icon accordion__icon--services" aria-hidden="true" width="22" height="22">
+                <use xlink:href="/img/sprite.svg#arrow-down"></use>
+              </svg>
+            </summary>
+            <div class="accordion__content accordion__content--services">
+              <img class="accordion__content-image lazy" data-src="/img/services/2.jpg" alt="картинка" width="848" height="524">
+              <h2 class="accordion__content-title accordion__content-title--services title title title--primary">Аутсорсинг</h2>
+              <p>Партнер по аутсорсингу, который помогает вам раскрыть свои сильные стороны.</p>
+              <p>По версии рейтингового агентства RAEX, Мариллион представлена в рейтинге крупнейших компаний по бухгалтерскому аутсорсингу учетных функций, в частности, Мариллион входит в ТОП-5 лучших компаний России в области подготовки отчетности по МСФО и РСБУ.</p>
+              <ul class="tags-list tags-list--accordion" role="list">
+                <li class="tags-list__item">
+                  <a class="tag" href="">Бухгалтерское сопровождение</a>
+                </li>
+                <li class="tags-list__item">
+                  <a class="tag" href="">Расчет заработной платы</a>
+                </li>
+                <li class="tags-list__item">
+                  <a class="tag" href="">Воинский учет</a>
+                </li>
+                <li class="tags-list__item">
+                  <a class="tag" href="">HR-портал</a>
+                </li>
+                <li class="tags-list__item">
+                  <a class="tag" href="">Тестирование кандидатов</a>
+                </li>
+              </ul>
+              <a class="accordion__button accordion__button--services button button--sm-p" href="/page/services/outsourcing/">Подробнее</a>
+            </div>
+          </details>
+        </details-utils>
+      </li>
+      <li class="accordion__item accordion__item--services">
+        <details-utils animate>
+          <details class="accordion__details accordion__details--services">
+            <summary class="accordion__summary accordion__summary--services">
+              <span class="accordion__title accordion__title--services">Налоговое консультирование</span>
+              <svg class="accordion__icon accordion__icon--services" aria-hidden="true" width="22" height="22">
+                <use xlink:href="/img/sprite.svg#arrow-down"></use>
+              </svg>
+            </summary>
+            <div class="accordion__content accordion__content--services">
+              <img class="accordion__content-image lazy" data-src="/img/services/3.jpg" alt="картинка" width="848" height="524">
+              <h2 class="accordion__content-title accordion__content-title--services title title title--primary">Налоговое <br> консультирование</h2>
+              <p>Качественные и индивидуальные решения в области налогообложения, которые соответствуют Вашим требованиям и бюджету</p>
+              <p>Наших клиентов лично обслуживают специалисты, имеющие многолетний опыт консультирования по вопросам налогообложения. Сочетая опыт в аудите, бухгалтерском учете, налогах и правовой поддержке, мы обладаем знаниями в отношении лучших практик, применяемых компаниями, и предпочитаем предоставлять решения, а не теорию, которая далека от реальности.</p>
+              <ul class="tags-list tags-list--accordion" role="list">
+                <li class="tags-list__item">
+                  <a class="tag" href="">Трансфертное ценообразование</a>
+                </li>
+                <li class="tags-list__item">
+                  <a class="tag" href="">Разрешение налоговых споров</a>
+                </li>
+                <li class="tags-list__item">
+                  <a class="tag" href="">Налогообложение физических лиц</a>
+                </li>
+                <li class="tags-list__item">
+                  <a class="tag" href="">КИК</a>
+                </li>
+              </ul>
+              <a class="accordion__button accordion__button--services button button--sm-p" href="/page/services/tax/">Подробнее</a>
+            </div>
+          </details>
+        </details-utils>
+      </li>
+      <li class="accordion__item accordion__item--services">
+        <details-utils animate>
+          <details class="accordion__details accordion__details--services">
+            <summary class="accordion__summary accordion__summary--services">
+              <span class="accordion__title accordion__title--services">Антикризисная поддержка бизнеса</span>
+              <svg class="accordion__icon accordion__icon--services" aria-hidden="true" width="22" height="22">
+                <use xlink:href="/img/sprite.svg#arrow-down"></use>
+              </svg>
+            </summary>
+            <div class="accordion__content accordion__content--services">
+              <img class="accordion__content-image lazy" data-src="/img/services/4.jpg" alt="картинка" width="848" height="524">
+              <h2 class="accordion__content-title accordion__content-title--services title title title--primary">Антикризисная <br> поддержка бизнеса</h2>
+              <p>Мы делаем все возможное, чтобы решать насущные проблемы и адаптироваться под нужды клиентов и рынка. Для того, чтобы в это непростое время помочь Вам и Вашему бизнесу ориентироваться в стремительно изменяющейся бизнес-среде, команда Мариллион сформировала практику по антикризисной консультационной поддержке. Мы оказываем поддержку компаниям в сферах производства, строительства, энергетики и сырья, сектора услуг, товаров массового потребления, транспорта и логистики, IT, фармацевтики и производства медицинских изделий при изменении структуры бизнеса, цепочек поставок и операционной деятельности, анализе санкций, ограничений и управлении рисками, связанными с возникшей ситуацией.</p>
+              <ul class="tags-list tags-list--accordion" role="list">
+                <li class="tags-list__item">
+                  <a class="tag" href="">Включение в МСП</a>
+                </li>
+              </ul>
+              <a class="accordion__button accordion__button--services button button--sm-p" href="/page/services/anti-crisis-support-and-sanctions-consulting/">Подробнее</a>
+            </div>
+          </details>
+        </details-utils>
+      </li>
+      <li class="accordion__item accordion__item--services">
+        <details-utils animate>
+          <details class="accordion__details accordion__details--services">
+            <summary class="accordion__summary accordion__summary--services">
+              <span class="accordion__title accordion__title--services">Финансовое консультирование и оценка</span>
+              <svg class="accordion__icon accordion__icon--services" aria-hidden="true" width="22" height="22">
+                <use xlink:href="/img/sprite.svg#arrow-down"></use>
+              </svg>
+            </summary>
+            <div class="accordion__content accordion__content--services">
+              <img class="accordion__content-image lazy" data-src="/img/services/5.jpg" alt="картинка" width="848" height="524">
+              <h2 class="accordion__content-title accordion__content-title--services title title title--primary">Финансовое <br> консультирование и оценка</h2>
+              <p>Мариллион предоставляет услуги по сопровождению сделок, содействие в проектах по инвестированию и финансированию посредством проведения дью дилидженс со стороны покупателя и продавца, совершат независимый обзор бизнеса, окажут практическую поддержку после проведения сделки.</p>
+              <ul class="tags-list tags-list--a" role="list">
+                <li class="tags-list__item">
+                  <a class="tag" href="">Консультирование по проектам слияний и поглощений</a>
+                </li>
+                <li class="tags-list__item">
+                  <a class="tag" href="">Сопровождение сделок</a>
+                </li>
+                <li class="tags-list__item">
+                  <a class="tag" href="">Оценка</a>
+                </li>
+                <li class="tags-list__item">
+                  <a class="tag" href="">Количественные финансы (МСФО (IFRS) 9, IRB, Скоринг)</a>
+                </li>
+              </ul>
+              <a class="accordion__button accordion__button--services button button--sm-p" href="/page/services/financial-advisory/">Подробнее</a>
+            </div>
+          </details>
+        </details-utils>
+      </li>
+      <li class="accordion__item accordion__item--services">
+        <details-utils animate>
+          <details class="accordion__details accordion__details--services">
+            <summary class="accordion__summary accordion__summary--services">
+              <span class="accordion__title accordion__title--services">Юридические услуги</span>
+              <svg class="accordion__icon accordion__icon--services" aria-hidden="true" width="22" height="22">
+                <use xlink:href="/img/sprite.svg#arrow-down"></use>
+              </svg>
+            </summary>
+            <div class="accordion__content accordion__content--services">
+              <img class="accordion__content-image lazy" data-src="/img/services/6.jpg" alt="картинка" width="848" height="524">
+              <h2 class="accordion__content-title accordion__content-title--services title title title--primary">Юридические услуги</h2>
+              <p>Оказание юридических услуг, чтобы помочь вам принимать решения в соответствии с нормами российского и зарубежного законодательства.</p>
+              <p>Наши клиенты могут обращаться к нам для получения практических советов и помощи в выработке стратегии в следующих областях:</p>
+              <a class="accordion__button accordion__button--services button button--sm-p" href="/page/services/legal/">Подробнее</a>
+            </div>
+          </details>
+        </details-utils>
+      </li>
+    </ul>
   </main>
   <footer class="footer">
     <div class="footer__container container">
@@ -611,9 +1104,9 @@
           <h3 class="footer__header">Связаться с нами</h3>
           <ul class="footer__list" role="list">
             <li><a href="/page/contacts/">Контакты</a></li>
-            <li><a href="/page/career/">Карьера</a></li>
-            <li><a href="/page/vacancy/">Вакансии</a></li>
-            <li><a href="/page/contacts/" data-hystmodal="#modal-form">Форма связи</a></li>
+            
+            
+            <li><a href="/page/contacts/" data-hystmodal="#modal-form">Свяжитесь с нами</a></li>
             <li><a href="#subscribe">Подписаться на рассылку</a></li>
           </ul>
         </div>
@@ -640,7 +1133,7 @@
                 <use xlink:href="/img/sprite.svg#cross"></use>
               </svg>
             </button>
-            <h2 class="hystmodal__title title title--primary accent-color">Форма запроса</h2>
+            <h2 class="hystmodal__title title title--primary accent-color">Свяжитесь с нами</h2>
             <p>Задайте интересующие вас вопросы или запросите коммерческое предложение, заполнив форму ниже, <br> и наши специалисты оперативно свяжутся с вами. </p>
             <form class="hystmodal__form form" id="request-form" enctype="multipart/form-data">
               <div class="form__group">

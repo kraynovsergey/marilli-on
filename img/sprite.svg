@@ -1,6 +1,6 @@
 <svg>
-  <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27 23" id="right-arrow">
-    <path d="M0 11.5H26M26 11.5L16.4667 0.5M26 11.5L16.4667 22.5" stroke="currentColor"></path>
+  <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27 24" id="right-arrow">
+    <path d="M0 12H26M26 12L16.4667 1M26 12L16.4667 23" stroke="currentColor"></path>
   </symbol>
   <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 7 4" id="down-arrow">
     <path d="M1 0.75L4 3.25L6.5 0.75" stroke="#141414"></path>
