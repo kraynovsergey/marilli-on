@@ -144,7 +144,7 @@ document.addEventListener('DOMContentLoaded', function() {
         tab.setAttribute('tabindex', '-1');
         tab.parentNode.setAttribute('role', 'presentation');
 
-        tab.addEventListener('click', e => {
+        tab.addEventListener('mouseover', e => {
           e.preventDefault();
           let currentTab = tablist.querySelector('[aria-selected]');
           if (e.currentTarget !== currentTab) {
