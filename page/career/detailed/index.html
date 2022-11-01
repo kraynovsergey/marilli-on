@@ -650,7 +650,7 @@
       </nav>
       <div class="post__heading">
         <h1 class="post__title title title--primary accent-color">Audit Intern <br> (Программа M-Talent 2022)</h1>
-        <a class="button button--max-width" href="https://hh.ru/vacancy/66567044" target="_blank" rel="nooener noreferrer">Перейти на hh.ru</a>
+        <a class="button button--max-width" href="" data-hystmodal="#modal-form">Откликнуться</a>
       </div>
       <div class="post__content content">
         <p>Intern (Программа M-Talent 2022) <br> Мы объявляем о наборе на программу развития начинающих специалистов в сфере аудита M-Talent. Выход на работу — осень 2022. Присылай свое резюме уже сейчас — количество мест ограничено!</p>
@@ -686,15 +686,15 @@
       </div>
     </div>
     <div class="contacts-card">
-      <div class="contacts-card__content clamp-offset">
+      <div class="contacts-card__content clamp-offset" style="--background:#282D38;">
         <h2 class="contacts-card__title title title--primary">Связаться с нами</h2>
         <a class="contacts-card__tel" href="tel:+74957925245">+7 (495) 792 52 45 </a>
-        <a class="contacts-card__email" href="mailto:bd@marillion.ru">bd@marillion.ru </a>
+        <a class="contacts-card__email" href="mailto:hr@marillion.ru">hr@marillion.ru </a>
         <a class="contacts-card__location" href="https://www.google.com/maps/place/Mazars/@55.7592523,37.6658805,19z/data=!4m5!3m4!1s0x46b54a6b80482ced:0x198f0075f6770477!8m2!3d55.7594076!4d37.6656047" target="_blank" rel="noopener">Москва, Нижний Сусальный пер. 5, стр. 19</a>
         <a class="contacts-card__button button button--sm-p" href="#request-form" data-hystmodal="#modal-form">Свяжитесь с нами</a>
       </div>
       <div class="contacts-card__figure">
-        <img class="contacts-card__image lazy" data-src="/img/contact-section/contacts-card.jpg" alt="" width="684" height="459">
+        <img class="contacts-card__image lazy" data-src="/img/career/contacts-card.jpg" alt="" width="684" height="459">
       </div>
     </div>
   </main>
@@ -790,20 +790,17 @@
                 <use xlink:href="/img/sprite.svg#cross"></use>
               </svg>
             </button>
-            <h2 class="hystmodal__title title title--primary accent-color">Свяжитесь с нами</h2>
-            <p>Задайте интересующие вас вопросы или запросите коммерческое предложение, заполнив форму ниже, <br> и наши специалисты оперативно свяжутся с вами. </p>
+            <h2 class="hystmodal__title title title--primary accent-color">Отклик на вакансию</h2>
+            <p>Audit Intern (Программа M-Talent 2022)</p>
             <form class="hystmodal__form form" id="request-form" enctype="multipart/form-data">
               <div class="form__group">
-                <label class="form__label">
-                  <span class="sr-only">Название компании</span>
-                  <input type="text" name="company-name" id="company-name" placeholder="Название компании *" required="">
-                </label>
                 <label class="form__label">
                   <span class="sr-only">ФИО</span>
                   <input type="text" name="name" id="name" placeholder="ФИО *" required="">
                 </label>
                 <label class="form__label">
                   <span class="sr-only">Email</span>
+                  <span class="form__notice">Пожалуйста, указывайте корпоративный адрес электронной почты при заполнении формы.</span>
                   <input type="email" name="email" id="email" placeholder="Email *" required="">
                 </label>
                 <label class="form__label">
@@ -811,11 +808,7 @@
                   <input type="tel" name="tel" id="tel" placeholder="+7 (999) 999-99-99" inputmode="numeric">
                 </label>
                 <label class="form__label">
-                  <span class="sr-only">Как вы нас нашли?</span>
-                  <input type="text" name="question" id="question" placeholder="Как вы нас нашли?">
-                </label>
-                <label class="form__label">
-                  <textarea name="message" id="message" rows="2" placeholder="Ваше сообщение" maxlength="500"></textarea>
+                  <textarea name="message" id="message" rows="2" placeholder="Сопроводительное письмо" maxlength="500"></textarea>
                 </label>
               </div>
               <div class="form__actions" id="agreement">
@@ -825,12 +818,12 @@
                     name="files[]"
                     id="upload-file__input_1"
                     class="upload-file__input sr-only"
-                    accept=".jpg, .jpeg, .png, .doc, .docx, .pdf">
+                    accept=".doc, .docx, .pdf">
                   <label class="upload-file__label" for="upload-file__input_1">
                     <svg class="upload-file__icon" aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M11.2 4.3602e-06C12.1343 -6.42193e-05 13.0483 0.272541 13.8299 0.784384C14.6115 1.29623 15.2267 2.02505 15.6001 2.88145C15.9735 3.73786 16.0887 4.68461 15.9318 5.60558C15.7748 6.52655 15.3525 7.38169 14.7166 8.06612L14.5646 8.2213L7.58354 15.202L7.54114 15.2419L7.49635 15.2779C6.92766 15.7682 6.19471 16.0254 5.44437 15.998C4.69404 15.9707 3.98176 15.6608 3.45029 15.1304C2.91881 14.6001 2.6074 13.8885 2.57848 13.1383C2.54955 12.388 2.80523 11.6546 3.29429 11.0849L3.41348 10.9537L3.42548 10.9449L9.257 5.10252C9.40689 4.95232 9.61031 4.86781 9.8225 4.86759C10.0347 4.86736 10.2383 4.95144 10.3885 5.10132C10.5387 5.2512 10.6232 5.4546 10.6234 5.66679C10.6237 5.87898 10.5396 6.08256 10.3897 6.23276L4.55819 12.0752L4.54859 12.0816C4.31322 12.3329 4.18059 12.6633 4.17686 13.0076C4.17313 13.3519 4.29858 13.6851 4.52845 13.9415C4.75832 14.1979 5.07593 14.3588 5.41862 14.3925C5.7613 14.4262 6.10419 14.3303 6.37964 14.1237L6.47723 14.0437L6.47803 14.0445L13.4391 7.08545L13.5662 6.95347C14.1263 6.33792 14.4245 5.5284 14.3975 4.69665C14.3706 3.86491 14.0206 3.0764 13.4218 2.4984C12.8231 1.92041 12.0227 1.59842 11.1905 1.60075C10.3583 1.60307 9.55972 1.92953 8.96422 2.51087L8.84023 2.63885L8.82584 2.64845L1.36565 10.1114C1.29133 10.1857 1.2031 10.2446 1.10602 10.2848C1.00893 10.325 0.904884 10.3456 0.799813 10.3456C0.694743 10.3455 0.590709 10.3248 0.493651 10.2846C0.396594 10.2443 0.308412 10.1854 0.234143 10.111C0.159873 10.0367 0.10097 9.9485 0.0607956 9.85142C0.0206213 9.75434 -3.70904e-05 9.6503 4.99901e-08 9.54523C7.50584e-05 9.33305 0.0844427 9.12958 0.234543 8.97959L7.68033 1.5302L7.71713 1.4958C8.16527 1.02253 8.70534 0.645752 9.30424 0.388546C9.90313 0.131339 10.5482 -0.000875244 11.2 4.3602e-06Z" fill="currentColor"/>
                     </svg>                        
-                    <span class="upload-file__text">Прикрепить файл (до 50 мб)</span>
+                    <span class="upload-file__text">Прикрепить резюме (.pdf/.doc)</span>
                   </label>
               </div>
                 <button class="form__button button button--fullwidth" type="submit">Отправить сообщение</button>
@@ -839,6 +832,20 @@
                 </div>
               </div>
             </form>
+        </div>
+    </div>
+  </div>
+  <div class="hystmodal" id="modal-success" aria-hidden="true">
+    <div class="hystmodal__wrap">
+        <div class="hystmodal__window" role="dialog" aria-modal="true">
+            <button data-hystclose class="hystmodal__close">
+              <svg aria-hidden="true" width="18" height="18">
+                <use xlink:href="/img/sprite.svg#cross"></use>
+              </svg>
+            </button>
+            <h2 class="hystmodal__title title title--primary accent-color">Благодарим за интерес <br> к компании "Мариллион".</h2>
+            <p>Мы свяжемся с вами после рассмотрения резюме.</p>
+            <button class="hystmodal__button button button--white" data-hystclose >Закрыть</button>
         </div>
     </div>
   </div>
