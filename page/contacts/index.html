@@ -42,16 +42,14 @@
         <img class="logo__img" src="/img/logo.svg" alt="Логотип Мариллион" width="272" height="38">
       </a>
       <nav class="menu menu--main" aria-label="Основное меню" itemscope="itemscope" itemtype="http://www.schema.org/SiteNavigationElement">
-        <button class="menu__submenu-close" type="button">
-          <svg aria-hidden="true" width="19" height="15">
-            <use xlink:href="/img/sprite.svg#left-arrow"></use>
-          </svg>
-          <span>Назад</span>
-        </button>
         <ul class="menu__list menu__list--main" id="menu__list" role="list">
+          <!-- самая первая выпадашка (у выпадашек всегда есть модификатор dropdown) -->
           <li class="menu__item menu__item--dropdown" itemprop="name">
+            <!-- хедер со ссылкой для декстопа и кнопкой для разворачивания меню на мобилках -->
             <div class="menu__item-header">
+              <!-- ссылка для декстопов -->
               <a class="menu__link menu__link--main" href="/page/services/">Услуги</a>
+              <!-- кнопка для разворачивания меню  на мобилках -->
               <button class="menu__mobile-control" type="button">
                 <span class="sr-only">Развернуть меню</span>
                 <svg class="menu__mobile-icon" aria-hidden="true" width="12" height="11">
@@ -59,20 +57,77 @@
                 </svg>
               </button>
             </div>
+            <!-- вложенное меню -->
             <ul class="menu__list menu__list--nested menu__list--lvl1" role="list">
+              <!-- хедер для общего раздела-->
+              <li class="menu__item menu__item--mobile">
+                <!-- хедер с кнопкой назад и заголовком для выезжающего меню (заголовок может быть ссылкой на мобилках) -->
+                <div class="menu__item-top">
+                  <!-- кнопка закрывает выезжающее меню -->
+                  <button class="menu__item-close" title="назад">
+                    <svg aria-hidden="true" width="19" height="15">
+                      <use xlink:href="/img/sprite.svg#left-arrow"></use>
+                    </svg>
+                    <span>Назад</span>
+                  </button>
+                  <h3 class="menu__item-title">
+                    <a href="/page/services/">Услуги</a>
+                  </h3>
+                </div>
+              </li>
               <li class="menu__item menu__item--dropdown" itemprop="name">
                 <div class="menu__item-header">
+                  <!-- ссылка для декстопов -->
                   <a class="menu__link" href="/page/services/audit/">
                     Аудит
                     <svg aria-hidden="true" width="12" height="11">
                       <use xlink:href="/img/sprite.svg#right-arrow"></use>
                     </svg>
                   </a>
+                  <!-- кнопка для разворачивания меню  на мобилках -->
+                  <button class="menu__mobile-control" type="button">
+                    <span class="sr-only">Развернуть меню</span>
+                    <svg class="menu__mobile-icon" aria-hidden="true" width="12" height="11">
+                      <use xlink:href="/img/sprite.svg#right-arrow"></use>
+                    </svg>
+                  </button>
                 </div>
+                <!-- это контентная часть третий и последний уровень вложенности,  
+                    у нее есть свой хедер для навигации назад и любой контент, новости, ссылки, описания -->
                 <div class="menu__item-content">
-                  <h3 class="menu__item-title">Аудит</h3>
-                  <p class="menu__item-desc">Гарантируем оказание услуг на высоком профессиональном уровне, с соблюдением принципа независимости и профессиональной этики.</p>
-                  <p class="menu__item-desc">В нашей работе мы руководствуемся принципами технического совершенства и независимости суждений. Наша команда высококвалифицированных специалистов гарантирует эффективные решения для всех отраслей бизнеса. Сочетание богатого опыта работы на международном и российском рынке позволяет нам соответствовать самым строгим стандартам и предоставлять специализированные услуги как транснациональным корпорациям, так и предприятиям малого и среднего бизнеса.</p>
+                  <!-- хедер с навигацией контентной части-->
+                  <div class="menu__item-top">
+                    <button class="menu__item-close" title="назад">
+                      <svg aria-hidden="true" width="19" height="15">
+                        <use xlink:href="/img/sprite.svg#left-arrow"></use>
+                      </svg>
+                      <span>Назад</span>
+                    </button>
+                    <h3 class="menu__item-title">
+                      <a href="">Аудит</a>
+                    </h3>
+                  </div>
+                  <!-- любой контент, ссылки, описание, новости -->
+                  <ul class="menu__links" role="list">
+                    <li class="menu__links-item" itemprop="name">
+                      <a class="menu__links-link" href="" itemprop="url">Аудит финансовой отчетности</a>
+                    </li>
+                    <li class="menu__links-item" itemprop="name">
+                      <a class="menu__links-link" href="" itemprop="url">Обязательный аудит</a>
+                    </li>
+                    <li class="menu__links-item" itemprop="name">
+                      <a class="menu__links-link" href="" itemprop="url">Обзорная проверка финансовой отчетности</a>
+                    </li>
+                    <li class="menu__links-item" itemprop="name">
+                      <a class="menu__links-link" href="" itemprop="url">Корпоративная отчетность</a>
+                    </li>
+                    <li class="menu__links-item" itemprop="name">
+                      <a class="menu__links-link" href="" itemprop="url">Аудит отчетности и актуарная оценка для страховых  организаций</a>
+                    </li>
+                    <li class="menu__links-item" itemprop="name">
+                      <a class="menu__links-link" href="" itemprop="url">Аудит отчетности управляющих компаний, НПФ и ПИФ</a>
+                    </li>
+                  </ul>
                 </div>
               </li>
               <li class="menu__item menu__item--dropdown" itemprop="name">
@@ -83,9 +138,25 @@
                       <use xlink:href="/img/sprite.svg#right-arrow"></use>
                     </svg>
                   </a>
+                  <button class="menu__mobile-control" type="button">
+                    <span class="sr-only">Развернуть меню</span>
+                    <svg class="menu__mobile-icon" aria-hidden="true" width="12" height="11">
+                      <use xlink:href="/img/sprite.svg#right-arrow"></use>
+                    </svg>
+                  </button>
                 </div>
                 <div class="menu__item-content">
-                  <h3 class="menu__item-title">Аутсорсинг</h3>
+                  <div class="menu__item-top">
+                    <button class="menu__item-close" title="назад">
+                      <svg aria-hidden="true" width="19" height="15">
+                        <use xlink:href="/img/sprite.svg#left-arrow"></use>
+                      </svg>
+                      <span>Назад</span>
+                    </button>
+                    <h3 class="menu__item-title">
+                      <a href="">Аутсорсинг</a>
+                    </h3>
+                  </div>
                   <p class="menu__item-desc">Партнер по аутсорсингу, который помогает вам раскрыть свои сильные стороны.</p>
                 </div>
               </li>
@@ -97,9 +168,25 @@
                       <use xlink:href="/img/sprite.svg#right-arrow"></use>
                     </svg>
                   </a>
+                  <button class="menu__mobile-control" type="button">
+                    <span class="sr-only">Развернуть меню</span>
+                    <svg class="menu__mobile-icon" aria-hidden="true" width="12" height="11">
+                      <use xlink:href="/img/sprite.svg#right-arrow"></use>
+                    </svg>
+                  </button>
                 </div>
                 <div class="menu__item-content">
-                  <h3 class="menu__item-title">Налоговое консультирование</h3>
+                  <div class="menu__item-top">
+                    <button class="menu__item-close" title="назад">
+                      <svg aria-hidden="true" width="19" height="15">
+                        <use xlink:href="/img/sprite.svg#left-arrow"></use>
+                      </svg>
+                      <span>Назад</span>
+                    </button>
+                    <h3 class="menu__item-title">
+                      <a href="">Налоговое консультирование</a>
+                    </h3>
+                  </div>
                   <p class="menu__item-desc">Качественные и индивидуальные решения в области налогообложения, которые соответствуют Вашим требованиям и бюджету</p>
                 </div>
               </li>
@@ -111,9 +198,25 @@
                       <use xlink:href="/img/sprite.svg#right-arrow"></use>
                     </svg>
                   </a>
+                  <button class="menu__mobile-control" type="button">
+                    <span class="sr-only">Развернуть меню</span>
+                    <svg class="menu__mobile-icon" aria-hidden="true" width="12" height="11">
+                      <use xlink:href="/img/sprite.svg#right-arrow"></use>
+                    </svg>
+                  </button>
                 </div>
                 <div class="menu__item-content">
-                  <h3 class="menu__item-title">Антикризисная поддержка бизнеса</h3>
+                  <div class="menu__item-top">
+                    <button class="menu__item-close" title="назад">
+                      <svg aria-hidden="true" width="19" height="15">
+                        <use xlink:href="/img/sprite.svg#left-arrow"></use>
+                      </svg>
+                      <span>Назад</span>
+                    </button>
+                    <h3 class="menu__item-title">
+                      <a href="">Антикризисная поддержка бизнеса</a>
+                    </h3>
+                  </div>
                   <p class="menu__item-desc">Мы делаем все возможное, чтобы решать насущные проблемы и адаптироваться под нужды клиентов и рынка. Для того, чтобы в это непростое время помочь Вам и Вашему бизнесу ориентироваться в стремительно изменяющейся бизнес-среде, команда Мариллион сформировала практику по антикризисной консультационной поддержке.</p>
                 </div>
               </li>
@@ -125,9 +228,25 @@
                       <use xlink:href="/img/sprite.svg#right-arrow"></use>
                     </svg>
                   </a>
+                  <button class="menu__mobile-control" type="button">
+                    <span class="sr-only">Развернуть меню</span>
+                    <svg class="menu__mobile-icon" aria-hidden="true" width="12" height="11">
+                      <use xlink:href="/img/sprite.svg#right-arrow"></use>
+                    </svg>
+                  </button>
                 </div>
                 <div class="menu__item-content">
-                  <h3 class="menu__item-title">Юридические услуги</h3>
+                  <div class="menu__item-top">
+                    <button class="menu__item-close" title="назад">
+                      <svg aria-hidden="true" width="19" height="15">
+                        <use xlink:href="/img/sprite.svg#left-arrow"></use>
+                      </svg>
+                      <span>Назад</span>
+                    </button>
+                    <h3 class="menu__item-title">
+                      <a href="">Юридические услуги</a>
+                    </h3>
+                  </div>
                   <p class="menu__item-desc">Оказание юридических услуг, чтобы помочь вам принимать решения в соответствии с нормами российского и зарубежного законодательства.</p>
                 </div>
               </li>
@@ -139,9 +258,25 @@
                       <use xlink:href="/img/sprite.svg#right-arrow"></use>
                     </svg>
                   </a>
+                  <button class="menu__mobile-control" type="button">
+                    <span class="sr-only">Развернуть меню</span>
+                    <svg class="menu__mobile-icon" aria-hidden="true" width="12" height="11">
+                      <use xlink:href="/img/sprite.svg#right-arrow"></use>
+                    </svg>
+                  </button>
                 </div>
                 <div class="menu__item-content">
-                  <h3 class="menu__item-title">Финансовое консультационие и оценка</h3>
+                  <div class="menu__item-top">
+                    <button class="menu__item-close" title="назад">
+                      <svg aria-hidden="true" width="19" height="15">
+                        <use xlink:href="/img/sprite.svg#left-arrow"></use>
+                      </svg>
+                      <span>Назад</span>
+                    </button>
+                    <h3 class="menu__item-title">
+                      <a href="">Финансовое консультационие и оценка</a>
+                    </h3>
+                  </div>
                   <p class="menu__item-desc">Мариллион предоставляет услуги по сопровождению сделок, содействие в проектах по инвестированию и финансированию посредством проведения дью дилидженс со стороны покупателя и продавца, совершат независимый обзор бизнеса, окажут практическую поддержку после проведения сделки.</p>
                 </div>
               </li>
@@ -158,6 +293,20 @@
               </button>
             </div>
             <ul class="menu__list menu__list--nested menu__list--lvl1" role="list">
+              <!-- хедер для общего раздела-->
+              <li class="menu__item menu__item--mobile">
+                <div class="menu__item-top">
+                  <button class="menu__item-close" title="назад">
+                    <svg aria-hidden="true" width="19" height="15">
+                      <use xlink:href="/img/sprite.svg#left-arrow"></use>
+                    </svg>
+                    <span>Назад</span>
+                  </button>
+                  <h3 class="menu__item-title">
+                    <a href="/page/news/">Новости</a>
+                  </h3>
+                </div>
+              </li>
               <li class="menu__item menu__item--dropdown" itemprop="name">
                 <div class="menu__item-header">
                   <a class="menu__link" href="/page/news/">
@@ -166,10 +315,44 @@
                       <use xlink:href="/img/sprite.svg#right-arrow"></use>
                     </svg>
                   </a>
+                  <button class="menu__mobile-control" type="button">
+                    <span class="sr-only">Развернуть меню</span>
+                    <svg class="menu__mobile-icon" aria-hidden="true" width="12" height="11">
+                      <use xlink:href="/img/sprite.svg#right-arrow"></use>
+                    </svg>
+                  </button>
                 </div>
                 <div class="menu__item-content">
-                  <h3 class="menu__item-title">Новости компании</h3>
-                  <p class="menu__item-desc">Программа развития молодых специалистов в сфере аудита. Начни свою карьеру в аудите на программе M-Talent! </p>
+                  <div class="menu__item-top">
+                    <button class="menu__item-close" title="назад">
+                      <svg aria-hidden="true" width="19" height="15">
+                        <use xlink:href="/img/sprite.svg#left-arrow"></use>
+                      </svg>
+                      <span>Назад</span>
+                    </button>
+                    <h3 class="menu__item-title">
+                      <a href="">Новости компании</a>
+                    </h3>
+                  </div>
+                  <ul class="articles articles--menu" role="list">
+                    <li class="articles__item">
+                      <article class="article-card article-card--menu">
+                        <a class="article-card__tag article-card__tag--menu" href="#">Новости компании</a>
+                        <h3 class="article-card__title article-card__title--menu">
+                          <a href="/page/news/2">Мы объявляем о ребрендинге и продолжаем работу под брендом «Мариллион»</a>
+                        </h3>
+                      </article>
+                    </li>
+                    <li class="articles__item">
+                      <article class="article-card article-card--menu">
+                        <a class="article-card__tag article-card__tag--menu" href="#">Новости компании</a>
+                        <h3 class="article-card__title article-card__title--menu">
+                          <a href="/page/news/2">Изменения в структуре управления</a>
+                        </h3>
+                      </article>
+                    </li>
+                  </ul>
+                  <a class="button button--white" href="/page/news/">Показать еще</a>
                 </div>
               </li>
               <li class="menu__item menu__item--dropdown" itemprop="name">
@@ -180,10 +363,44 @@
                       <use xlink:href="/img/sprite.svg#right-arrow"></use>
                     </svg>
                   </a>
+                  <button class="menu__mobile-control" type="button">
+                    <span class="sr-only">Развернуть меню</span>
+                    <svg class="menu__mobile-icon" aria-hidden="true" width="12" height="11">
+                      <use xlink:href="/img/sprite.svg#right-arrow"></use>
+                    </svg>
+                  </button>
                 </div>
                 <div class="menu__item-content">
-                  <h3 class="menu__item-title">Мероприятия</h3>
-                  <p class="menu__item-desc">Программа развития молодых специалистов в сфере аудита. Начни свою карьеру в аудите на программе M-Talent! </p>
+                  <div class="menu__item-top">
+                    <button class="menu__item-close" title="назад">
+                      <svg aria-hidden="true" width="19" height="15">
+                        <use xlink:href="/img/sprite.svg#left-arrow"></use>
+                      </svg>
+                      <span>Назад</span>
+                    </button>
+                    <h3 class="menu__item-title">
+                      <a href="">Мероприятия</a>
+                    </h3>
+                  </div>
+                  <ul class="articles articles--menu" role="list">
+                    <li class="articles__item">
+                      <article class="article-card article-card--menu">
+                        <a class="article-card__tag article-card__tag--menu" href="#">Мероприятия</a>
+                        <h3 class="article-card__title article-card__title--menu">
+                          <a href="/page/news/2">«Мариллион» — партнер конференции ИД Коммерсантъ «Аудит и консалтинг: тренды, прогнозы, итоги полугодия»</a>
+                        </h3>
+                      </article>
+                    </li>
+                    <li class="articles__item">
+                      <article class="article-card article-card--menu">
+                        <a class="article-card__tag article-card__tag--menu" href="#">Мероприятия</a>
+                        <h3 class="article-card__title article-card__title--menu">
+                          <a href="/page/news/2">«Мариллион» выступила партнером конференции ИД Коммерсантъ «Трудовое право – 2022»</a>
+                        </h3>
+                      </article>
+                    </li>
+                  </ul>
+                  <a class="button button--white" href="/page/news/">Показать еще</a>
                 </div>
               </li>
               <li class="menu__item menu__item--dropdown" itemprop="name">
@@ -194,10 +411,44 @@
                       <use xlink:href="/img/sprite.svg#right-arrow"></use>
                     </svg>
                   </a>
+                  <button class="menu__mobile-control" type="button">
+                    <span class="sr-only">Развернуть меню</span>
+                    <svg class="menu__mobile-icon" aria-hidden="true" width="12" height="11">
+                      <use xlink:href="/img/sprite.svg#right-arrow"></use>
+                    </svg>
+                  </button>
                 </div>
                 <div class="menu__item-content">
-                  <h3 class="menu__item-title">Экспертное мнение</h3>
-                  <p class="menu__item-desc">Программа развития молодых специалистов в сфере аудита. Начни свою карьеру в аудите на программе M-Talent! </p>
+                  <div class="menu__item-top">
+                    <button class="menu__item-close" title="назад">
+                      <svg aria-hidden="true" width="19" height="15">
+                        <use xlink:href="/img/sprite.svg#left-arrow"></use>
+                      </svg>
+                      <span>Назад</span>
+                    </button>
+                    <h3 class="menu__item-title">
+                      <a href="">Экспертное мнение</a>
+                    </h3>
+                  </div>
+                  <ul class="articles articles--menu" role="list">
+                    <li class="articles__item">
+                      <article class="article-card article-card--menu">
+                        <a class="article-card__tag article-card__tag--menu" href="#">Экспертное мнение</a>
+                        <h3 class="article-card__title article-card__title--menu">
+                          <a href="/page/news/2">О квотах на привлечение иностранных граждан к трудовой деятельности в РФ</a>
+                        </h3>
+                      </article>
+                    </li>
+                    <li class="articles__item">
+                      <article class="article-card article-card--menu">
+                        <a class="article-card__tag article-card__tag--menu" href="#">Экспертное мнение</a>
+                        <h3 class="article-card__title article-card__title--menu">
+                          <a href="/page/news/2">Опубликованы правила выдачи разрешений на осуществление сделок и операций в отношении долей ООО с участием лиц из «недружественных» стран</a>
+                        </h3>
+                      </article>
+                    </li>
+                  </ul>
+                  <a class="button button--white" href="/page/news/">Показать еще</a>
                 </div>
               </li>
             </ul>
@@ -213,6 +464,20 @@
               </button>
             </div>
             <ul class="menu__list menu__list--nested menu__list--lvl1" role="list">
+              <!-- хедер для общего раздела-->
+              <li class="menu__item menu__item--mobile">
+                <div class="menu__item-top">
+                  <button class="menu__item-close" title="назад">
+                    <svg aria-hidden="true" width="19" height="15">
+                      <use xlink:href="/img/sprite.svg#left-arrow"></use>
+                    </svg>
+                    <span>Назад</span>
+                  </button>
+                  <h3 class="menu__item-title">
+                    <a href="/page/about/">О нас</a>
+                  </h3>
+                </div>
+              </li>
               <li class="menu__item menu__item--dropdown" itemprop="name">
                 <div class="menu__item-header">
                   <a class="menu__link" href="/page/about/">
@@ -221,9 +486,25 @@
                       <use xlink:href="/img/sprite.svg#right-arrow"></use>
                     </svg>
                   </a>
+                  <button class="menu__mobile-control" type="button">
+                    <span class="sr-only">Развернуть меню</span>
+                    <svg class="menu__mobile-icon" aria-hidden="true" width="12" height="11">
+                      <use xlink:href="/img/sprite.svg#right-arrow"></use>
+                    </svg>
+                  </button>
                 </div>
                 <div class="menu__item-content">
-                  <h3 class="menu__item-title">О компании</h3>
+                  <div class="menu__item-top">
+                    <button class="menu__item-close" title="назад">
+                      <svg aria-hidden="true" width="19" height="15">
+                        <use xlink:href="/img/sprite.svg#left-arrow"></use>
+                      </svg>
+                      <span>Назад</span>
+                    </button>
+                    <h3 class="menu__item-title">
+                      <a href="">О компании</a>
+                    </h3>
+                  </div>
                   <p class="menu__item-desc">30 лет динамичного и устойчивого развития превратили компанию в серьезного игрока на российском рынке, предоставляющего независимые профессиональные услуги высочайшего качества.</p>
                 </div>
               </li>
@@ -235,10 +516,25 @@
                       <use xlink:href="/img/sprite.svg#right-arrow"></use>
                     </svg>
                   </a>
-
+                  <button class="menu__mobile-control" type="button">
+                    <span class="sr-only">Развернуть меню</span>
+                    <svg class="menu__mobile-icon" aria-hidden="true" width="12" height="11">
+                      <use xlink:href="/img/sprite.svg#right-arrow"></use>
+                    </svg>
+                  </button>
                 </div>
                 <div class="menu__item-content">
-                  <h3 class="menu__item-title">Наше руководство</h3>
+                  <div class="menu__item-top">
+                    <button class="menu__item-close" title="назад">
+                      <svg aria-hidden="true" width="19" height="15">
+                        <use xlink:href="/img/sprite.svg#left-arrow"></use>
+                      </svg>
+                      <span>Назад</span>
+                    </button>
+                    <h3 class="menu__item-title">
+                      <a href="">Наше руководство</a>
+                    </h3>
+                  </div>
                   <p class="menu__item-desc">Многообразие опыта, компетенций и специализаций наших сотрудников гарантируют клиенту получение высококвалифицированных аудиторских, аутсорсинговых, налоговых и юридических услуг, а также услуг по сопровождению сделок.</p>
                 </div>
               </li>
@@ -250,9 +546,25 @@
                       <use xlink:href="/img/sprite.svg#right-arrow"></use>
                     </svg>
                   </a>
+                  <button class="menu__mobile-control" type="button">
+                    <span class="sr-only">Развернуть меню</span>
+                    <svg class="menu__mobile-icon" aria-hidden="true" width="12" height="11">
+                      <use xlink:href="/img/sprite.svg#right-arrow"></use>
+                    </svg>
+                  </button>
                 </div>
                 <div class="menu__item-content">
-                  <h3 class="menu__item-title">Сведения ООО Мазар Аудит</h3>
+                  <div class="menu__item-top">
+                    <button class="menu__item-close" title="назад">
+                      <svg aria-hidden="true" width="19" height="15">
+                        <use xlink:href="/img/sprite.svg#left-arrow"></use>
+                      </svg>
+                      <span>Назад</span>
+                    </button>
+                    <h3 class="menu__item-title">
+                      <a href="">Сведения ООО Мазар Аудит</a>
+                    </h3>
+                  </div>
                   <p class="menu__item-desc">Программа развития молодых специалистов в сфере аудита. Начни свою карьеру в аудите на программе M-Talent! </p>
                 </div>
               </li>
@@ -263,9 +575,25 @@
                       <use xlink:href="/img/sprite.svg#right-arrow"></use>
                     </svg>
                   </a>
+                  <button class="menu__mobile-control" type="button">
+                    <span class="sr-only">Развернуть меню</span>
+                    <svg class="menu__mobile-icon" aria-hidden="true" width="12" height="11">
+                      <use xlink:href="/img/sprite.svg#right-arrow"></use>
+                    </svg>
+                  </button>
                 </div>
                 <div class="menu__item-content">
-                  <h3 class="menu__item-title">Сведения АО Мазар Аудиторские услуги</h3>
+                  <div class="menu__item-top">
+                    <button class="menu__item-close" title="назад">
+                      <svg aria-hidden="true" width="19" height="15">
+                        <use xlink:href="/img/sprite.svg#left-arrow"></use>
+                      </svg>
+                      <span>Назад</span>
+                    </button>
+                    <h3 class="menu__item-title">
+                      <a href="">Сведения АО Мазар Аудиторские услуги</a>
+                    </h3>
+                  </div>
                   <p class="menu__item-desc">Программа развития молодых специалистов в сфере аудита. Начни свою карьеру в аудите на программе M-Talent! </p>
                 </div>
               </li>
@@ -273,14 +601,7 @@
                 <div class="menu__item-header">
                   <a class="menu__link" href="/page/data-marillion/">
                     Сведения ООО АК Мариллион
-                    <svg aria-hidden="true" width="12" height="11">
-                      <use xlink:href="/img/sprite.svg#right-arrow"></use>
-                    </svg>
                   </a>
-                </div>
-                <div class="menu__item-content">
-                  <h3 class="menu__item-title">Сведения ООО АК Мариллион</h3>
-                  <p class="menu__item-desc">Программа развития молодых специалистов в сфере аудита. Начни свою карьеру в аудите на программе M-Talent! </p>
                 </div>
               </li>
             </ul>
@@ -288,25 +609,35 @@
           <li class="menu__item" itemprop="name">
             <a class="menu__link menu__link--main" href="/page/career/" itemprop="url">Карьера</a>
           </li>
-          <li class="menu__item menu__item--dropdown" itemprop="name">
+          <li class="menu__item" itemprop="name">
             <a class="menu__link menu__link--main" href="/page/contacts/" itemprop="url">Контакты</a>
           </li>
         </ul>
-        <div class="header__lang language-dropdown">
-          <button class="language-dropdown__control btn-reset">
-            <span class="language-dropdown__selected">Рус</span>
-            <svg class="language-dropdown__arrow" aria-hidden="true" width="10" height="6"> 
-              <use xlink:href="/img/sprite.svg#down-arrow"></use>
+        <!-- обертка для новых элементов верстки -->
+        <div class="header__actions">
+          <a class="header__button header__button--form" href="#" data-hystmodal="#modal-form">Свяжитесь с нами</a>
+          <div class="header__lang language-dropdown">
+            <button class="language-dropdown__control btn-reset">
+              <span class="language-dropdown__selected sr-only">Рус</span>
+              <svg aria-hidden="true" width="19" height="19">
+                <use xlink:href="/img/sprite.svg#globe"></use>
+              </svg>
+            </button>
+            <ul class="language-dropdown__list" role="list">
+              <li class="language-dropdown__item">
+                <a class="language-dropdown__link language-dropdown__link--current">Ru</a>
+              </li>
+              <li class="language-dropdown__item">
+                <a class="language-dropdown__link" href="/page/en/" title="Переключить язык на английский">Eng</a>
+              </li>
+            </ul>
+          </div>
+          <a class="header__search" href="/search" title="Поиск">
+            <span class="sr-only">Поиск</span>
+            <svg aria-hidden="true" width="19" height="19">
+              <use xlink:href="/img/sprite.svg#search"></use>
             </svg>
-          </button>
-          <ul class="language-dropdown__list" role="list">
-            <li class="language-dropdown__item">
-              <a class="language-dropdown__link language-dropdown__link--current">Ru</a>
-            </li>
-            <li class="language-dropdown__item">
-              <a class="language-dropdown__link" href="/page/en/" title="Переключить язык на английский">Eng</a>
-            </li>
-          </ul>
+          </a>
         </div>
       </nav>
       <button class="menu-button" type="button" aria-expanded="false" aria-controls="menu__list" aria-label="Открыть меню">
@@ -336,83 +667,222 @@
       </div>
     </div>
     <div class="contacts-grid">
-      <div class="contacts-grid__content clamp-offset">
-        <ul class="contacts-list" role="list">
-          <li class="contacts-list__item">
+      <div class="contacts-grid__content">
+        <h2 class="contacts-grid__title title title--primary accent-color">Наши офисы</h2>
+        <div class="tabbed c-tab">
+          <ul class="c-tab__list c-tab__list--office">
+            <li class="c-tab__item">
+              <a class="c-tab__link" href="#section1">Москва</a>
+            </li>
+            <li class="c-tab__item">
+              <a class="c-tab__link" href="#section2">Санкт-Петербург</a>
+            </li>
+            <li class="c-tab__item">
+              <a class="c-tab__link" href="#section3">Тольятти</a>
+            </li>
+          </ul>
+          <section class="c-tab__panel" id="section1">
             <div class="c-contact">
               <h2 class="c-contact__title">Москва</h2>
               <a class="c-contact__location" href="">Нижний Сусальный переулок, 5/19</a>
               <a href="tel:+74957925245">+7 (495) 792 52 45</a>
               <a href="mailto:info@marillion.ru">info@marillion.ru</a>
             </div>
-          </li>
-          <li class="contacts-list__item">
+          </section>
+          <section class="c-tab__panel" id="section2">
             <div class="c-contact">
               <h2 class="c-contact__title">Санкт-Петербург</h2>
               <a class="c-contact__location" href="">В.О., Малый пр., 22, литер А</a>
               <a href="tel:+78123257002">+7 (812) 325 70 02</a>
               <a href="mailto:info@marillion.ru">info@marillion.ru</a>
             </div>
-          </li>
-          <li class="contacts-list__item">
+          </section>
+          <section class="c-tab__panel" id="section3">
             <div class="c-contact">
               <h2 class="c-contact__title">Тольятти</h2>
               <a class="c-contact__location" href="">ул. Юбилейная, 40, МТДЦ «Вега»</a>
               <a href="tel:+78482620199">+7 (8482) 620 199</a>
               <a href="mailto:info@marillion.ru">info@marillion.ru</a>
             </div>
-          </li>
-        </ul>
+          </section>
+        </div>
       </div>
-      <div class="contacts-grid__form clamp-offset-right">
+      <div class="contacts-grid__form">
         <h2 class="contacts-grid__title title title--primary accent-color">Связаться с нами</h2>
-        <form class="form" id="request-form" enctype="multipart/form-data">
-          <div class="form__group">
-            <label class="form__label">
-              <span class="sr-only">Название компании</span>
-              <input type="text" name="company-name" id="company-name" placeholder="Название компании *" required="">
-            </label>
-            <label class="form__label">
-              <span class="sr-only">ФИО</span>
-              <input type="text" name="name" id="name" placeholder="ФИО *" required="">
-            </label>
-            <label class="form__label">
-              <span class="sr-only">Email</span>
-              <input type="email" name="email" id="email" placeholder="Email *" required="">
-            </label>
-            <label class="form__label">
-              <span class="sr-only">Введите номер телефона</span>
-              <input type="tel" name="tel" id="tel" placeholder="+7 (999) 999-99-99" inputmode="numeric">
-            </label>
-            <label class="form__label">
-              <span class="sr-only">Как вы нас нашли?</span>
-              <input type="text" name="question" id="question" placeholder="Как вы нас нашли?">
-            </label>
-            <label class="form__label">
-              <textarea name="message" id="message" rows="2" placeholder="Ваше сообщение" maxlength="500"></textarea>
-            </label>
-          </div>
-          <div class="form__actions" id="agreement">
-            <div class="upload-file__wrapper">
-              <input
-                type="file"
-                name="files[]"
-                id="upload-file__input_1"
-                class="upload-file__input sr-only"
-                accept=".jpg, .jpeg, .png, .doc, .docx, .pdf">
-              <label class="upload-file__label" style="--bg:#fff" for="upload-file__input_1">
-                <svg class="upload-file__icon" aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M11.2 4.3602e-06C12.1343 -6.42193e-05 13.0483 0.272541 13.8299 0.784384C14.6115 1.29623 15.2267 2.02505 15.6001 2.88145C15.9735 3.73786 16.0887 4.68461 15.9318 5.60558C15.7748 6.52655 15.3525 7.38169 14.7166 8.06612L14.5646 8.2213L7.58354 15.202L7.54114 15.2419L7.49635 15.2779C6.92766 15.7682 6.19471 16.0254 5.44437 15.998C4.69404 15.9707 3.98176 15.6608 3.45029 15.1304C2.91881 14.6001 2.6074 13.8885 2.57848 13.1383C2.54955 12.388 2.80523 11.6546 3.29429 11.0849L3.41348 10.9537L3.42548 10.9449L9.257 5.10252C9.40689 4.95232 9.61031 4.86781 9.8225 4.86759C10.0347 4.86736 10.2383 4.95144 10.3885 5.10132C10.5387 5.2512 10.6232 5.4546 10.6234 5.66679C10.6237 5.87898 10.5396 6.08256 10.3897 6.23276L4.55819 12.0752L4.54859 12.0816C4.31322 12.3329 4.18059 12.6633 4.17686 13.0076C4.17313 13.3519 4.29858 13.6851 4.52845 13.9415C4.75832 14.1979 5.07593 14.3588 5.41862 14.3925C5.7613 14.4262 6.10419 14.3303 6.37964 14.1237L6.47723 14.0437L6.47803 14.0445L13.4391 7.08545L13.5662 6.95347C14.1263 6.33792 14.4245 5.5284 14.3975 4.69665C14.3706 3.86491 14.0206 3.0764 13.4218 2.4984C12.8231 1.92041 12.0227 1.59842 11.1905 1.60075C10.3583 1.60307 9.55972 1.92953 8.96422 2.51087L8.84023 2.63885L8.82584 2.64845L1.36565 10.1114C1.29133 10.1857 1.2031 10.2446 1.10602 10.2848C1.00893 10.325 0.904884 10.3456 0.799813 10.3456C0.694743 10.3455 0.590709 10.3248 0.493651 10.2846C0.396594 10.2443 0.308412 10.1854 0.234143 10.111C0.159873 10.0367 0.10097 9.9485 0.0607956 9.85142C0.0206213 9.75434 -3.70904e-05 9.6503 4.99901e-08 9.54523C7.50584e-05 9.33305 0.0844427 9.12958 0.234543 8.97959L7.68033 1.5302L7.71713 1.4958C8.16527 1.02253 8.70534 0.645752 9.30424 0.388546C9.90313 0.131339 10.5482 -0.000875244 11.2 4.3602e-06Z" fill="currentColor"/>
-                </svg>                        
-                <span class="upload-file__text">Прикрепить файл (до 50 мб)</span>
-              </label>
-          </div>
-            <button class="form__button button button--fullwidth" type="submit">Отправить сообщение</button>
-            <div class="form__agreement">
-              <span>Нажимая кнопку отправить, вы соглашаетесь c  <a href="/doc/data-privacy-rus.pdf" target="_blank">политикой конфиденциальности</a> и правилами обработки и хранения <a href="/doc/Agreement-on-Personal-data-processing-rus.pdf" target="_blank">персональных данных</a></span>
-            </div>
-          </div>
-        </form>
+        <div class="tabbed tabbed--form c-tab">
+          <ul class="c-tab__list">
+            <li class="c-tab__item">
+              <a class="c-tab__link" href="#section-request">Форма запроса</a>
+            </li>
+            <li class="c-tab__item">
+              <a class="c-tab__link" href="#section-question">Задать вопрос</a>
+            </li>
+            <li class="c-tab__item">
+              <a class="c-tab__link" href="#section-other">Другое</a>
+            </li>
+          </ul>
+          <section class="c-tab__panel" id="section-request">
+            <p class="mb-32">Оставьте заявку прямо сейчас, и мы свяжемся с вами в ближайшее время, чтобы оказать профессиональную поддержку по интересующим вас вопросам</p>
+            <form class="form" id="request-form" enctype="multipart/form-data">
+              <div class="form__group">
+                <label class="form__label">
+                  <span class="sr-only">ФИО</span>
+                  <input type="text" name="name" id="request-name" placeholder="ФИО *" required="">
+                </label>
+                <label class="form__label">
+                  <span class="sr-only">Компания*</span>
+                  <input type="text" name="company-name" id="request-company-name" placeholder="Компания *" required="">
+                </label>
+                <label class="form__label">
+                  <span class="sr-only">Email</span>
+                  <span class="form__notice">Пожалуйста, указывайте корпоративный адрес электронной почты при заполнении формы.</span>
+                  <input type="email" name="email" id="request-email" placeholder="Email *" required="">
+                </label>
+                <label class="form__label">
+                  <span class="sr-only">Введите номер телефона</span>
+                  <input type="tel" name="tel" id="request-tel" placeholder="+7 (999) 999-99-99" inputmode="numeric">
+                </label>
+                <label class="form__label">
+                  <span class="sr-only">Как вы нас нашли?</span>
+                  <input type="text" name="question" id="request-question" placeholder="Как вы нас нашли?">
+                </label>
+                <label class="form__label">
+                  <textarea name="message" id="request-message" rows="2" placeholder="Ваше сообщение" maxlength="500"></textarea>
+                </label>
+              </div>
+              <div class="form__actions" id="request-agreement">
+                <div class="upload-file__wrapper">
+                  <input
+                    type="file"
+                    name="files[]"
+                    id="upload-file__input_1"
+                    class="upload-file__input sr-only"
+                    accept=".jpg, .jpeg, .png, .doc, .docx, .pdf">
+                  <label class="upload-file__label" style="--bg:#fff" for="upload-file__input_1">
+                    <svg class="upload-file__icon" aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M11.2 4.3602e-06C12.1343 -6.42193e-05 13.0483 0.272541 13.8299 0.784384C14.6115 1.29623 15.2267 2.02505 15.6001 2.88145C15.9735 3.73786 16.0887 4.68461 15.9318 5.60558C15.7748 6.52655 15.3525 7.38169 14.7166 8.06612L14.5646 8.2213L7.58354 15.202L7.54114 15.2419L7.49635 15.2779C6.92766 15.7682 6.19471 16.0254 5.44437 15.998C4.69404 15.9707 3.98176 15.6608 3.45029 15.1304C2.91881 14.6001 2.6074 13.8885 2.57848 13.1383C2.54955 12.388 2.80523 11.6546 3.29429 11.0849L3.41348 10.9537L3.42548 10.9449L9.257 5.10252C9.40689 4.95232 9.61031 4.86781 9.8225 4.86759C10.0347 4.86736 10.2383 4.95144 10.3885 5.10132C10.5387 5.2512 10.6232 5.4546 10.6234 5.66679C10.6237 5.87898 10.5396 6.08256 10.3897 6.23276L4.55819 12.0752L4.54859 12.0816C4.31322 12.3329 4.18059 12.6633 4.17686 13.0076C4.17313 13.3519 4.29858 13.6851 4.52845 13.9415C4.75832 14.1979 5.07593 14.3588 5.41862 14.3925C5.7613 14.4262 6.10419 14.3303 6.37964 14.1237L6.47723 14.0437L6.47803 14.0445L13.4391 7.08545L13.5662 6.95347C14.1263 6.33792 14.4245 5.5284 14.3975 4.69665C14.3706 3.86491 14.0206 3.0764 13.4218 2.4984C12.8231 1.92041 12.0227 1.59842 11.1905 1.60075C10.3583 1.60307 9.55972 1.92953 8.96422 2.51087L8.84023 2.63885L8.82584 2.64845L1.36565 10.1114C1.29133 10.1857 1.2031 10.2446 1.10602 10.2848C1.00893 10.325 0.904884 10.3456 0.799813 10.3456C0.694743 10.3455 0.590709 10.3248 0.493651 10.2846C0.396594 10.2443 0.308412 10.1854 0.234143 10.111C0.159873 10.0367 0.10097 9.9485 0.0607956 9.85142C0.0206213 9.75434 -3.70904e-05 9.6503 4.99901e-08 9.54523C7.50584e-05 9.33305 0.0844427 9.12958 0.234543 8.97959L7.68033 1.5302L7.71713 1.4958C8.16527 1.02253 8.70534 0.645752 9.30424 0.388546C9.90313 0.131339 10.5482 -0.000875244 11.2 4.3602e-06Z" fill="currentColor"/>
+                    </svg>                        
+                    <span class="upload-file__text">Прикрепить файл (до 50 мб)</span>
+                  </label>
+              </div>
+                <button class="form__button button button--fullwidth" type="submit">Отправить сообщение</button>
+                <div class="form__agreement">
+                  <span>Нажимая кнопку отправить, вы соглашаетесь c  <a href="/doc/data-privacy-rus.pdf" target="_blank">политикой конфиденциальности</a> и правилами обработки и хранения <a href="/doc/Agreement-on-Personal-data-processing-rus.pdf" target="_blank">персональных данных</a></span>
+                </div>
+              </div>
+            </form>
+          </section>
+          <section class="c-tab__panel" id="section-question">
+            <p class="mb-32">Если у вас возникли какие-либо вопросы, мы будем рады вам помочь</p>
+            <form class="form" id="question-form" enctype="multipart/form-data">
+              <div class="form__group">
+                <label class="form__label">
+                  <span class="sr-only">ФИО</span>
+                  <input type="text" name="name" id="question-name" placeholder="ФИО *" required="">
+                </label>
+                <label class="form__label">
+                  <span class="sr-only">Компания*</span>
+                  <input type="text" name="company-name" id="question-company-name" placeholder="Компания *" required="">
+                </label>
+                <label class="form__label">
+                  <span class="sr-only">Email</span>
+                  <span class="form__notice">Пожалуйста, указывайте корпоративный адрес электронной почты при заполнении формы.</span>
+                  <input type="email" name="email" id="question-email" placeholder="Email *" required="">
+                </label>
+                <label class="form__label">
+                  <span class="sr-only">Введите номер телефона</span>
+                  <input type="tel" name="tel" id="question-tel" placeholder="+7 (999) 999-99-99" inputmode="numeric">
+                </label>
+                <label class="form__label">
+                  <span class="sr-only">Как вы нас нашли?</span>
+                  <input type="text" name="question" id="question-question" placeholder="Как вы нас нашли?">
+                </label>
+                <label class="form__label">
+                  <textarea name="message" id="question-message" rows="2" placeholder="Ваше сообщение" maxlength="500"></textarea>
+                </label>
+              </div>
+              <div class="form__actions" id="question-agreement">
+                <div class="upload-file__wrapper">
+                  <input
+                    type="file"
+                    name="files[]"
+                    id="upload-file__input_1"
+                    class="upload-file__input sr-only"
+                    accept=".jpg, .jpeg, .png, .doc, .docx, .pdf">
+                  <label class="upload-file__label" style="--bg:#fff" for="upload-file__input_1">
+                    <svg class="upload-file__icon" aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M11.2 4.3602e-06C12.1343 -6.42193e-05 13.0483 0.272541 13.8299 0.784384C14.6115 1.29623 15.2267 2.02505 15.6001 2.88145C15.9735 3.73786 16.0887 4.68461 15.9318 5.60558C15.7748 6.52655 15.3525 7.38169 14.7166 8.06612L14.5646 8.2213L7.58354 15.202L7.54114 15.2419L7.49635 15.2779C6.92766 15.7682 6.19471 16.0254 5.44437 15.998C4.69404 15.9707 3.98176 15.6608 3.45029 15.1304C2.91881 14.6001 2.6074 13.8885 2.57848 13.1383C2.54955 12.388 2.80523 11.6546 3.29429 11.0849L3.41348 10.9537L3.42548 10.9449L9.257 5.10252C9.40689 4.95232 9.61031 4.86781 9.8225 4.86759C10.0347 4.86736 10.2383 4.95144 10.3885 5.10132C10.5387 5.2512 10.6232 5.4546 10.6234 5.66679C10.6237 5.87898 10.5396 6.08256 10.3897 6.23276L4.55819 12.0752L4.54859 12.0816C4.31322 12.3329 4.18059 12.6633 4.17686 13.0076C4.17313 13.3519 4.29858 13.6851 4.52845 13.9415C4.75832 14.1979 5.07593 14.3588 5.41862 14.3925C5.7613 14.4262 6.10419 14.3303 6.37964 14.1237L6.47723 14.0437L6.47803 14.0445L13.4391 7.08545L13.5662 6.95347C14.1263 6.33792 14.4245 5.5284 14.3975 4.69665C14.3706 3.86491 14.0206 3.0764 13.4218 2.4984C12.8231 1.92041 12.0227 1.59842 11.1905 1.60075C10.3583 1.60307 9.55972 1.92953 8.96422 2.51087L8.84023 2.63885L8.82584 2.64845L1.36565 10.1114C1.29133 10.1857 1.2031 10.2446 1.10602 10.2848C1.00893 10.325 0.904884 10.3456 0.799813 10.3456C0.694743 10.3455 0.590709 10.3248 0.493651 10.2846C0.396594 10.2443 0.308412 10.1854 0.234143 10.111C0.159873 10.0367 0.10097 9.9485 0.0607956 9.85142C0.0206213 9.75434 -3.70904e-05 9.6503 4.99901e-08 9.54523C7.50584e-05 9.33305 0.0844427 9.12958 0.234543 8.97959L7.68033 1.5302L7.71713 1.4958C8.16527 1.02253 8.70534 0.645752 9.30424 0.388546C9.90313 0.131339 10.5482 -0.000875244 11.2 4.3602e-06Z" fill="currentColor"/>
+                    </svg>                        
+                    <span class="upload-file__text">Прикрепить файл (до 50 мб)</span>
+                  </label>
+              </div>
+                <button class="form__button button button--fullwidth" type="submit">Отправить сообщение</button>
+                <div class="form__agreement">
+                  <span>Нажимая кнопку отправить, вы соглашаетесь c  <a href="/doc/data-privacy-rus.pdf" target="_blank">политикой конфиденциальности</a> и правилами обработки и хранения <a href="/doc/Agreement-on-Personal-data-processing-rus.pdf" target="_blank">персональных данных</a></span>
+                </div>
+              </div>
+            </form>
+          </section>
+          <section class="c-tab__panel" id="section-other">
+            <p class="mb-32">Если вы хотите оставить предложение или связаться с нами по вопросам, не связанным с нашими услугами, заполните, пожалуйста, данную форму.</p>
+            <form class="form" id="other-form" enctype="multipart/form-data">
+              <div class="form__group">
+                <label class="form__label">
+                  <span class="sr-only">ФИО</span>
+                  <input type="text" name="name" id="other-name" placeholder="ФИО *" required="">
+                </label>
+                <label class="form__label">
+                  <span class="sr-only">Компании*</span>
+                  <input type="text" name="company-name" id="other-company-name" placeholder="Компания *" required="">
+                </label>
+                <label class="form__label">
+                  <span class="sr-only">Email</span>
+                  <span class="form__notice">Пожалуйста, указывайте корпоративный адрес электронной почты при заполнении формы.</span>
+                  <input type="email" name="email" id="other-email" placeholder="Email *" required="">
+                </label>
+                <label class="form__label">
+                  <span class="sr-only">Введите номер телефона</span>
+                  <input type="tel" name="tel" id="other-tel" placeholder="+7 (999) 999-99-99" inputmode="numeric">
+                </label>
+                <label class="form__label">
+                  <span class="sr-only">Как вы нас нашли?</span>
+                  <input type="text" name="question" id="other-question" placeholder="Как вы нас нашли?">
+                </label>
+                <label class="form__label">
+                  <textarea name="message" id="other-message" rows="2" placeholder="Ваш вопрос" maxlength="500"></textarea>
+                </label>
+              </div>
+              <div class="form__actions" id="other-agreement">
+                <div class="upload-file__wrapper">
+                  <input
+                    type="file"
+                    name="files[]"
+                    id="upload-file__input_1"
+                    class="upload-file__input sr-only"
+                    accept=".jpg, .jpeg, .png, .doc, .docx, .pdf">
+                  <label class="upload-file__label" style="--bg:#fff" for="upload-file__input_1">
+                    <svg class="upload-file__icon" aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M11.2 4.3602e-06C12.1343 -6.42193e-05 13.0483 0.272541 13.8299 0.784384C14.6115 1.29623 15.2267 2.02505 15.6001 2.88145C15.9735 3.73786 16.0887 4.68461 15.9318 5.60558C15.7748 6.52655 15.3525 7.38169 14.7166 8.06612L14.5646 8.2213L7.58354 15.202L7.54114 15.2419L7.49635 15.2779C6.92766 15.7682 6.19471 16.0254 5.44437 15.998C4.69404 15.9707 3.98176 15.6608 3.45029 15.1304C2.91881 14.6001 2.6074 13.8885 2.57848 13.1383C2.54955 12.388 2.80523 11.6546 3.29429 11.0849L3.41348 10.9537L3.42548 10.9449L9.257 5.10252C9.40689 4.95232 9.61031 4.86781 9.8225 4.86759C10.0347 4.86736 10.2383 4.95144 10.3885 5.10132C10.5387 5.2512 10.6232 5.4546 10.6234 5.66679C10.6237 5.87898 10.5396 6.08256 10.3897 6.23276L4.55819 12.0752L4.54859 12.0816C4.31322 12.3329 4.18059 12.6633 4.17686 13.0076C4.17313 13.3519 4.29858 13.6851 4.52845 13.9415C4.75832 14.1979 5.07593 14.3588 5.41862 14.3925C5.7613 14.4262 6.10419 14.3303 6.37964 14.1237L6.47723 14.0437L6.47803 14.0445L13.4391 7.08545L13.5662 6.95347C14.1263 6.33792 14.4245 5.5284 14.3975 4.69665C14.3706 3.86491 14.0206 3.0764 13.4218 2.4984C12.8231 1.92041 12.0227 1.59842 11.1905 1.60075C10.3583 1.60307 9.55972 1.92953 8.96422 2.51087L8.84023 2.63885L8.82584 2.64845L1.36565 10.1114C1.29133 10.1857 1.2031 10.2446 1.10602 10.2848C1.00893 10.325 0.904884 10.3456 0.799813 10.3456C0.694743 10.3455 0.590709 10.3248 0.493651 10.2846C0.396594 10.2443 0.308412 10.1854 0.234143 10.111C0.159873 10.0367 0.10097 9.9485 0.0607956 9.85142C0.0206213 9.75434 -3.70904e-05 9.6503 4.99901e-08 9.54523C7.50584e-05 9.33305 0.0844427 9.12958 0.234543 8.97959L7.68033 1.5302L7.71713 1.4958C8.16527 1.02253 8.70534 0.645752 9.30424 0.388546C9.90313 0.131339 10.5482 -0.000875244 11.2 4.3602e-06Z" fill="currentColor"/>
+                    </svg>                        
+                    <span class="upload-file__text">Прикрепить файл (до 50 мб)</span>
+                  </label>
+              </div>
+                <button class="form__button button button--fullwidth" type="submit">Отправить сообщение</button>
+                <div class="form__agreement">
+                  <span>Нажимая кнопку отправить, вы соглашаетесь c  <a href="/doc/data-privacy-rus.pdf" target="_blank">политикой конфиденциальности</a> и правилами обработки и хранения <a href="/doc/Agreement-on-Personal-data-processing-rus.pdf" target="_blank">персональных данных</a></span>
+                </div>
+              </div>
+            </form>
+            <!-- блок успешной отправки -->
+            <!-- <div class="form-success">
+              <p class="mb-32">Благодарим за интерес к компании "Мариллион". Мы рассмотрим вашу заявку и свяжемся с вами в ближайшее время. </p>
+              <button class="button button--white" type="button">Закрыть</button>
+            </div> -->
+          </section>
+        </div>
+      </div>
+      <div class="contacts-grid__map">
+        <div class="c-map" id="c-map"></div>
       </div>
     </div>
   </main>
@@ -516,8 +986,8 @@
   <script type="module" src="/js/details-utils.js"></script>
   <script src="/js/hystmodal.min.js"></script>
   <script src="/js/inputmask.min.js"></script>
-  <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
-  <script src="/js/ru-form.js"></script>
+  <script src="https://yandex.st/jquery/2.2.3/jquery.min.js" type="text/javascript"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=<ваш API-ключ>" type="text/javascript"></script>
   <script src="/js/script.js"></script>
   <script src="https://unpkg.com/spacingjs" defer></script>
 </body>

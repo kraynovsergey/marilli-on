@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
       `${window.innerHeight}px`
     );
   }
+
   syncHeight();
   window.addEventListener('resize', syncHeight);
 
@@ -118,8 +119,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
   //tabs
   if (document.querySelector('.tabbed')) {
-    (function () {
-      const tabbed = document.querySelector('.tabbed');
+    const tabs = (function (tabClass) {
+      const tabbed = document.querySelector(tabClass);
       const tablist = tabbed.querySelector('ul');
       const tabs = tablist.querySelectorAll('a:not(.tag)');
       const panels = tabbed.querySelectorAll('[id^="section"]');
@@ -152,6 +153,14 @@ document.addEventListener('DOMContentLoaded', function() {
           }
         });
 
+        tab.addEventListener('click', e => {
+          e.preventDefault();
+          let currentTab = tablist.querySelector('[aria-selected]');
+          if (e.currentTarget !== currentTab) {
+            switchTab(currentTab, e.currentTarget);
+          }
+        });
+
         tab.addEventListener('keydown', e => {
           let index = Array.prototype.indexOf.call(tabs, e.currentTarget);
           let dir = e.which === 38 ? index - 1 : e.which === 40 ? index + 1 : e.which === 39 ? 'down' : null;
@@ -173,7 +182,11 @@ document.addEventListener('DOMContentLoaded', function() {
       tabs[0].removeAttribute('tabindex');
       tabs[0].setAttribute('aria-selected', 'true');
       panels[0].hidden = false;
-    })();
+    });
+    
+    tabs('.tabbed');
+    tabs('.tabbed--form');
+
   }
 
 
@@ -185,4 +198,48 @@ document.addEventListener('DOMContentLoaded', function() {
       this.closest('.cookie').hidden = true;
     });
   });
+
+  //map
+  if (document.querySelector('#c-map')) {
+    ymaps.ready(init);
+
+    function init() {
+      var contactsMap = new ymaps.Map('c-map', {
+          center: [55.759375, 37.666045],
+          zoom: 16
+        }, {
+          searchControlProvider: 'yandex#search'
+        }),
+        objectManager = new ymaps.ObjectManager({
+          clusterize: true,
+          gridSize: 32,
+          clusterDisableClickZoom: false
+        });
+
+      contactsMap.controls.remove('geolocationControl');
+      contactsMap.controls.remove('searchControl');
+      contactsMap.controls.remove('trafficControl');
+      contactsMap.controls.remove('typeSelector');
+      contactsMap.controls.remove('fullscreenControl');
+      contactsMap.controls.remove('rulerControl');
+      contactsMap.behaviors.disable(['scrollZoom']);
+
+      objectManager.clusters.options.set('clusterIconColor', '#009D72');
+      objectManager.clusters.options.set('hasBalloon', false);
+      contactsMap.geoObjects.add(objectManager);
+
+      objectManager.objects.options.set({
+        iconLayout: 'default#imageWithContent',
+        iconImageHref: '/img/icons/mark.svg',
+        iconImageSize: [49, 64],
+        hideIconOnBalloonOpen: false,
+      });
+
+      $.ajax({
+        url: "/js/data.json"
+      }).done(function (data) {
+        objectManager.add(data);
+      });
+    }
+  }
 });
