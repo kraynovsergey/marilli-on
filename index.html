@@ -1294,10 +1294,8 @@
           <h3 class="footer__header">Связаться с нами</h3>
           <ul class="footer__list" role="list">
             <li><a href="/page/contacts/">Контакты</a></li>
-            
-            
             <li><a href="/page/contacts/" data-hystmodal="#modal-form">Свяжитесь с нами</a></li>
-            <li><a href="#subscribe">Подписаться на рассылку</a></li>
+            <li><a href="#subscribe" data-hystmodal="#modal-subscribe">Подписаться на рассылку</a></li>
           </ul>
         </div>
         <div class="footer__item footer__item--legally">
@@ -1621,6 +1619,73 @@
                 </div>
               </div>
             </form>
+        </div>
+    </div>
+  </div>
+  <div class="hystmodal" id="modal-subscribe" aria-hidden="true">
+    <div class="hystmodal__wrap">
+        <div class="hystmodal__window" role="dialog" aria-modal="true">
+            <button data-hystclose class="hystmodal__close">
+              <svg aria-hidden="true" width="18" height="18">
+                <use xlink:href="/img/sprite.svg#cross"></use>
+              </svg>
+            </button>
+            <h2 class="hystmodal__title title title--primary accent-color">Подписаться на рассылку</h2>
+            <p>Если вы хотите быть в курсе последних изменений законодательства и получать приглашения на наши бизнес-мероприятия, пожалуйста, заполните форму ниже, и мы будем держать вас в курсе актуальных новостей и обновлений.</p>
+            <form class="hystmodal__form form" id="subscribe-form" enctype="multipart/form-data">
+              <div class="form__group">
+                <label class="form__label">
+                  <span class="sr-only">ФИО</span>
+                  <input type="text" name="name" id="subscriber-name" placeholder="ФИО *" required="">
+                </label>
+                <label class="form__label">
+                  <span class="sr-only">Название компании</span>
+                  <input type="text" name="company-name" id="subscriber-company" placeholder="Компания *" required="">
+                </label>
+                <label class="form__label">
+                  <span class="sr-only">Email</span>
+                  <input type="email" name="email" id="subscriber-email" placeholder="Email *" required="">
+                </label>
+                <label class="form__label">
+                  <span class="sr-only">Должность*</span>
+                  <input type="text" name="question" id="subscriber-position" placeholder="Должность*" required="">
+                </label>
+              </div>
+              <div class="form__actions">
+                <button class="form__button button button--fullwidth" type="submit">Подписаться на рассылку</button>
+                <div class="form__agreement">
+                  <span>Нажимая кнопку отправить, вы соглашаетесь c  <a href="/doc/data-privacy-rus.pdf" target="_blank">политикой конфиденциальности</a> и правилами обработки и хранения <a href="/doc/Agreement-on-Personal-data-processing-rus.pdf" target="_blank">персональных данных</a></span>
+                </div>
+              </div>
+            </form>
+        </div>
+    </div>
+  </div>
+  <div class="hystmodal" id="modal-success" aria-hidden="true">
+    <div class="hystmodal__wrap">
+        <div class="hystmodal__window" role="dialog" aria-modal="true">
+            <button data-hystclose class="hystmodal__close">
+              <svg aria-hidden="true" width="18" height="18">
+                <use xlink:href="/img/sprite.svg#cross"></use>
+              </svg>
+            </button>
+            <h2 class="hystmodal__title title title--primary accent-color">Благодарим за обращение <br> в "Мариллион"!</h2>
+            <p>Мы свяжемся с вами в ближайшее время. </p>
+            <button class="hystmodal__button button button--white" data-hystclose>Закрыть</button>
+        </div>
+    </div>
+  </div>
+  <div class="hystmodal" id="modal-subscribe-success" aria-hidden="true">
+    <div class="hystmodal__wrap">
+        <div class="hystmodal__window" role="dialog" aria-modal="true">
+            <button data-hystclose class="hystmodal__close">
+              <svg aria-hidden="true" width="18" height="18">
+                <use xlink:href="/img/sprite.svg#cross"></use>
+              </svg>
+            </button>
+            <h2 class="hystmodal__title title title--primary accent-color">Благодарим за подписку.</h2>
+            <p>Ваша форма успешно отправлена.</p>
+            <button class="hystmodal__button button button--white" data-hystclose>Закрыть</button>
         </div>
     </div>
   </div>
