@@ -239,6 +239,20 @@ document.addEventListener('DOMContentLoaded', function() {
         url: "/js/data.json"
       }).done(function (data) {
         objectManager.add(data);
+        var mapControls = $('.map-control');
+
+        mapControls.each(function (item, i) {
+          $(this).bind('click', function () {
+            var position = $('#c-map').offset().top;
+            window.scrollTo(0, position);
+            var destination = data.features[item].geometry.coordinates;
+            contactsMap.panTo(destination, {
+              flying: true,
+              duration: 3000,
+            })
+            return false;
+          });
+        });
       });
     }
   }
