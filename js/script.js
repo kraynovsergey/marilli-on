@@ -244,7 +244,7 @@ document.addEventListener('DOMContentLoaded', function() {
         mapControls.each(function (item, i) {
           $(this).bind('click', function () {
             var position = $('#c-map').offset().top;
-            window.scrollTo(0, position);
+            window.scrollTo(0, position - 80);
             var destination = data.features[item].geometry.coordinates;
             contactsMap.panTo(destination, {
               flying: true,
