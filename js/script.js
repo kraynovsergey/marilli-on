@@ -249,7 +249,7 @@ document.addEventListener('DOMContentLoaded', function() {
             contactsMap.panTo(destination, {
               flying: true,
               duration: 3000,
-            })
+            });
             return false;
           });
         });
