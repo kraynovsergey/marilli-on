@@ -145,21 +145,21 @@ document.addEventListener('DOMContentLoaded', function() {
         tab.setAttribute('tabindex', '-1');
         tab.parentNode.setAttribute('role', 'presentation');
 
-        tab.addEventListener('mouseover', e => {
-          e.preventDefault();
-          let currentTab = tablist.querySelector('[aria-selected]');
-          if (e.currentTarget !== currentTab) {
-            switchTab(currentTab, e.currentTarget);
-          }
-        });
+        const pointerEvent = function (pointer) {
+          tab.addEventListener(pointer, e => {
+            e.preventDefault();
+            let currentTab = tablist.querySelector('[aria-selected]');
+            if (e.currentTarget !== currentTab) {
+              switchTab(currentTab, e.currentTarget);
+            }
+          });
+        }
 
-        tab.addEventListener('click', e => {
-          e.preventDefault();
-          let currentTab = tablist.querySelector('[aria-selected]');
-          if (e.currentTarget !== currentTab) {
-            switchTab(currentTab, e.currentTarget);
-          }
-        });
+        if(tabbed.classList.contains('tabbed--click')) {
+          pointerEvent('click');
+        } else {
+          pointerEvent('mouseover');
+        }
 
         tab.addEventListener('keydown', e => {
           let index = Array.prototype.indexOf.call(tabs, e.currentTarget);
@@ -240,17 +240,26 @@ document.addEventListener('DOMContentLoaded', function() {
       }).done(function (data) {
         objectManager.add(data);
         var mapControls = $('.map-control');
+        var mapLinks = $('.map-link')
 
         mapControls.each(function (item, i) {
           $(this).bind('click', function () {
-            var position = $('#c-map').offset().top;
-            window.scrollTo(0, position - 80);
             var destination = data.features[item].geometry.coordinates;
+            contactsMap.setZoom(16);
             contactsMap.panTo(destination, {
               flying: true,
               duration: 3000,
             });
             return false;
+          });
+        });
+
+        mapLinks.each(function () {
+          $(this).bind('click', function(e) {
+            e.preventDefault();
+            var position = $('#c-map').offset().top;
+            window.scrollTo(0, position - 80);
+            contactsMap.setZoom(18);
           });
         });
       });
