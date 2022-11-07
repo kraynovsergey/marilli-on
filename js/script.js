@@ -118,12 +118,11 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   //tabs
-  if (document.querySelector('.tabbed')) {
-    const tabs = (function (tabClass) {
-      const tabbed = document.querySelector(tabClass);
-      const tablist = tabbed.querySelector('ul');
+  let tabs = document?.querySelectorAll('.tabbed');
+  tabs.forEach(el => {
+      const tablist = el.querySelector('ul');
       const tabs = tablist.querySelectorAll('a:not(.tag)');
-      const panels = tabbed.querySelectorAll('[id^="section"]');
+      const panels = el.querySelectorAll('[id^="section"]');
 
       const switchTab = (oldTab, newTab) => {
         newTab.focus();
@@ -155,7 +154,7 @@ document.addEventListener('DOMContentLoaded', function() {
           });
         }
 
-        if(tabbed.classList.contains('tabbed--click')) {
+        if(el.classList.contains('tabbed--click')) {
           pointerEvent('click');
         } else {
           pointerEvent('mouseover');
@@ -182,13 +181,7 @@ document.addEventListener('DOMContentLoaded', function() {
       tabs[0].removeAttribute('tabindex');
       tabs[0].setAttribute('aria-selected', 'true');
       panels[0].hidden = false;
-    });
-    
-    tabs('.tabbed');
-    tabs('.tabbed--form');
-
-  }
-
+  });
 
   //cookie
   let cookieClose = document.querySelectorAll('[data-cookie-close]');
@@ -204,9 +197,18 @@ document.addEventListener('DOMContentLoaded', function() {
     ymaps.ready(init);
 
     function init() {
+      const map = document?.querySelector('.c-map');
+      const mapCenterLat = map?.dataset.centerLat;
+      const mapCenterLong = map?.dataset.centerLong;
+      const mapCoords = map?.dataset.coords;
+      const mapZoom = map?.dataset.zoom;
+      const iconImageHref = map?.dataset.iconHref;
+      const iconImageWidth = map?.dataset.iconWidth;
+      const iconImageHeight = map?.dataset.iconHeight;
+
       var contactsMap = new ymaps.Map('c-map', {
-          center: [55.759375, 37.666045],
-          zoom: 16
+        center: [mapCenterLat, mapCenterLong],
+        zoom: mapZoom
         }, {
           searchControlProvider: 'yandex#search'
         }),
@@ -215,7 +217,7 @@ document.addEventListener('DOMContentLoaded', function() {
           gridSize: 32,
           clusterDisableClickZoom: false
         });
-
+        
       contactsMap.controls.remove('geolocationControl');
       contactsMap.controls.remove('searchControl');
       contactsMap.controls.remove('trafficControl');
@@ -230,13 +232,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
       objectManager.objects.options.set({
         iconLayout: 'default#imageWithContent',
-        iconImageHref: '/img/icons/mark.svg',
-        iconImageSize: [49, 64],
+        iconImageHref: `${iconImageHref}`,
+        iconImageSize: [iconImageWidth, iconImageHeight],
         hideIconOnBalloonOpen: false,
       });
 
       $.ajax({
-        url: "/js/data.json"
+        url: `${mapCoords}`
       }).done(function (data) {
         objectManager.add(data);
         var mapControls = $('.map-control');
