@@ -42,16 +42,14 @@
         <img class="logo__img" src="/img/logo.svg" alt="Логотип Мариллион" width="272" height="38">
       </a>
       <nav class="menu menu--main" aria-label="Основное меню" itemscope="itemscope" itemtype="http://www.schema.org/SiteNavigationElement">
-        <button class="menu__submenu-close" type="button">
-          <svg aria-hidden="true" width="19" height="15">
-            <use xlink:href="/img/sprite.svg#left-arrow"></use>
-          </svg>
-          <span>Назад</span>
-        </button>
         <ul class="menu__list menu__list--main" id="menu__list" role="list">
+          <!-- самая первая выпадашка (у выпадашек всегда есть модификатор dropdown) -->
           <li class="menu__item menu__item--dropdown" itemprop="name">
+            <!-- хедер со ссылкой для декстопа и кнопкой для разворачивания меню на мобилках -->
             <div class="menu__item-header">
+              <!-- ссылка для декстопов -->
               <a class="menu__link menu__link--main" href="/page/services/">Услуги</a>
+              <!-- кнопка для разворачивания меню  на мобилках -->
               <button class="menu__mobile-control" type="button">
                 <span class="sr-only">Развернуть меню</span>
                 <svg class="menu__mobile-icon" aria-hidden="true" width="12" height="11">
@@ -59,20 +57,77 @@
                 </svg>
               </button>
             </div>
+            <!-- вложенное меню -->
             <ul class="menu__list menu__list--nested menu__list--lvl1" role="list">
+              <!-- хедер для общего раздела-->
+              <li class="menu__item menu__item--mobile">
+                <!-- хедер с кнопкой назад и заголовком для выезжающего меню (заголовок может быть ссылкой на мобилках) -->
+                <div class="menu__item-top">
+                  <!-- кнопка закрывает выезжающее меню -->
+                  <button class="menu__item-close" title="назад">
+                    <svg aria-hidden="true" width="19" height="15">
+                      <use xlink:href="/img/sprite.svg#left-arrow"></use>
+                    </svg>
+                    <span>Назад</span>
+                  </button>
+                  <h3 class="menu__item-title">
+                    <a href="/page/services/">Услуги</a>
+                  </h3>
+                </div>
+              </li>
               <li class="menu__item menu__item--dropdown" itemprop="name">
                 <div class="menu__item-header">
+                  <!-- ссылка для декстопов -->
                   <a class="menu__link" href="/page/services/audit/">
                     Аудит
                     <svg aria-hidden="true" width="12" height="11">
                       <use xlink:href="/img/sprite.svg#right-arrow"></use>
                     </svg>
                   </a>
+                  <!-- кнопка для разворачивания меню  на мобилках -->
+                  <button class="menu__mobile-control" type="button">
+                    <span class="sr-only">Развернуть меню</span>
+                    <svg class="menu__mobile-icon" aria-hidden="true" width="12" height="11">
+                      <use xlink:href="/img/sprite.svg#right-arrow"></use>
+                    </svg>
+                  </button>
                 </div>
+                <!-- это контентная часть третий и последний уровень вложенности,  
+                    у нее есть свой хедер для навигации назад и любой контент, новости, ссылки, описания -->
                 <div class="menu__item-content">
-                  <h3 class="menu__item-title">Аудит</h3>
-                  <p class="menu__item-desc">Гарантируем оказание услуг на высоком профессиональном уровне, с соблюдением принципа независимости и профессиональной этики.</p>
-                  <p class="menu__item-desc">В нашей работе мы руководствуемся принципами технического совершенства и независимости суждений. Наша команда высококвалифицированных специалистов гарантирует эффективные решения для всех отраслей бизнеса. Сочетание богатого опыта работы на международном и российском рынке позволяет нам соответствовать самым строгим стандартам и предоставлять специализированные услуги как транснациональным корпорациям, так и предприятиям малого и среднего бизнеса.</p>
+                  <!-- хедер с навигацией контентной части-->
+                  <div class="menu__item-top">
+                    <button class="menu__item-close" title="назад">
+                      <svg aria-hidden="true" width="19" height="15">
+                        <use xlink:href="/img/sprite.svg#left-arrow"></use>
+                      </svg>
+                      <span>Назад</span>
+                    </button>
+                    <h3 class="menu__item-title">
+                      <a href="">Аудит</a>
+                    </h3>
+                  </div>
+                  <!-- любой контент, ссылки, описание, новости -->
+                  <ul class="menu__links" role="list">
+                    <li class="menu__links-item" itemprop="name">
+                      <a class="menu__links-link" href="" itemprop="url">Аудит финансовой отчетности</a>
+                    </li>
+                    <li class="menu__links-item" itemprop="name">
+                      <a class="menu__links-link" href="" itemprop="url">Обязательный аудит</a>
+                    </li>
+                    <li class="menu__links-item" itemprop="name">
+                      <a class="menu__links-link" href="" itemprop="url">Обзорная проверка финансовой отчетности</a>
+                    </li>
+                    <li class="menu__links-item" itemprop="name">
+                      <a class="menu__links-link" href="" itemprop="url">Корпоративная отчетность</a>
+                    </li>
+                    <li class="menu__links-item" itemprop="name">
+                      <a class="menu__links-link" href="" itemprop="url">Аудит отчетности и актуарная оценка для страховых  организаций</a>
+                    </li>
+                    <li class="menu__links-item" itemprop="name">
+                      <a class="menu__links-link" href="" itemprop="url">Аудит отчетности управляющих компаний, НПФ и ПИФ</a>
+                    </li>
+                  </ul>
                 </div>
               </li>
               <li class="menu__item menu__item--dropdown" itemprop="name">
@@ -83,9 +138,25 @@
                       <use xlink:href="/img/sprite.svg#right-arrow"></use>
                     </svg>
                   </a>
+                  <button class="menu__mobile-control" type="button">
+                    <span class="sr-only">Развернуть меню</span>
+                    <svg class="menu__mobile-icon" aria-hidden="true" width="12" height="11">
+                      <use xlink:href="/img/sprite.svg#right-arrow"></use>
+                    </svg>
+                  </button>
                 </div>
                 <div class="menu__item-content">
-                  <h3 class="menu__item-title">Аутсорсинг</h3>
+                  <div class="menu__item-top">
+                    <button class="menu__item-close" title="назад">
+                      <svg aria-hidden="true" width="19" height="15">
+                        <use xlink:href="/img/sprite.svg#left-arrow"></use>
+                      </svg>
+                      <span>Назад</span>
+                    </button>
+                    <h3 class="menu__item-title">
+                      <a href="">Аутсорсинг</a>
+                    </h3>
+                  </div>
                   <p class="menu__item-desc">Партнер по аутсорсингу, который помогает вам раскрыть свои сильные стороны.</p>
                 </div>
               </li>
@@ -97,9 +168,25 @@
                       <use xlink:href="/img/sprite.svg#right-arrow"></use>
                     </svg>
                   </a>
+                  <button class="menu__mobile-control" type="button">
+                    <span class="sr-only">Развернуть меню</span>
+                    <svg class="menu__mobile-icon" aria-hidden="true" width="12" height="11">
+                      <use xlink:href="/img/sprite.svg#right-arrow"></use>
+                    </svg>
+                  </button>
                 </div>
                 <div class="menu__item-content">
-                  <h3 class="menu__item-title">Налоговое консультирование</h3>
+                  <div class="menu__item-top">
+                    <button class="menu__item-close" title="назад">
+                      <svg aria-hidden="true" width="19" height="15">
+                        <use xlink:href="/img/sprite.svg#left-arrow"></use>
+                      </svg>
+                      <span>Назад</span>
+                    </button>
+                    <h3 class="menu__item-title">
+                      <a href="">Налоговое консультирование</a>
+                    </h3>
+                  </div>
                   <p class="menu__item-desc">Качественные и индивидуальные решения в области налогообложения, которые соответствуют Вашим требованиям и бюджету</p>
                 </div>
               </li>
@@ -111,9 +198,25 @@
                       <use xlink:href="/img/sprite.svg#right-arrow"></use>
                     </svg>
                   </a>
+                  <button class="menu__mobile-control" type="button">
+                    <span class="sr-only">Развернуть меню</span>
+                    <svg class="menu__mobile-icon" aria-hidden="true" width="12" height="11">
+                      <use xlink:href="/img/sprite.svg#right-arrow"></use>
+                    </svg>
+                  </button>
                 </div>
                 <div class="menu__item-content">
-                  <h3 class="menu__item-title">Антикризисная поддержка бизнеса</h3>
+                  <div class="menu__item-top">
+                    <button class="menu__item-close" title="назад">
+                      <svg aria-hidden="true" width="19" height="15">
+                        <use xlink:href="/img/sprite.svg#left-arrow"></use>
+                      </svg>
+                      <span>Назад</span>
+                    </button>
+                    <h3 class="menu__item-title">
+                      <a href="">Антикризисная поддержка бизнеса</a>
+                    </h3>
+                  </div>
                   <p class="menu__item-desc">Мы делаем все возможное, чтобы решать насущные проблемы и адаптироваться под нужды клиентов и рынка. Для того, чтобы в это непростое время помочь Вам и Вашему бизнесу ориентироваться в стремительно изменяющейся бизнес-среде, команда Мариллион сформировала практику по антикризисной консультационной поддержке.</p>
                 </div>
               </li>
@@ -125,9 +228,25 @@
                       <use xlink:href="/img/sprite.svg#right-arrow"></use>
                     </svg>
                   </a>
+                  <button class="menu__mobile-control" type="button">
+                    <span class="sr-only">Развернуть меню</span>
+                    <svg class="menu__mobile-icon" aria-hidden="true" width="12" height="11">
+                      <use xlink:href="/img/sprite.svg#right-arrow"></use>
+                    </svg>
+                  </button>
                 </div>
                 <div class="menu__item-content">
-                  <h3 class="menu__item-title">Юридические услуги</h3>
+                  <div class="menu__item-top">
+                    <button class="menu__item-close" title="назад">
+                      <svg aria-hidden="true" width="19" height="15">
+                        <use xlink:href="/img/sprite.svg#left-arrow"></use>
+                      </svg>
+                      <span>Назад</span>
+                    </button>
+                    <h3 class="menu__item-title">
+                      <a href="">Юридические услуги</a>
+                    </h3>
+                  </div>
                   <p class="menu__item-desc">Оказание юридических услуг, чтобы помочь вам принимать решения в соответствии с нормами российского и зарубежного законодательства.</p>
                 </div>
               </li>
@@ -139,9 +258,25 @@
                       <use xlink:href="/img/sprite.svg#right-arrow"></use>
                     </svg>
                   </a>
+                  <button class="menu__mobile-control" type="button">
+                    <span class="sr-only">Развернуть меню</span>
+                    <svg class="menu__mobile-icon" aria-hidden="true" width="12" height="11">
+                      <use xlink:href="/img/sprite.svg#right-arrow"></use>
+                    </svg>
+                  </button>
                 </div>
                 <div class="menu__item-content">
-                  <h3 class="menu__item-title">Финансовое консультационие и оценка</h3>
+                  <div class="menu__item-top">
+                    <button class="menu__item-close" title="назад">
+                      <svg aria-hidden="true" width="19" height="15">
+                        <use xlink:href="/img/sprite.svg#left-arrow"></use>
+                      </svg>
+                      <span>Назад</span>
+                    </button>
+                    <h3 class="menu__item-title">
+                      <a href="">Финансовое консультационие и оценка</a>
+                    </h3>
+                  </div>
                   <p class="menu__item-desc">Мариллион предоставляет услуги по сопровождению сделок, содействие в проектах по инвестированию и финансированию посредством проведения дью дилидженс со стороны покупателя и продавца, совершат независимый обзор бизнеса, окажут практическую поддержку после проведения сделки.</p>
                 </div>
               </li>
@@ -158,6 +293,20 @@
               </button>
             </div>
             <ul class="menu__list menu__list--nested menu__list--lvl1" role="list">
+              <!-- хедер для общего раздела-->
+              <li class="menu__item menu__item--mobile">
+                <div class="menu__item-top">
+                  <button class="menu__item-close" title="назад">
+                    <svg aria-hidden="true" width="19" height="15">
+                      <use xlink:href="/img/sprite.svg#left-arrow"></use>
+                    </svg>
+                    <span>Назад</span>
+                  </button>
+                  <h3 class="menu__item-title">
+                    <a href="/page/news/">Новости</a>
+                  </h3>
+                </div>
+              </li>
               <li class="menu__item menu__item--dropdown" itemprop="name">
                 <div class="menu__item-header">
                   <a class="menu__link" href="/page/news/">
@@ -166,10 +315,44 @@
                       <use xlink:href="/img/sprite.svg#right-arrow"></use>
                     </svg>
                   </a>
+                  <button class="menu__mobile-control" type="button">
+                    <span class="sr-only">Развернуть меню</span>
+                    <svg class="menu__mobile-icon" aria-hidden="true" width="12" height="11">
+                      <use xlink:href="/img/sprite.svg#right-arrow"></use>
+                    </svg>
+                  </button>
                 </div>
                 <div class="menu__item-content">
-                  <h3 class="menu__item-title">Новости компании</h3>
-                  <p class="menu__item-desc">Программа развития молодых специалистов в сфере аудита. Начни свою карьеру в аудите на программе M-Talent! </p>
+                  <div class="menu__item-top">
+                    <button class="menu__item-close" title="назад">
+                      <svg aria-hidden="true" width="19" height="15">
+                        <use xlink:href="/img/sprite.svg#left-arrow"></use>
+                      </svg>
+                      <span>Назад</span>
+                    </button>
+                    <h3 class="menu__item-title">
+                      <a href="">Новости компании</a>
+                    </h3>
+                  </div>
+                  <ul class="articles articles--menu" role="list">
+                    <li class="articles__item">
+                      <article class="article-card article-card--menu">
+                        <a class="article-card__tag article-card__tag--menu" href="#">Новости компании</a>
+                        <h3 class="article-card__title article-card__title--menu">
+                          <a href="/page/news/2">Мы объявляем о ребрендинге и продолжаем работу под брендом «Мариллион»</a>
+                        </h3>
+                      </article>
+                    </li>
+                    <li class="articles__item">
+                      <article class="article-card article-card--menu">
+                        <a class="article-card__tag article-card__tag--menu" href="#">Новости компании</a>
+                        <h3 class="article-card__title article-card__title--menu">
+                          <a href="/page/news/2">Изменения в структуре управления</a>
+                        </h3>
+                      </article>
+                    </li>
+                  </ul>
+                  <a class="button button--white" href="/page/news/">Показать еще</a>
                 </div>
               </li>
               <li class="menu__item menu__item--dropdown" itemprop="name">
@@ -180,10 +363,44 @@
                       <use xlink:href="/img/sprite.svg#right-arrow"></use>
                     </svg>
                   </a>
+                  <button class="menu__mobile-control" type="button">
+                    <span class="sr-only">Развернуть меню</span>
+                    <svg class="menu__mobile-icon" aria-hidden="true" width="12" height="11">
+                      <use xlink:href="/img/sprite.svg#right-arrow"></use>
+                    </svg>
+                  </button>
                 </div>
                 <div class="menu__item-content">
-                  <h3 class="menu__item-title">Мероприятия</h3>
-                  <p class="menu__item-desc">Программа развития молодых специалистов в сфере аудита. Начни свою карьеру в аудите на программе M-Talent! </p>
+                  <div class="menu__item-top">
+                    <button class="menu__item-close" title="назад">
+                      <svg aria-hidden="true" width="19" height="15">
+                        <use xlink:href="/img/sprite.svg#left-arrow"></use>
+                      </svg>
+                      <span>Назад</span>
+                    </button>
+                    <h3 class="menu__item-title">
+                      <a href="">Мероприятия</a>
+                    </h3>
+                  </div>
+                  <ul class="articles articles--menu" role="list">
+                    <li class="articles__item">
+                      <article class="article-card article-card--menu">
+                        <a class="article-card__tag article-card__tag--menu" href="#">Мероприятия</a>
+                        <h3 class="article-card__title article-card__title--menu">
+                          <a href="/page/news/2">«Мариллион» — партнер конференции ИД Коммерсантъ «Аудит и консалтинг: тренды, прогнозы, итоги полугодия»</a>
+                        </h3>
+                      </article>
+                    </li>
+                    <li class="articles__item">
+                      <article class="article-card article-card--menu">
+                        <a class="article-card__tag article-card__tag--menu" href="#">Мероприятия</a>
+                        <h3 class="article-card__title article-card__title--menu">
+                          <a href="/page/news/2">«Мариллион» выступила партнером конференции ИД Коммерсантъ «Трудовое право – 2022»</a>
+                        </h3>
+                      </article>
+                    </li>
+                  </ul>
+                  <a class="button button--white" href="/page/news/">Показать еще</a>
                 </div>
               </li>
               <li class="menu__item menu__item--dropdown" itemprop="name">
@@ -194,10 +411,44 @@
                       <use xlink:href="/img/sprite.svg#right-arrow"></use>
                     </svg>
                   </a>
+                  <button class="menu__mobile-control" type="button">
+                    <span class="sr-only">Развернуть меню</span>
+                    <svg class="menu__mobile-icon" aria-hidden="true" width="12" height="11">
+                      <use xlink:href="/img/sprite.svg#right-arrow"></use>
+                    </svg>
+                  </button>
                 </div>
                 <div class="menu__item-content">
-                  <h3 class="menu__item-title">Экспертное мнение</h3>
-                  <p class="menu__item-desc">Программа развития молодых специалистов в сфере аудита. Начни свою карьеру в аудите на программе M-Talent! </p>
+                  <div class="menu__item-top">
+                    <button class="menu__item-close" title="назад">
+                      <svg aria-hidden="true" width="19" height="15">
+                        <use xlink:href="/img/sprite.svg#left-arrow"></use>
+                      </svg>
+                      <span>Назад</span>
+                    </button>
+                    <h3 class="menu__item-title">
+                      <a href="">Экспертное мнение</a>
+                    </h3>
+                  </div>
+                  <ul class="articles articles--menu" role="list">
+                    <li class="articles__item">
+                      <article class="article-card article-card--menu">
+                        <a class="article-card__tag article-card__tag--menu" href="#">Экспертное мнение</a>
+                        <h3 class="article-card__title article-card__title--menu">
+                          <a href="/page/news/2">О квотах на привлечение иностранных граждан к трудовой деятельности в РФ</a>
+                        </h3>
+                      </article>
+                    </li>
+                    <li class="articles__item">
+                      <article class="article-card article-card--menu">
+                        <a class="article-card__tag article-card__tag--menu" href="#">Экспертное мнение</a>
+                        <h3 class="article-card__title article-card__title--menu">
+                          <a href="/page/news/2">Опубликованы правила выдачи разрешений на осуществление сделок и операций в отношении долей ООО с участием лиц из «недружественных» стран</a>
+                        </h3>
+                      </article>
+                    </li>
+                  </ul>
+                  <a class="button button--white" href="/page/news/">Показать еще</a>
                 </div>
               </li>
             </ul>
@@ -213,6 +464,20 @@
               </button>
             </div>
             <ul class="menu__list menu__list--nested menu__list--lvl1" role="list">
+              <!-- хедер для общего раздела-->
+              <li class="menu__item menu__item--mobile">
+                <div class="menu__item-top">
+                  <button class="menu__item-close" title="назад">
+                    <svg aria-hidden="true" width="19" height="15">
+                      <use xlink:href="/img/sprite.svg#left-arrow"></use>
+                    </svg>
+                    <span>Назад</span>
+                  </button>
+                  <h3 class="menu__item-title">
+                    <a href="/page/about/">О нас</a>
+                  </h3>
+                </div>
+              </li>
               <li class="menu__item menu__item--dropdown" itemprop="name">
                 <div class="menu__item-header">
                   <a class="menu__link" href="/page/about/">
@@ -221,9 +486,25 @@
                       <use xlink:href="/img/sprite.svg#right-arrow"></use>
                     </svg>
                   </a>
+                  <button class="menu__mobile-control" type="button">
+                    <span class="sr-only">Развернуть меню</span>
+                    <svg class="menu__mobile-icon" aria-hidden="true" width="12" height="11">
+                      <use xlink:href="/img/sprite.svg#right-arrow"></use>
+                    </svg>
+                  </button>
                 </div>
                 <div class="menu__item-content">
-                  <h3 class="menu__item-title">О компании</h3>
+                  <div class="menu__item-top">
+                    <button class="menu__item-close" title="назад">
+                      <svg aria-hidden="true" width="19" height="15">
+                        <use xlink:href="/img/sprite.svg#left-arrow"></use>
+                      </svg>
+                      <span>Назад</span>
+                    </button>
+                    <h3 class="menu__item-title">
+                      <a href="">О компании</a>
+                    </h3>
+                  </div>
                   <p class="menu__item-desc">30 лет динамичного и устойчивого развития превратили компанию в серьезного игрока на российском рынке, предоставляющего независимые профессиональные услуги высочайшего качества.</p>
                 </div>
               </li>
@@ -235,10 +516,25 @@
                       <use xlink:href="/img/sprite.svg#right-arrow"></use>
                     </svg>
                   </a>
-
+                  <button class="menu__mobile-control" type="button">
+                    <span class="sr-only">Развернуть меню</span>
+                    <svg class="menu__mobile-icon" aria-hidden="true" width="12" height="11">
+                      <use xlink:href="/img/sprite.svg#right-arrow"></use>
+                    </svg>
+                  </button>
                 </div>
                 <div class="menu__item-content">
-                  <h3 class="menu__item-title">Наше руководство</h3>
+                  <div class="menu__item-top">
+                    <button class="menu__item-close" title="назад">
+                      <svg aria-hidden="true" width="19" height="15">
+                        <use xlink:href="/img/sprite.svg#left-arrow"></use>
+                      </svg>
+                      <span>Назад</span>
+                    </button>
+                    <h3 class="menu__item-title">
+                      <a href="">Наше руководство</a>
+                    </h3>
+                  </div>
                   <p class="menu__item-desc">Многообразие опыта, компетенций и специализаций наших сотрудников гарантируют клиенту получение высококвалифицированных аудиторских, аутсорсинговых, налоговых и юридических услуг, а также услуг по сопровождению сделок.</p>
                 </div>
               </li>
@@ -250,9 +546,25 @@
                       <use xlink:href="/img/sprite.svg#right-arrow"></use>
                     </svg>
                   </a>
+                  <button class="menu__mobile-control" type="button">
+                    <span class="sr-only">Развернуть меню</span>
+                    <svg class="menu__mobile-icon" aria-hidden="true" width="12" height="11">
+                      <use xlink:href="/img/sprite.svg#right-arrow"></use>
+                    </svg>
+                  </button>
                 </div>
                 <div class="menu__item-content">
-                  <h3 class="menu__item-title">Сведения ООО Мазар Аудит</h3>
+                  <div class="menu__item-top">
+                    <button class="menu__item-close" title="назад">
+                      <svg aria-hidden="true" width="19" height="15">
+                        <use xlink:href="/img/sprite.svg#left-arrow"></use>
+                      </svg>
+                      <span>Назад</span>
+                    </button>
+                    <h3 class="menu__item-title">
+                      <a href="">Сведения ООО Мазар Аудит</a>
+                    </h3>
+                  </div>
                   <p class="menu__item-desc">Программа развития молодых специалистов в сфере аудита. Начни свою карьеру в аудите на программе M-Talent! </p>
                 </div>
               </li>
@@ -263,9 +575,25 @@
                       <use xlink:href="/img/sprite.svg#right-arrow"></use>
                     </svg>
                   </a>
+                  <button class="menu__mobile-control" type="button">
+                    <span class="sr-only">Развернуть меню</span>
+                    <svg class="menu__mobile-icon" aria-hidden="true" width="12" height="11">
+                      <use xlink:href="/img/sprite.svg#right-arrow"></use>
+                    </svg>
+                  </button>
                 </div>
                 <div class="menu__item-content">
-                  <h3 class="menu__item-title">Сведения АО Мазар Аудиторские услуги</h3>
+                  <div class="menu__item-top">
+                    <button class="menu__item-close" title="назад">
+                      <svg aria-hidden="true" width="19" height="15">
+                        <use xlink:href="/img/sprite.svg#left-arrow"></use>
+                      </svg>
+                      <span>Назад</span>
+                    </button>
+                    <h3 class="menu__item-title">
+                      <a href="">Сведения АО Мазар Аудиторские услуги</a>
+                    </h3>
+                  </div>
                   <p class="menu__item-desc">Программа развития молодых специалистов в сфере аудита. Начни свою карьеру в аудите на программе M-Talent! </p>
                 </div>
               </li>
@@ -273,14 +601,7 @@
                 <div class="menu__item-header">
                   <a class="menu__link" href="/page/data-marillion/">
                     Сведения ООО АК Мариллион
-                    <svg aria-hidden="true" width="12" height="11">
-                      <use xlink:href="/img/sprite.svg#right-arrow"></use>
-                    </svg>
                   </a>
-                </div>
-                <div class="menu__item-content">
-                  <h3 class="menu__item-title">Сведения ООО АК Мариллион</h3>
-                  <p class="menu__item-desc">Программа развития молодых специалистов в сфере аудита. Начни свою карьеру в аудите на программе M-Talent! </p>
                 </div>
               </li>
             </ul>
@@ -288,25 +609,35 @@
           <li class="menu__item" itemprop="name">
             <a class="menu__link menu__link--main" href="/page/career/" itemprop="url">Карьера</a>
           </li>
-          <li class="menu__item menu__item--dropdown" itemprop="name">
+          <li class="menu__item" itemprop="name">
             <a class="menu__link menu__link--main" href="/page/contacts/" itemprop="url">Контакты</a>
           </li>
         </ul>
-        <div class="header__lang language-dropdown">
-          <button class="language-dropdown__control btn-reset">
-            <span class="language-dropdown__selected">Рус</span>
-            <svg class="language-dropdown__arrow" aria-hidden="true" width="10" height="6"> 
-              <use xlink:href="/img/sprite.svg#down-arrow"></use>
+        <!-- обертка для новых элементов верстки -->
+        <div class="header__actions">
+          <a class="header__button header__button--form" href="#" data-hystmodal="#modal-form">Свяжитесь с нами</a>
+          <div class="header__lang language-dropdown">
+            <button class="language-dropdown__control btn-reset">
+              <span class="language-dropdown__selected sr-only">Рус</span>
+              <svg aria-hidden="true" width="19" height="19">
+                <use xlink:href="/img/sprite.svg#globe"></use>
+              </svg>
+            </button>
+            <ul class="language-dropdown__list" role="list">
+              <li class="language-dropdown__item">
+                <a class="language-dropdown__link language-dropdown__link--current">Ru</a>
+              </li>
+              <li class="language-dropdown__item">
+                <a class="language-dropdown__link" href="/page/en/" title="Переключить язык на английский">Eng</a>
+              </li>
+            </ul>
+          </div>
+          <a class="header__search" href="/search" title="Поиск">
+            <span class="sr-only">Поиск</span>
+            <svg aria-hidden="true" width="19" height="19">
+              <use xlink:href="/img/sprite.svg#search"></use>
             </svg>
-          </button>
-          <ul class="language-dropdown__list" role="list">
-            <li class="language-dropdown__item">
-              <a class="language-dropdown__link language-dropdown__link--current">Ru</a>
-            </li>
-            <li class="language-dropdown__item">
-              <a class="language-dropdown__link" href="/page/en/" title="Переключить язык на английский">Eng</a>
-            </li>
-          </ul>
+          </a>
         </div>
       </nav>
       <button class="menu-button" type="button" aria-expanded="false" aria-controls="menu__list" aria-label="Открыть меню">
@@ -317,114 +648,116 @@
     </div>
   </header>
   <main class="main">
-    <div class="hero-block hero-block--container">
-      <div class="hero-block__text-wrap hero-block__text-wrap--container">
-        <nav class="hero-block__breadcrumb breadcrumb" aria-label="Breadcrumb">
-          <ol class="breadcrumb__list" role="list">
-            <li class="breadcrumb__item">
-              <a class="breadcrumb__link" href="/">Мариллион</a>
-            </li>
-            <li class="breadcrumb__item">
-              <a class="breadcrumb__link" href="/page/about/">О нас</a>
-            </li>
-            <li class="breadcrumb__item">
-              <a class="breadcrumb__link breadcrumb__link--current" aria-current="location">Наше руководство</a>
-            </li>
-            </ol>
-        </nav>
-        <h1 class="hero-block__title title title--primary accent-color">Наше руководство</h1>
+    <div class="main__content">
+      <div class="hero-block">
+        <div class="hero-block__text-wrap hero-block__text-wrap--container">
+          <nav class="hero-block__breadcrumb breadcrumb" aria-label="Breadcrumb">
+            <ol class="breadcrumb__list" role="list">
+              <li class="breadcrumb__item">
+                <a class="breadcrumb__link" href="/">Мариллион</a>
+              </li>
+              <li class="breadcrumb__item">
+                <a class="breadcrumb__link" href="/page/about/">О нас</a>
+              </li>
+              <li class="breadcrumb__item">
+                <a class="breadcrumb__link breadcrumb__link--current" aria-current="location">Наше руководство</a>
+              </li>
+              </ol>
+          </nav>
+          <h1 class="hero-block__title title title--primary accent-color">Наше руководство</h1>
+        </div>
       </div>
+      <ul class="team-list" role="list">
+        <li class="team-list__item">
+          <div class="expert">
+            <div class="expert__avatar">
+              <img class="expert__img" src="/img/team-section/1.png" alt="Полина Виксне" width="180" height="180" loading="lazy">
+            </div>
+            <h3 class="expert__name">
+              <a class="expert__link" href="">Полина Виксне</a>
+            </h3>
+            <span class="expert__position">Управляющий партнер, Аудит</span>
+          </div>
+        </li>
+        <li class="team-list__item">
+          <div class="expert">
+            <div class="expert__avatar">
+              <img class="expert__img" src="/img/team-section/2.png" alt="Ирина Татарцева" width="180" height="180" loading="lazy">
+            </div>
+            <h3 class="expert__name">
+              <a class="expert__link" href="/page/team/irina-tatartseva/">Ирина Татарцева</a>
+            </h3>
+            <span class="expert__position">Партнер, Аудит</span>
+          </div>
+        </li>
+        <li class="team-list__item">
+          <div class="expert">
+            <div class="expert__avatar">
+              <img class="expert__img" src="/img/team-section/3.png" alt="Сергей Харитонов" width="180" height="180" loading="lazy">
+            </div>
+            <h3 class="expert__name">
+              <a class="expert__link" href="">Сергей Харитонов</a>
+            </h3>
+            <span class="expert__position">Управляющий партнер, Аудит</span>
+          </div>
+        </li>
+        <li class="team-list__item">
+          <div class="expert">
+            <div class="expert__avatar">
+              <img class="expert__img" src="/img/team-section/4.png" alt="Евгений Авдеев" width="180" height="180" loading="lazy">
+            </div>
+            <h3 class="expert__name">
+              <a class="expert__link" href="">Евгений Авдеев</a>
+            </h3>
+            <span class="expert__position">Партнер, Аудит</span>
+          </div>
+        </li>
+        <li class="team-list__item">
+          <div class="expert">
+            <div class="expert__avatar">
+              <img class="expert__img" src="/img/team-section/6.png" alt="Наталья Цой" width="180" height="180" loading="lazy">
+            </div>
+            <h3 class="expert__name">
+              <a class="expert__link" href="">Наталья Цой</a>
+            </h3>
+            <span class="expert__position">Управляющий партнер, Аутсорсинг</span>
+          </div>
+        </li>
+        <li class="team-list__item">
+          <div class="expert">
+            <div class="expert__avatar">
+              <img class="expert__img" src="/img/team-section/7.png" alt="Даниил Берлизов" width="180" height="180" loading="lazy">
+            </div>
+            <h3 class="expert__name">
+              <a class="expert__link" href="">Даниил Берлизов</a>
+            </h3>
+            <span class="expert__position">Партнер, Развитие бизнеса</span>
+          </div>
+        </li>
+        <li class="team-list__item">
+          <div class="expert">
+            <div class="expert__avatar">
+              <img class="expert__img" src="/img/team-section/8.png" alt="Алексей Швынденков" width="180" height="180" loading="lazy">
+            </div>
+            <h3 class="expert__name">
+              <a class="expert__link" href="">Алексей Швынденков</a>
+            </h3>
+            <span class="expert__position">Партнер, Налоговые и юридические услуги</span>
+          </div>
+        </li>
+        <li class="team-list__item">
+          <div class="expert">
+            <div class="expert__avatar">
+              <img class="expert__img" src="/img/team-section/5.png" alt="Андрей Милинов" width="180" height="180" loading="lazy">
+            </div>
+            <h3 class="expert__name">
+              <a class="expert__link" href="">Андрей Милинов</a>
+            </h3>
+            <span class="expert__position">Партнер, Аудит</span>
+          </div>
+        </li>
+      </ul>
     </div>
-    <ul class="team-list container pb-80" role="list">
-      <li class="team-list__item">
-        <div class="expert">
-          <div class="expert__avatar">
-            <img class="expert__img" src="/img/team-section/1.png" alt="Полина Виксне" width="180" height="180" loading="lazy">
-          </div>
-          <h3 class="expert__name">
-            <a class="expert__link" href="">Полина Виксне</a>
-          </h3>
-          <span class="expert__position">Управляющий партнер, Аудит</span>
-        </div>
-      </li>
-      <li class="team-list__item">
-        <div class="expert">
-          <div class="expert__avatar">
-            <img class="expert__img" src="/img/team-section/2.png" alt="Ирина Татарцева" width="180" height="180" loading="lazy">
-          </div>
-          <h3 class="expert__name">
-            <a class="expert__link" href="/page/team/irina-tatartseva/">Ирина Татарцева</a>
-          </h3>
-          <span class="expert__position">Партнер, Аудит</span>
-        </div>
-      </li>
-      <li class="team-list__item">
-        <div class="expert">
-          <div class="expert__avatar">
-            <img class="expert__img" src="/img/team-section/3.png" alt="Сергей Харитонов" width="180" height="180" loading="lazy">
-          </div>
-          <h3 class="expert__name">
-            <a class="expert__link" href="">Сергей Харитонов</a>
-          </h3>
-          <span class="expert__position">Управляющий партнер, Аудит</span>
-        </div>
-      </li>
-      <li class="team-list__item">
-        <div class="expert">
-          <div class="expert__avatar">
-            <img class="expert__img" src="/img/team-section/4.png" alt="Евгений Авдеев" width="180" height="180" loading="lazy">
-          </div>
-          <h3 class="expert__name">
-            <a class="expert__link" href="">Евгений Авдеев</a>
-          </h3>
-          <span class="expert__position">Партнер, Аудит</span>
-        </div>
-      </li>
-      <li class="team-list__item">
-        <div class="expert">
-          <div class="expert__avatar">
-            <img class="expert__img" src="/img/team-section/6.png" alt="Наталья Цой" width="180" height="180" loading="lazy">
-          </div>
-          <h3 class="expert__name">
-            <a class="expert__link" href="">Наталья Цой</a>
-          </h3>
-          <span class="expert__position">Управляющий партнер, Аутсорсинг</span>
-        </div>
-      </li>
-      <li class="team-list__item">
-        <div class="expert">
-          <div class="expert__avatar">
-            <img class="expert__img" src="/img/team-section/7.png" alt="Даниил Берлизов" width="180" height="180" loading="lazy">
-          </div>
-          <h3 class="expert__name">
-            <a class="expert__link" href="">Даниил Берлизов</a>
-          </h3>
-          <span class="expert__position">Партнер, Развитие бизнеса</span>
-        </div>
-      </li>
-      <li class="team-list__item">
-        <div class="expert">
-          <div class="expert__avatar">
-            <img class="expert__img" src="/img/team-section/8.png" alt="Алексей Швынденков" width="180" height="180" loading="lazy">
-          </div>
-          <h3 class="expert__name">
-            <a class="expert__link" href="">Алексей Швынденков</a>
-          </h3>
-          <span class="expert__position">Партнер, Налоговые и юридические услуги</span>
-        </div>
-      </li>
-      <li class="team-list__item">
-        <div class="expert">
-          <div class="expert__avatar">
-            <img class="expert__img" src="/img/team-section/5.png" alt="Андрей Милинов" width="180" height="180" loading="lazy">
-          </div>
-          <h3 class="expert__name">
-            <a class="expert__link" href="">Андрей Милинов</a>
-          </h3>
-          <span class="expert__position">Партнер, Аудит</span>
-        </div>
-      </li>
-    </ul>
     <div class="contacts-card">
       <div class="contacts-card__content clamp-offset">
         <h2 class="contacts-card__title title title--primary">Связаться с нами</h2>
