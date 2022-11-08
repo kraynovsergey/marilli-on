@@ -201,17 +201,22 @@ document.addEventListener('DOMContentLoaded', function() {
       const mapCenterLat = map?.dataset.centerLat;
       const mapCenterLong = map?.dataset.centerLong;
       const mapCoords = map?.dataset.coords;
+      let data = JSON.parse(mapCoords);
       const mapZoom = map?.dataset.zoom;
       const iconImageHref = map?.dataset.iconHref;
       const iconImageWidth = map?.dataset.iconWidth;
       const iconImageHeight = map?.dataset.iconHeight;
+      const mapControls = document?.querySelectorAll(".map-control");
+      const mapLinks = document?.querySelectorAll(".map-link");
 
       var contactsMap = new ymaps.Map('c-map', {
         center: [mapCenterLat, mapCenterLong],
-        zoom: mapZoom
+        zoom: mapZoom,
+        controls: ['smallMapDefaultSet']
         }, {
           searchControlProvider: 'yandex#search'
         }),
+        
         objectManager = new ymaps.ObjectManager({
           clusterize: true,
           gridSize: 32,
@@ -237,32 +242,22 @@ document.addEventListener('DOMContentLoaded', function() {
         hideIconOnBalloonOpen: false,
       });
 
-      $.ajax({
-        url: `${mapCoords}`
-      }).done(function (data) {
-        objectManager.add(data);
-        var mapControls = $('.map-control');
-        var mapLinks = $('.map-link')
+      objectManager.add(data);
 
-        mapControls.each(function (item, i) {
-          $(this).bind('click', function () {
-            var destination = data.features[item].geometry.coordinates;
-            contactsMap.setZoom(16);
-            contactsMap.panTo(destination, {
-              flying: true,
-              duration: 3000,
-            });
-            return false;
+      mapControls.forEach(function(item, i) {
+        item.addEventListener('click', function() {
+          let destination = data.features[i].geometry.coordinates;
+          contactsMap.setZoom(16);
+          contactsMap.panTo(destination, {
+            flying: true,
+            duration: 2000,
           });
         });
+      });
 
-        mapLinks.each(function () {
-          $(this).bind('click', function(e) {
-            e.preventDefault();
-            var position = $('#c-map').offset().top;
-            window.scrollTo(0, position - 80);
-            contactsMap.setZoom(18);
-          });
+      mapLinks.forEach(function(link) {
+        link.addEventListener('click', function(e) {
+          contactsMap.setZoom(18);
         });
       });
     }
