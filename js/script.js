@@ -189,9 +189,17 @@ document.addEventListener('DOMContentLoaded', function() {
   cookieClose.forEach(close => {
     close.addEventListener('click', function() {
       this.closest('.cookie').hidden = true;
+      localStorage.setItem('cookie', true);
     });
+    if(!localStorage.getItem('cookie')) {
+      setTimeout(() => {
+        close.closest('.cookie').hidden = false;
+        close.closest('.cookie').classList.add('cookie--animation');
+      }, 2000);
+    } else {
+      close.closest('.cookie').hidden = true;
+    }
   });
-
   //map
   if (document.querySelector('#c-map')) {
     ymaps.ready(init);
