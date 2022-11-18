@@ -742,10 +742,26 @@
                   <span class="sr-only">Введите номер телефона</span>
                   <input type="tel" name="tel" id="request-tel" placeholder="+7 (999) 999-99-99" inputmode="numeric">
                 </label>
-                <label class="form__label">
-                  <span class="sr-only">Как вы нас нашли?</span>
-                  <input type="text" name="question" id="request-question" placeholder="Как вы нас нашли?">
-                </label>
+                <div class="form__label">
+                  <label class="sr-only" for="question">Как вы нас нашли?</label>
+                  <div class="c-select">
+                    <select class="c-select__dropdown c-select__dropdown--form" name="question" id="question">
+                      <option value="" selected disabled hidden>Как вы нас нашли</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                    </select>
+                    <div class="c-select__chevron" aria-hidden="true">
+                      <svg width="14" height="8" viewBox="0 0 14 8" fill="none">
+                        <path d="M13 1L7 7L1 0.999999" stroke="currentColor"></path>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
                 <label class="form__label">
                   <textarea name="message" id="request-message" rows="2" placeholder="Ваше сообщение" maxlength="500"></textarea>
                 </label>

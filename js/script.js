@@ -183,9 +183,22 @@ document.addEventListener('DOMContentLoaded', function() {
       panels[0].hidden = false;
   });
 
+  //c-select
+  const selects = document?.querySelectorAll('.c-select');
+  selects.forEach(select => {
+    const selectDropdown = select.querySelector('select');
+    selectDropdown.addEventListener('change', function() {
+      let selected = Array.from(selectDropdown.options)
+        .filter(option => option.selected)
+        .map(option => option.value)
+      if(selected) {
+        this.classList.add('c-select__dropdown--selected');
+      }
+    });
+  });
+
   //cookie
   let cookieClose = document.querySelectorAll('[data-cookie-close]');
-
   cookieClose.forEach(close => {
     close.addEventListener('click', function() {
       this.closest('.cookie').hidden = true;
