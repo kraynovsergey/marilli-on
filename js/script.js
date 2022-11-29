@@ -188,11 +188,20 @@ document.addEventListener('DOMContentLoaded', function() {
   selects.forEach(select => {
     const selectDropdown = select.querySelector('select');
     selectDropdown.addEventListener('change', function() {
+      const label = this.closest('.form__label');
+      
       let selected = Array.from(selectDropdown.options)
         .filter(option => option.selected)
         .map(option => option.value)
       if(selected) {
         this.classList.add('c-select__dropdown--selected');
+      }
+
+      if(this.value === 'other') {
+        label?.classList.add('form__label--other');
+        label?.nextElementSibling.querySelector('input').focus();
+      } else {
+        label?.classList.remove('form__label--other')
       }
     });
   });
