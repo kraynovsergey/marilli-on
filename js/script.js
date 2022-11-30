@@ -200,8 +200,10 @@ document.addEventListener('DOMContentLoaded', function() {
       if(this.value === 'other') {
         label?.classList.add('form__label--other');
         label?.nextElementSibling.querySelector('input').focus();
+        label?.nextElementSibling.querySelector('input').setAttribute('required', '');
       } else {
-        label?.classList.remove('form__label--other')
+        label?.classList.remove('form__label--other');
+        label?.nextElementSibling.querySelector('input').removeAttribute('required');
       }
     });
   });
