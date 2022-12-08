@@ -1316,10 +1316,19 @@
   <div class="hystmodal hystmodal--search" id="modal-search" aria-hidden="true">
     <div class="hystmodal__wrap hystmodal__wrap--search">
       <div class="hystmodal__window hystmodal__window--search" role="dialog" aria-modal="true">
+        <div class="hystmodal__header">
+          <a class="hystmodal__header-close" title="назад" data-hystclose>
+            <svg aria-hidden="true" width="19" height="15">
+              <use xlink:href="/img/sprite.svg#left-arrow"></use>
+            </svg>
+            <span>Назад</span>
+          </a>
+          <span class="hystmodal__header-title">Поиск</span>
+        </div>
         <div class="c-search">
           <form action="/page/search/" method="get" role="search">
             <div class="c-search__group">
-              <div class="c-search__box">
+              <div class="c-search__box c-search__box--modal">
                 <label class="sr-only" for="search">Поиск по Marillion</label>
                 <input class="c-search__input" type="text" id="search" name="q" placeholder="Поиск..." autocomplete="off" aria-label="Поиск">
               </div>
