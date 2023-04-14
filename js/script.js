@@ -272,6 +272,7 @@ document.addEventListener('DOMContentLoaded', function() {
         iconImageHref: `${iconImageHref}`,
         iconImageSize: [iconImageWidth, iconImageHeight],
         hideIconOnBalloonOpen: false,
+        iconOffset: [-24, -60]
       });
 
       objectManager.add(data);
