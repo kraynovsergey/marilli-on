@@ -238,10 +238,13 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   //cases swiper
-  const casesSwiper = document?.querySelector(".successful-cases__swiper");
+  const sliders = document?.querySelectorAll(".slider");
+  sliders.forEach(slider => {
+    const sliderSwiper = slider.querySelector('.slider__swiper');
+    const swiperButtonNext = slider.querySelector('.slider__button--next');
+    const swiperButtonPrev = slider.querySelector('.slider__button--prev');
 
-  if(casesSwiper) {
-    const swiper = new Swiper(casesSwiper, {
+    const swiper = new Swiper(sliderSwiper, {
       slidesPerView: 1,
       slidesPerGroup:1,
       spaceBetween:20,
@@ -249,8 +252,8 @@ document.addEventListener('DOMContentLoaded', function() {
       watchOverflow: true,
   
       navigation: {
-        nextEl: '.successful-cases__button--next',
-        prevEl: '.successful-cases__button--prev',
+        nextEl: swiperButtonNext,
+        prevEl: swiperButtonPrev,
       },
 
       breakpoints: {
@@ -265,7 +268,7 @@ document.addEventListener('DOMContentLoaded', function() {
     swiper.on('slideChangeTransitionStart', function () {
       if (swiper.activeIndex === 0) {
         swiper.params.rewind = false;
-        swiper.navigation.prevEl[0].disabled = true;
+        swiperButtonPrev.disabled = true;
         swiper.update();
         
       } else {
@@ -273,8 +276,8 @@ document.addEventListener('DOMContentLoaded', function() {
         swiper.update();
       }
     });
-  }
-
+    
+  });
   //cookie
   let cookieClose = document.querySelectorAll('[data-cookie-close]');
   cookieClose.forEach(close => {
