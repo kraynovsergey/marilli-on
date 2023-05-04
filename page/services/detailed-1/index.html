@@ -1,0 +1,1550 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+<head>
+  <meta name="theme-color" content="#0F4F3B">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- preload preconnect -->
+  <link rel="preload" href="/fonts/CoFoSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/css/main.min.css" as="style">
+  <!-- meta SEO -->
+  <title>Внедрение и сопровождение программ 1С - Мариллион</title>
+  <meta name="description" content="Мариллион» предоставляет услуги по внедрению и сопровождению сделок.">
+  <meta name="keywords" content="">
+  <!-- og -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Внедрение и сопровождение программ 1С - Мариллион">
+  <meta property="og:site_name" content="Мариллион» предоставляет услуги по внедрению и сопровождению сделок.">
+  <meta property="og:description" content="Мариллион» предоставляет услуги по внедрению и сопровождению сделок.">
+  <meta property="og:url" content="https://marilli-on.ru/">
+  <meta property="og:image" content="/img/social-share-n.jpg">
+  <!-- twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Внедрение и сопровождение программ 1С - Мариллион">
+  <meta name="twitter:description" content="Мариллион» предоставляет услуги по внедрению и сопровождению сделок.">
+  <meta name="twitter:site" content="https://marilli-on.ru/">
+  <meta name="twitter:image" content="/img/social-share-n.jpg">
+  <!-- icons -->
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/icons/16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/icons/32x32.png">
+  <link rel="icon" type="image/png" sizes="160x160" href="/img/icons/160x160.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/img/icons/192x192.png">
+  <link rel="icon" type="image/svg+xml" sizes="any" href="/img/icons/any.svg">
+  <link rel="apple-touch-icon" href="/img/icons/160x160.png">
+  <!-- styles -->
+  <link rel="stylesheet" href="/css/main.min.css?ver=22">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+</head>
+<body class="page__body">
+  <header class="header">
+    <div class="header__container">
+      <a class="header__logo logo" href="/">
+        <img class="logo__img" src="/img/logo.svg" alt="Логотип Мариллион" width="272" height="38">
+      </a>
+      <nav class="menu menu--main" aria-label="Основное меню" itemscope="itemscope" itemtype="http://www.schema.org/SiteNavigationElement">
+        <ul class="menu__list menu__list--main" id="menu__list" role="list">
+          <!-- самая первая выпадашка (у выпадашек всегда есть модификатор dropdown) -->
+          <li class="menu__item menu__item--dropdown" itemprop="name">
+            <!-- хедер со ссылкой для декстопа и кнопкой для разворачивания меню на мобилках -->
+            <div class="menu__item-header">
+              <!-- ссылка для декстопов -->
+              <a class="menu__link menu__link--main" href="/page/services/">Услуги</a>
+              <!-- кнопка для разворачивания меню  на мобилках -->
+              <button class="menu__mobile-control" type="button">
+                <span class="sr-only">Развернуть меню</span>
+                <svg class="menu__mobile-icon" aria-hidden="true" width="12" height="11">
+                  <use xlink:href="/img/sprite.svg#right-arrow"></use>
+                </svg>
+              </button>
+            </div>
+            <!-- вложенное меню -->
+            <ul class="menu__list menu__list--nested menu__list--lvl1" role="list">
+              <!-- хедер для общего раздела-->
+              <li class="menu__item menu__item--mobile">
+                <!-- хедер с кнопкой назад и заголовком для выезжающего меню (заголовок может быть ссылкой на мобилках) -->
+                <div class="menu__item-top">
+                  <!-- кнопка закрывает выезжающее меню -->
+                  <button class="menu__item-close" title="назад">
+                    <svg aria-hidden="true" width="19" height="15">
+                      <use xlink:href="/img/sprite.svg#left-arrow"></use>
+                    </svg>
+                    <span>Назад</span>
+                  </button>
+                  <h3 class="menu__item-title">
+                    <a href="/page/services/">Услуги</a>
+                  </h3>
+                </div>
+              </li>
+              <li class="menu__item menu__item--dropdown" itemprop="name">
+                <div class="menu__item-header">
+                  <!-- ссылка для декстопов -->
+                  <a class="menu__link" href="/page/services/audit/">
+                    Аудит
+                    <svg aria-hidden="true" width="12" height="11">
+                      <use xlink:href="/img/sprite.svg#right-arrow"></use>
+                    </svg>
+                  </a>
+                  <!-- кнопка для разворачивания меню  на мобилках -->
+                  <button class="menu__mobile-control" type="button">
+                    <span class="sr-only">Развернуть меню</span>
+                    <svg class="menu__mobile-icon" aria-hidden="true" width="12" height="11">
+                      <use xlink:href="/img/sprite.svg#right-arrow"></use>
+                    </svg>
+                  </button>
+                </div>
+                <!-- это контентная часть третий и последний уровень вложенности,  
+                    у нее есть свой хедер для навигации назад и любой контент, новости, ссылки, описания -->
+                <div class="menu__item-content">
+                  <!-- хедер с навигацией контентной части-->
+                  <div class="menu__item-top">
+                    <button class="menu__item-close" title="назад">
+                      <svg aria-hidden="true" width="19" height="15">
+                        <use xlink:href="/img/sprite.svg#left-arrow"></use>
+                      </svg>
+                      <span>Назад</span>
+                    </button>
+                    <h3 class="menu__item-title">
+                      <a href="">Аудит</a>
+                    </h3>
+                  </div>
+                  <!-- любой контент, ссылки, описание, новости -->
+                  <ul class="menu__links" role="list">
+                    <li class="menu__links-item" itemprop="name">
+                      <a class="menu__links-link" href="" itemprop="url">Аудит финансовой отчетности</a>
+                    </li>
+                    <li class="menu__links-item" itemprop="name">
+                      <a class="menu__links-link" href="" itemprop="url">Обязательный аудит</a>
+                    </li>
+                    <li class="menu__links-item" itemprop="name">
+                      <a class="menu__links-link" href="" itemprop="url">Обзорная проверка финансовой отчетности</a>
+                    </li>
+                    <li class="menu__links-item" itemprop="name">
+                      <a class="menu__links-link" href="" itemprop="url">Корпоративная отчетность</a>
+                    </li>
+                    <li class="menu__links-item" itemprop="name">
+                      <a class="menu__links-link" href="" itemprop="url">Аудит отчетности и актуарная оценка для страховых  организаций</a>
+                    </li>
+                    <li class="menu__links-item" itemprop="name">
+                      <a class="menu__links-link" href="" itemprop="url">Аудит отчетности управляющих компаний, НПФ и ПИФ</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="menu__item menu__item--dropdown" itemprop="name">
+                <div class="menu__item-header">
+                  <a class="menu__link" href="/page/services/outsourcing/">
+                    Аутсорсинг
+                    <svg aria-hidden="true" width="12" height="11">
+                      <use xlink:href="/img/sprite.svg#right-arrow"></use>
+                    </svg>
+                  </a>
+                  <button class="menu__mobile-control" type="button">
+                    <span class="sr-only">Развернуть меню</span>
+                    <svg class="menu__mobile-icon" aria-hidden="true" width="12" height="11">
+                      <use xlink:href="/img/sprite.svg#right-arrow"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="menu__item-content">
+                  <div class="menu__item-top">
+                    <button class="menu__item-close" title="назад">
+                      <svg aria-hidden="true" width="19" height="15">
+                        <use xlink:href="/img/sprite.svg#left-arrow"></use>
+                      </svg>
+                      <span>Назад</span>
+                    </button>
+                    <h3 class="menu__item-title">
+                      <a href="">Аутсорсинг</a>
+                    </h3>
+                  </div>
+                  <p class="menu__item-desc">Партнер по аутсорсингу, который помогает вам раскрыть свои сильные стороны.</p>
+                </div>
+              </li>
+              <li class="menu__item menu__item--dropdown" itemprop="name">
+                <div class="menu__item-header">
+                  <a class="menu__link" href="/page/services/tax/">
+                    Налоговое консультирование
+                    <svg aria-hidden="true" width="12" height="11">
+                      <use xlink:href="/img/sprite.svg#right-arrow"></use>
+                    </svg>
+                  </a>
+                  <button class="menu__mobile-control" type="button">
+                    <span class="sr-only">Развернуть меню</span>
+                    <svg class="menu__mobile-icon" aria-hidden="true" width="12" height="11">
+                      <use xlink:href="/img/sprite.svg#right-arrow"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="menu__item-content">
+                  <div class="menu__item-top">
+                    <button class="menu__item-close" title="назад">
+                      <svg aria-hidden="true" width="19" height="15">
+                        <use xlink:href="/img/sprite.svg#left-arrow"></use>
+                      </svg>
+                      <span>Назад</span>
+                    </button>
+                    <h3 class="menu__item-title">
+                      <a href="">Налоговое консультирование</a>
+                    </h3>
+                  </div>
+                  <p class="menu__item-desc">Качественные и индивидуальные решения в области налогообложения, которые соответствуют Вашим требованиям и бюджету</p>
+                </div>
+              </li>
+              <li class="menu__item menu__item--dropdown" itemprop="name">
+                <div class="menu__item-header">
+                  <a class="menu__link" href="/page/services/anti-crisis-support-and-sanctions-consulting/">
+                    Антикризисная поддержка бизнеса
+                    <svg aria-hidden="true" width="12" height="11">
+                      <use xlink:href="/img/sprite.svg#right-arrow"></use>
+                    </svg>
+                  </a>
+                  <button class="menu__mobile-control" type="button">
+                    <span class="sr-only">Развернуть меню</span>
+                    <svg class="menu__mobile-icon" aria-hidden="true" width="12" height="11">
+                      <use xlink:href="/img/sprite.svg#right-arrow"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="menu__item-content">
+                  <div class="menu__item-top">
+                    <button class="menu__item-close" title="назад">
+                      <svg aria-hidden="true" width="19" height="15">
+                        <use xlink:href="/img/sprite.svg#left-arrow"></use>
+                      </svg>
+                      <span>Назад</span>
+                    </button>
+                    <h3 class="menu__item-title">
+                      <a href="">Антикризисная поддержка бизнеса</a>
+                    </h3>
+                  </div>
+                  <p class="menu__item-desc">Мы делаем все возможное, чтобы решать насущные проблемы и адаптироваться под нужды клиентов и рынка. Для того, чтобы в это непростое время помочь Вам и Вашему бизнесу ориентироваться в стремительно изменяющейся бизнес-среде, команда Мариллион сформировала практику по антикризисной консультационной поддержке.</p>
+                </div>
+              </li>
+              <li class="menu__item menu__item--dropdown" itemprop="name">
+                <div class="menu__item-header">
+                  <a class="menu__link" href="/page/services/legal/">
+                    Юридические услуги
+                    <svg aria-hidden="true" width="12" height="11">
+                      <use xlink:href="/img/sprite.svg#right-arrow"></use>
+                    </svg>
+                  </a>
+                  <button class="menu__mobile-control" type="button">
+                    <span class="sr-only">Развернуть меню</span>
+                    <svg class="menu__mobile-icon" aria-hidden="true" width="12" height="11">
+                      <use xlink:href="/img/sprite.svg#right-arrow"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="menu__item-content">
+                  <div class="menu__item-top">
+                    <button class="menu__item-close" title="назад">
+                      <svg aria-hidden="true" width="19" height="15">
+                        <use xlink:href="/img/sprite.svg#left-arrow"></use>
+                      </svg>
+                      <span>Назад</span>
+                    </button>
+                    <h3 class="menu__item-title">
+                      <a href="">Юридические услуги</a>
+                    </h3>
+                  </div>
+                  <p class="menu__item-desc">Оказание юридических услуг, чтобы помочь вам принимать решения в соответствии с нормами российского и зарубежного законодательства.</p>
+                </div>
+              </li>
+              <li class="menu__item menu__item--dropdown" itemprop="name">
+                <div class="menu__item-header">
+                  <a class="menu__link" href="/page/services/financial-advisory/">
+                    Финансовое консультационие и оценка
+                    <svg aria-hidden="true" width="12" height="11">
+                      <use xlink:href="/img/sprite.svg#right-arrow"></use>
+                    </svg>
+                  </a>
+                  <button class="menu__mobile-control" type="button">
+                    <span class="sr-only">Развернуть меню</span>
+                    <svg class="menu__mobile-icon" aria-hidden="true" width="12" height="11">
+                      <use xlink:href="/img/sprite.svg#right-arrow"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="menu__item-content">
+                  <div class="menu__item-top">
+                    <button class="menu__item-close" title="назад">
+                      <svg aria-hidden="true" width="19" height="15">
+                        <use xlink:href="/img/sprite.svg#left-arrow"></use>
+                      </svg>
+                      <span>Назад</span>
+                    </button>
+                    <h3 class="menu__item-title">
+                      <a href="">Финансовое консультационие и оценка</a>
+                    </h3>
+                  </div>
+                  <p class="menu__item-desc">Мариллион предоставляет услуги по сопровождению сделок, содействие в проектах по инвестированию и финансированию посредством проведения дью дилидженс со стороны покупателя и продавца, совершат независимый обзор бизнеса, окажут практическую поддержку после проведения сделки.</p>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <li class="menu__item menu__item--dropdown" itemprop="name">
+            <div class="menu__item-header">
+              <a class="menu__link menu__link--main" href="/page/news/">Новости</a>
+              <button class="menu__mobile-control" type="button">
+                <span class="sr-only">Развернуть меню</span>
+                <svg class="menu__mobile-icon" aria-hidden="true" width="12" height="11">
+                  <use xlink:href="/img/sprite.svg#right-arrow"></use>
+                </svg>
+              </button>
+            </div>
+            <ul class="menu__list menu__list--nested menu__list--lvl1" role="list">
+              <!-- хедер для общего раздела-->
+              <li class="menu__item menu__item--mobile">
+                <div class="menu__item-top">
+                  <button class="menu__item-close" title="назад">
+                    <svg aria-hidden="true" width="19" height="15">
+                      <use xlink:href="/img/sprite.svg#left-arrow"></use>
+                    </svg>
+                    <span>Назад</span>
+                  </button>
+                  <h3 class="menu__item-title">
+                    <a href="/page/news/">Новости</a>
+                  </h3>
+                </div>
+              </li>
+              <li class="menu__item menu__item--dropdown" itemprop="name">
+                <div class="menu__item-header">
+                  <a class="menu__link" href="/page/news/">
+                    Новости компании
+                    <svg aria-hidden="true" width="12" height="11">
+                      <use xlink:href="/img/sprite.svg#right-arrow"></use>
+                    </svg>
+                  </a>
+                  <button class="menu__mobile-control" type="button">
+                    <span class="sr-only">Развернуть меню</span>
+                    <svg class="menu__mobile-icon" aria-hidden="true" width="12" height="11">
+                      <use xlink:href="/img/sprite.svg#right-arrow"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="menu__item-content">
+                  <div class="menu__item-top">
+                    <button class="menu__item-close" title="назад">
+                      <svg aria-hidden="true" width="19" height="15">
+                        <use xlink:href="/img/sprite.svg#left-arrow"></use>
+                      </svg>
+                      <span>Назад</span>
+                    </button>
+                    <h3 class="menu__item-title">
+                      <a href="">Новости компании</a>
+                    </h3>
+                  </div>
+                  <ul class="articles articles--menu" role="list">
+                    <li class="articles__item">
+                      <article class="article-card article-card--menu">
+                        <a class="article-card__tag article-card__tag--menu" href="#">Новости компании</a>
+                        <h3 class="article-card__title article-card__title--menu">
+                          <a href="/page/news/2">Мы объявляем о ребрендинге и продолжаем работу под брендом «Мариллион»</a>
+                        </h3>
+                      </article>
+                    </li>
+                    <li class="articles__item">
+                      <article class="article-card article-card--menu">
+                        <a class="article-card__tag article-card__tag--menu" href="#">Новости компании</a>
+                        <h3 class="article-card__title article-card__title--menu">
+                          <a href="/page/news/2">Изменения в структуре управления</a>
+                        </h3>
+                      </article>
+                    </li>
+                  </ul>
+                  <a class="button button--white" href="/page/news/">Показать еще</a>
+                </div>
+              </li>
+              <li class="menu__item menu__item--dropdown" itemprop="name">
+                <div class="menu__item-header">
+                  <a class="menu__link" href="">
+                    Мероприятия
+                    <svg aria-hidden="true" width="12" height="11">
+                      <use xlink:href="/img/sprite.svg#right-arrow"></use>
+                    </svg>
+                  </a>
+                  <button class="menu__mobile-control" type="button">
+                    <span class="sr-only">Развернуть меню</span>
+                    <svg class="menu__mobile-icon" aria-hidden="true" width="12" height="11">
+                      <use xlink:href="/img/sprite.svg#right-arrow"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="menu__item-content">
+                  <div class="menu__item-top">
+                    <button class="menu__item-close" title="назад">
+                      <svg aria-hidden="true" width="19" height="15">
+                        <use xlink:href="/img/sprite.svg#left-arrow"></use>
+                      </svg>
+                      <span>Назад</span>
+                    </button>
+                    <h3 class="menu__item-title">
+                      <a href="">Мероприятия</a>
+                    </h3>
+                  </div>
+                  <p class="menu__item-desc">Программа развития молодых специалистов в сфере аудита. Начни свою карьеру в аудите на программе M-Talent! </p>
+                </div>
+              </li>
+              <li class="menu__item menu__item--dropdown" itemprop="name">
+                <div class="menu__item-header">
+                  <a class="menu__link" href="">
+                    Экспертное мнение
+                    <svg aria-hidden="true" width="12" height="11">
+                      <use xlink:href="/img/sprite.svg#right-arrow"></use>
+                    </svg>
+                  </a>
+                  <button class="menu__mobile-control" type="button">
+                    <span class="sr-only">Развернуть меню</span>
+                    <svg class="menu__mobile-icon" aria-hidden="true" width="12" height="11">
+                      <use xlink:href="/img/sprite.svg#right-arrow"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="menu__item-content">
+                  <div class="menu__item-top">
+                    <button class="menu__item-close" title="назад">
+                      <svg aria-hidden="true" width="19" height="15">
+                        <use xlink:href="/img/sprite.svg#left-arrow"></use>
+                      </svg>
+                      <span>Назад</span>
+                    </button>
+                    <h3 class="menu__item-title">
+                      <a href="">Экспертное мнение</a>
+                    </h3>
+                  </div>
+                  <p class="menu__item-desc">Программа развития молодых специалистов в сфере аудита. Начни свою карьеру в аудите на программе M-Talent! </p>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <li class="menu__item menu__item--dropdown" itemprop="name">
+            <div class="menu__item-header">
+              <a class="menu__link menu__link--main" href="/page/about/">О нас</a>
+              <button class="menu__mobile-control" type="button">
+                <span class="sr-only">Развернуть меню</span>
+                <svg class="menu__mobile-icon" aria-hidden="true" width="12" height="11">
+                  <use xlink:href="/img/sprite.svg#right-arrow"></use>
+                </svg>
+              </button>
+            </div>
+            <ul class="menu__list menu__list--nested menu__list--lvl1" role="list">
+              <!-- хедер для общего раздела-->
+              <li class="menu__item menu__item--mobile">
+                <div class="menu__item-top">
+                  <button class="menu__item-close" title="назад">
+                    <svg aria-hidden="true" width="19" height="15">
+                      <use xlink:href="/img/sprite.svg#left-arrow"></use>
+                    </svg>
+                    <span>Назад</span>
+                  </button>
+                  <h3 class="menu__item-title">
+                    <a href="/page/about/">О нас</a>
+                  </h3>
+                </div>
+              </li>
+              <li class="menu__item menu__item--dropdown" itemprop="name">
+                <div class="menu__item-header">
+                  <a class="menu__link" href="/page/about/">
+                    О компании
+                    <svg aria-hidden="true" width="12" height="11">
+                      <use xlink:href="/img/sprite.svg#right-arrow"></use>
+                    </svg>
+                  </a>
+                  <button class="menu__mobile-control" type="button">
+                    <span class="sr-only">Развернуть меню</span>
+                    <svg class="menu__mobile-icon" aria-hidden="true" width="12" height="11">
+                      <use xlink:href="/img/sprite.svg#right-arrow"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="menu__item-content">
+                  <div class="menu__item-top">
+                    <button class="menu__item-close" title="назад">
+                      <svg aria-hidden="true" width="19" height="15">
+                        <use xlink:href="/img/sprite.svg#left-arrow"></use>
+                      </svg>
+                      <span>Назад</span>
+                    </button>
+                    <h3 class="menu__item-title">
+                      <a href="">О компании</a>
+                    </h3>
+                  </div>
+                  <p class="menu__item-desc">30 лет динамичного и устойчивого развития превратили компанию в серьезного игрока на российском рынке, предоставляющего независимые профессиональные услуги высочайшего качества.</p>
+                </div>
+              </li>
+              <li class="menu__item menu__item--dropdown" itemprop="name">
+                <div class="menu__item-header">
+                  <a class="menu__link" href="/page/team/">
+                    Наше руководство
+                    <svg aria-hidden="true" width="12" height="11">
+                      <use xlink:href="/img/sprite.svg#right-arrow"></use>
+                    </svg>
+                  </a>
+                  <button class="menu__mobile-control" type="button">
+                    <span class="sr-only">Развернуть меню</span>
+                    <svg class="menu__mobile-icon" aria-hidden="true" width="12" height="11">
+                      <use xlink:href="/img/sprite.svg#right-arrow"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="menu__item-content">
+                  <div class="menu__item-top">
+                    <button class="menu__item-close" title="назад">
+                      <svg aria-hidden="true" width="19" height="15">
+                        <use xlink:href="/img/sprite.svg#left-arrow"></use>
+                      </svg>
+                      <span>Назад</span>
+                    </button>
+                    <h3 class="menu__item-title">
+                      <a href="">Наше руководство</a>
+                    </h3>
+                  </div>
+                  <p class="menu__item-desc">Многообразие опыта, компетенций и специализаций наших сотрудников гарантируют клиенту получение высококвалифицированных аудиторских, аутсорсинговых, налоговых и юридических услуг, а также услуг по сопровождению сделок.</p>
+                </div>
+              </li>
+              <li class="menu__item menu__item--dropdown" itemprop="name">
+                <div class="menu__item-header">
+                  <a class="menu__link" href="/attachments/mazaraudit.pdf" target="_blank">
+                    Сведения ООО Мазар Аудит
+                    <svg aria-hidden="true" width="12" height="11">
+                      <use xlink:href="/img/sprite.svg#right-arrow"></use>
+                    </svg>
+                  </a>
+                  <button class="menu__mobile-control" type="button">
+                    <span class="sr-only">Развернуть меню</span>
+                    <svg class="menu__mobile-icon" aria-hidden="true" width="12" height="11">
+                      <use xlink:href="/img/sprite.svg#right-arrow"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="menu__item-content">
+                  <div class="menu__item-top">
+                    <button class="menu__item-close" title="назад">
+                      <svg aria-hidden="true" width="19" height="15">
+                        <use xlink:href="/img/sprite.svg#left-arrow"></use>
+                      </svg>
+                      <span>Назад</span>
+                    </button>
+                    <h3 class="menu__item-title">
+                      <a href="">Сведения ООО Мазар Аудит</a>
+                    </h3>
+                  </div>
+                  <p class="menu__item-desc">Программа развития молодых специалистов в сфере аудита. Начни свою карьеру в аудите на программе M-Talent! </p>
+                </div>
+              </li>
+              <li class="menu__item menu__item--dropdown" itemprop="name">
+                <div class="menu__item-header">
+                  <a class="menu__link" href="/page/data-mazar-service">
+                    АО АФ Мариллион<svg aria-hidden="true" width="12" height="11">
+                      <use xlink:href="/img/sprite.svg#right-arrow"></use>
+                    </svg>
+                  </a>
+                  <button class="menu__mobile-control" type="button">
+                    <span class="sr-only">Развернуть меню</span>
+                    <svg class="menu__mobile-icon" aria-hidden="true" width="12" height="11">
+                      <use xlink:href="/img/sprite.svg#right-arrow"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="menu__item-content">
+                  <div class="menu__item-top">
+                    <button class="menu__item-close" title="назад">
+                      <svg aria-hidden="true" width="19" height="15">
+                        <use xlink:href="/img/sprite.svg#left-arrow"></use>
+                      </svg>
+                      <span>Назад</span>
+                    </button>
+                    <h3 class="menu__item-title">
+                      <a href="">Сведения АО Мазар Аудиторские услуги</a>
+                    </h3>
+                  </div>
+                  <p class="menu__item-desc">Программа развития молодых специалистов в сфере аудита. Начни свою карьеру в аудите на программе M-Talent! </p>
+                </div>
+              </li>
+              <li class="menu__item menu__item--dropdown" itemprop="name">
+                <div class="menu__item-header">
+                  <a class="menu__link" href="/page/data-marillion/">
+                    Сведения ООО АК Мариллион
+                  </a>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <li class="menu__item" itemprop="name">
+            <a class="menu__link menu__link--main" href="/page/career/" itemprop="url">Карьера</a>
+          </li>
+          <li class="menu__item" itemprop="name">
+            <a class="menu__link menu__link--main" href="/page/contacts/" itemprop="url">Контакты</a>
+          </li>
+        </ul>
+        <!-- обертка для новых элементов верстки -->
+        <div class="header__actions">
+          <a class="header__button header__button--form" href="#" data-hystmodal="#modal-form">Свяжитесь с нами</a>
+          <div class="header__lang language-dropdown">
+            <button class="language-dropdown__control btn-reset">
+              <span class="language-dropdown__selected sr-only">Рус</span>
+              <svg aria-hidden="true" width="19" height="19">
+                <use xlink:href="/img/sprite.svg#globe"></use>
+              </svg>
+            </button>
+            <ul class="language-dropdown__list" role="list">
+              <li class="language-dropdown__item">
+                <a class="language-dropdown__link language-dropdown__link--current">Ru</a>
+              </li>
+              <li class="language-dropdown__item">
+                <a class="language-dropdown__link" href="/page/en/" title="Переключить язык на английский">Eng</a>
+              </li>
+            </ul>
+          </div>
+          <a class="header__search" href="/search" title="Поиск">
+            <span class="sr-only">Поиск</span>
+            <svg aria-hidden="true" width="19" height="19">
+              <use xlink:href="/img/sprite.svg#search"></use>
+            </svg>
+          </a>
+        </div>
+      </nav>
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="menu__list" aria-label="Открыть меню">
+        <span class="menu-button__line" aria-hidden="true"></span>
+        <span class="menu-button__line" aria-hidden="true"></span>
+        <span class="menu-button__line" aria-hidden="true"></span>
+      </button>
+    </div>
+  </header>
+  <main class="main">
+    <div class="article" itemscope itemtype="http://schema.org/Article">
+      <div class="article__heading-wrapper">
+        <div class="article__heading" style="--background:#C82C32">
+          <nav class="article__breadcrumb breadcrumb" aria-label="Breadcrumb">
+            <ol class="breadcrumb__list" role="list">
+              <li class="breadcrumb__item">
+                <a class="breadcrumb__link" href="/">Мариллион</a>
+              </li>
+              <li class="breadcrumb__item">
+                <a class="breadcrumb__link" href="/page/services/">Услуги</a>
+              </li>
+              <li class="breadcrumb__item">
+                <a class="breadcrumb__link breadcrumb__link--current" aria-current="location">Внедрение и сопровождение программ 1С</a>
+              </li>
+            </ol>
+          </nav>
+          <h1 class="article__title title title--primary">Внедрение и сопровождение <br> программ 1С</h1>
+          <p class="article__excerpt">«Мариллион» предоставляет услуги по внедрению и сопровождению сделок.</p>
+          <a class="article__button button button--max-width" href="" data-hystmodal="#modal-form">Связаться с нами</a>
+        </div>
+        <div class="article__hero">
+          <img class="article__hero-img lazy" data-src="/img/services/7.jpg" width="1344" height="476" alt="" itemprop="image">
+        </div>
+      </div>
+      <div class="article__content content" itemprop="articleBody">
+        <p>Мы поможем вам сделать переход профессионально, надежно и безопасно. Наш накопленный опыт позволит качественно оценить необходимость перехода и подобрать идеальное решение для вас, с учетом всех потребностей.</p>
+        <p>Обычно мы стараемся организовать процесс работы так, чтобы он прошел максимально незаметно для клиента и без простоев в работе. Сама работа проходит в строгом соответствии с заранее согласованным бюджетом. Плюс мы гарантируем работоспособность новой программы, в том числе и в случае ее доработки и донастройки под вашу специфику.</p>
+        <div class="content__block">
+          <h2>Официальное партнерство</h2>
+          <ul class="article__communities communities styled" role="list">
+            <li class="communities__item">
+              <div class="community">
+                <figure class="community__figure">
+                  <img class="community__img lazy" data-src="/img/partners/1.png" alt="">
+                </figure>
+                <h3 class="community__title styled">
+                  <a class="community__link styled" href="">1С:Франчайзинг</a>
+                </h3>
+              </div>
+            </li>
+            <li class="communities__item">
+              <div class="community">
+                <figure class="community__figure">
+                  <img class="community__img lazy" data-src="/img/partners/2.png" alt="">
+                </figure>
+                <h3 class="community__title styled">
+                  <a class="community__link styled" href="">1С:Аренда программ</a>
+                </h3>
+              </div>
+            </li>
+            <li class="communities__item">
+              <div class="community">
+                <figure class="community__figure">
+                  <img class="community__img lazy" data-src="/img/partners/3.png" alt="">
+                </figure>
+                <h3 class="community__title styled">
+                  <a class="community__link styled" href="">1С:ИТС</a>
+                </h3>
+              </div>
+            </li>
+            <li class="communities__item">
+              <div class="community">
+                <figure class="community__figure">
+                  <img class="community__img lazy" data-src="/img/partners/4.png" alt="">
+                </figure>
+                <h3 class="community__title styled">
+                  <a class="community__link styled" href="">1С:Консалтинг</a>
+                </h3>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="content__block">
+          <h2>Почему мы?</h2>
+          <ul class="article__worth worth styled" role="list">
+            <li class="worth__item">
+              <img class="worth__icon lazy" data-src="/img/worth/1.svg" width="54" height="70" alt="">
+              <p class="worth__desc">Ведущие позиции в рэнкингах (Топ-5 по RAEX в подготовке отчетности РСБУ и МСФО, Топ-10 по расчету заработной платы)</p>
+            </li>
+            <li class="worth__item">
+              <img class="worth__icon lazy" data-src="/img/worth/2.svg" width="66" height="60" alt="">
+              <p class="worth__desc">Команда профессионалов с высокой квалификацией и значительным опытом работы с крупным и средним бизнесом</p>
+            </li>
+            <li class="worth__item">
+              <img class="worth__icon lazy" data-src="/img/worth/2.svg" width="66" height="60" alt="">
+              <p class="worth__desc">Более 30 лет на лынке</p>
+            </li>
+            <li class="worth__item">
+              <img class="worth__icon lazy" data-src="/img/worth/3.svg" width="66" height="60" alt="">
+              <p class="worth__desc">Комплексное сопровождение проектов</p>
+            </li>
+            <li class="worth__item">
+              <img class="worth__icon lazy" data-src="/img/worth/5.svg" width="56" height="66" alt="">
+              <p class="worth__desc">Гибкий подход и возможность адаптироваться под потребности бизнеса</p>
+            </li>
+            <li class="worth__item">
+              <img class="worth__icon lazy" data-src="/img/worth/4.svg" width="48" height="66" alt="">
+              <p class="worth__desc">Предлагаем клиенту эффективные и адаптированные под его бизнес решения</p>
+            </li>
+          </ul>
+        </div>
+        <div class="content__block">
+          <h2>Услуги</h2>
+          <ul class="articles articles--blog styled" role="list">
+            <li class="articles__item articles__item--blog">
+              <article class="article-card article-card--blog">
+                <div class="article-card__body">
+                  <h3 class="article-card__title article-card__title--blog accent-color styled">
+                    <a class="styled" href="">Внедрение и доработка 1С продуктов</a>
+                  </h3>
+                  <p>Небольшое описание того как «Мариллион» предоставляет услуги по внедрению и доработке 1С продуктов</p>
+                </div>
+                <figure class="article-card__figure article-card__figure--blog">
+                  <img class="article-card__image article-card__image--blog" src="/img/services/1c-1jpg.jpg" alt="" width="320" height="216">
+                </figure>
+              </article>
+            </li>
+            <li class="articles__item articles__item--blog">
+              <article class="article-card article-card--blog">
+                <div class="article-card__body">
+                  <h3 class="article-card__title article-card__title--blog accent-color styled">
+                    <a class="styled" href="">Перевод с одной учетной системы на другую</a>
+                  </h3>
+                  <p>Небольшое описание того как «Мариллион» предоставляет услуги по переводу с одной учетной системы на другую</p>
+                </div>
+                <figure class="article-card__figure article-card__figure--blog">
+                  <img class="article-card__image article-card__image--blog" src="/img/services/1c-2.jpg" alt="" width="320" height="216">
+                </figure>
+              </article>
+            </li>
+            <li class="articles__item articles__item--blog">
+              <article class="article-card article-card--blog">
+                <div class="article-card__body">
+                  <h3 class="article-card__title article-card__title--blog accent-color styled">
+                    <a class="styled" href="">Автоматизация бизнес-процессов на базе 1С</a>
+                  </h3>
+                  <p>Небольшое описание того как «Мариллион» предоставляет услуги по переводу с одной учетной системы на другую</p>
+                </div>
+                <figure class="article-card__figure article-card__figure--blog">
+                  <img class="article-card__image article-card__image--blog" src="/img/services/1c-3.jpg" alt="" width="320" height="216">
+                </figure>
+              </article>
+            </li>
+            <li class="articles__item articles__item--blog">
+              <article class="article-card article-card--blog">
+                <div class="article-card__body">
+                  <h3 class="article-card__title article-card__title--blog accent-color styled">
+                    <a class="styled" href="">Интеграция с различными системами </a>
+                  </h3>
+                  <p>Небольшое описание того как «Мариллион» предоставляет услуги по переводу с одной учетной системы на другую</p>
+                </div>
+                <figure class="article-card__figure article-card__figure--blog">
+                  <img class="article-card__image article-card__image--blog" src="/img/services/1c-4.jpg" alt="" width="320" height="216">
+                </figure>
+              </article>
+            </li>
+            <li class="articles__item articles__item--blog">
+              <article class="article-card article-card--blog">
+                <div class="article-card__body">
+                  <h3 class="article-card__title article-card__title--blog accent-color styled">
+                    <a class="styled" href="">Сопровождение систем включая обновление, консультирование и т.д.</a>
+                  </h3>
+                  <p>Небольшое описание того как «Мариллион» предоставляет услуги по переводу с одной учетной системы на другую</p>
+                </div>
+                <figure class="article-card__figure article-card__figure--blog">
+                  <img class="article-card__image article-card__image--blog" src="/img/services/1c-5.jpg" alt="" width="320" height="216">
+                </figure>
+              </article>
+            </li>
+            <li class="articles__item articles__item--blog">
+              <article class="article-card article-card--blog">
+                <div class="article-card__body">
+                  <h3 class="article-card__title article-card__title--blog accent-color styled">
+                    <a class="styled" href="">Предоставление удаленного доступа к системе на базе технологии 1С-фреш</a>
+                  </h3>
+                  <p>Небольшое описание того как «Мариллион» предоставляет услуги по переводу с одной учетной системы на другую</p>
+                </div>
+                <figure class="article-card__figure article-card__figure--blog">
+                  <img class="article-card__image article-card__image--blog" src="/img/services/1c-6.jpg" alt="" width="320" height="216">
+                </figure>
+              </article>
+            </li>
+            <li class="articles__item articles__item--blog">
+              <article class="article-card article-card--blog">
+                <div class="article-card__body">
+                  <h3 class="article-card__title article-card__title--blog accent-color styled">
+                    <a class="styled" href="">Визуализация данных на базе Yandex Data Lens</a>
+                  </h3>
+                  <p>Небольшое описание того как «Мариллион» предоставляет услуги по переводу с одной учетной системы на другую</p>
+                </div>
+                <figure class="article-card__figure article-card__figure--blog">
+                  <img class="article-card__image article-card__image--blog" src="/img/services/1c-7.jpg" alt="" width="320" height="216">
+                </figure>
+              </article>
+            </li>
+            <li class="articles__item articles__item--blog">
+              <article class="article-card article-card--blog">
+                <div class="article-card__body">
+                  <h3 class="article-card__title article-card__title--blog accent-color styled">
+                    <a class="styled" href="">Готовые решения по автоматизации воинского учета</a>
+                  </h3>
+                  <p>Небольшое описание того как «Мариллион» предоставляет услуги по переводу с одной учетной системы на другую</p>
+                </div>
+                <figure class="article-card__figure article-card__figure--blog">
+                  <img class="article-card__image article-card__image--blog" src="/img/services/1c-8.jpg" alt="" width="320" height="216">
+                </figure>
+              </article>
+            </li>
+            <li class="articles__item articles__item--blog">
+              <article class="article-card article-card--blog">
+                <div class="article-card__body">
+                  <h3 class="article-card__title article-card__title--blog accent-color styled">
+                    <a class="styled" href="">Готовые решения по отслеживанию кадровых процессов и т.д.</a>
+                  </h3>
+                  <p>Небольшое описание того как «Мариллион» предоставляет услуги по переводу с одной учетной системы на другую</p>
+                </div>
+                <figure class="article-card__figure article-card__figure--blog">
+                  <img class="article-card__image article-card__image--blog" src="/img/services/1c-9.jpg" alt="" width="320" height="216">
+                </figure>
+              </article>
+            </li>
+          </ul>
+        </div>
+        <div class="content__block">
+          <h2>Продукты и сервисы</h2>
+          <div class="product-table">
+            <table>
+              <thead>
+                <tr>
+                  <th scope="col">Список продуктов</th>
+                  <th scope="col">Цена по кол-ву пользователей</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <a class="styled" href="">Облачные решения 1С</a>
+                  </td>
+                  <td>от 1 085 ₽ </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a class="styled" href="">1С:Бухгалтерия 8 ПРОФ</a>
+                  </td>
+                  <td>13 000.00 ₽ </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a class="styled" href="">1С:Бухгалтерия 8 КОРП</a>
+                  </td>
+                  <td>33 600.00 ₽ </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a class="styled" href="">1С:Зарплата и Управление Персоналом 8</a>
+                  </td>
+                  <td>22 600.00 ₽ </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a class="styled" href="">1С:Зарплата и управление персоналом 8 КОРП</a>
+                  </td>
+                  <td>109 000.00 ₽</td>
+                </tr>
+                <tr>
+                  <td>
+                    <a class="styled" href="">1С:Комплексная автоматизация 8</a>
+                  </td>
+                  <td>61 700.00 ₽ </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a class="styled" href="">1С:Документооборот 8 ПРОФ</a>
+                  </td>
+                  <td>36 000.00 ₽ </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a class="styled" href="">1С:Документооборот 8 КОРП</a>
+                  </td>
+                  <td>187 000.00 ₽ </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a class="styled" href="">1C:Document Management 8</a>
+                  </td>
+                  <td>300 000.00 ₽ </td>
+                </tr>
+                <tr>
+                  <th scope="row">Сервисы 1С:ИТС</th>
+                  <th scope="row">Цена по кол-ву пользователей</th>
+                </tr>
+                <tr>
+                  <td>
+                    <a class="styled" href="">1С:Предприятие 8 ПРОФ. Клиентская лицензия </a>
+                    <div class="product-table__select">
+                      <select class="dynamic-width" name="" id="">
+                        <option value="1" selected>На 1 рабочее место</option>
+                        <option value="5">на 5 рабочих мест</option>
+                        <option value="10">на 10 рабочих мест</option>
+                        <option value="20">на 20 рабочих мест</option>
+                        <option value="50">на 50 рабочих мест</option>
+                        <option value="100">на 100 рабочих мест</option>
+                        <option value="300">на 300 рабочих мест</option>
+                        <option value="500">на 500 рабочих мест</option>
+                      </select>
+                    </div>
+                  </td>
+                  <td>от 6 300.00 ₽ </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a class="styled" href="">1С:Предприятие 8.3. Сервер МИНИ </a>
+                    <div class="product-table__select">
+                      <select class="dynamic-width" name="" id="">
+                        <option value="5" selected>на 5 подключений</option>
+                        <option value="5">на 5 подключений. Электронная поставк...</option>
+                      </select>
+                    </div>
+                  </td>
+                  <td>от 14 400.00 ₽ </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a class="styled" href="">1С:Предприятие 8.3 ПРОФ. </a>
+                    <div class="product-table__select">
+                      <select class="dynamic-width" name="" id="">
+                        <option value="1" selected>Лицензия на сервер</option>
+                        <option value="5">Лицензия на сервер. Электронная поста</option>
+                        <option value="10">Лицензия на сервер (х86-64)</option>
+                        <option value="20">Лицензия на сервер (х86-64). Электрон</option>
+                        <option value="">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae, hic.</option>
+                      </select>
+                    </div>
+                  </td>
+                  <td>от 50 400.00 ₽ </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="content__block successful-cases">
+          <h2 class="successful-cases__header">Успешные кейсы</h2>
+          <div class="successful-cases__nav">
+            <button class="successful-cases__button successful-cases__button--prev" type="button">
+              <svg aria-hidden="true" width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16 7.00098L1 7.00098M1 7.00098L6.5 13.001M1 7.00098L6.5 1.00098" stroke="currentColor"/>
+              </svg>
+            </button>
+            <button class="successful-cases__button successful-cases__button--next" type="button">
+              <svg aria-hidden="true" width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 7.00098H15M15 7.00098L9.5 1.00098M15 7.00098L9.5 13.001" stroke="currentColor"/>
+              </svg>
+            </button>
+          </div>
+          <div class="swiper successful-cases__swiper">
+            <div class="swiper-wrapper">
+              <div class="successful-cases__slide swiper-slide">
+                <article class="article-card">
+                  <figure class="article-card__figure">
+                    <img class="article-card__image" src="/img/services/1c-10.jpg" alt="" width="488" height="240">
+                  </figure>
+                  <h3 class="article-card__title styled">
+                    <a class="styled" href="">Внедрение ПП «1С:Бухгалтерия предприятия КОРП» в компании ООО «ЭТАМ РУС»</a>
+                  </h3>
+                  <dl class="article-card__desc-list">
+                    <dt class="article-card__desc-term">Использованные 1С продукты:</dt>
+                    <dd class="article-card__desc-details">1С:Бухгалтерия предприятия КОРП</dd>
+                  
+                    <dt class="article-card__desc-term">Компания:</dt>
+                    <dd class="article-card__desc-details">ООО «ЭТАМ РУС»</dd>
+                  
+                    <dt class="article-card__desc-term">Отрасль:</dt>
+                    <dd class="article-card__desc-details">Торговля розничной одеждой в специализированных магазинах</dd>
+                  </dl>
+                  <a class="article-card__button styled" href="">Подробнее о кейсе</a>
+                </article>
+              </div>
+              <div class="successful-cases__slide swiper-slide">
+                <article class="article-card">
+                  <figure class="article-card__figure">
+                    <img class="article-card__image" src="/img/services/1c-11.jpg" alt="" width="488" height="240">
+                  </figure>
+                  <h3 class="article-card__title styled">
+                    <a class="styled" href="">Внедрение ПП «1С:Бухгалтерия предприятия КОРП» в компании ООО «Парексель интернэшнл (РУС)»</a>
+                  </h3>
+                  <dl class="article-card__desc-list">
+                    <dt class="article-card__desc-term">Использованные 1С продукты:</dt>
+                    <dd class="article-card__desc-details">1С:Бухгалтерия предприятия КОРП, редакция 3.0</dd>
+                  
+                    <dt class="article-card__desc-term">Компания:</dt>
+                    <dd class="article-card__desc-details">ООО «Парексель интернэшнл (РУС)»</dd>
+                  
+                    <dt class="article-card__desc-term">Отрасль:</dt>
+                    <dd class="article-card__desc-details">Научные исследования и разработки в области естественных и технических наук в сфере медицины, фармацевтики</dd>
+                  </dl>
+                  <a class="article-card__button styled" href="">Подробнее о кейсе</a>
+                </article>
+              </div>
+              <div class="successful-cases__slide swiper-slide">
+                <article class="article-card">
+                  <figure class="article-card__figure">
+                    <img class="article-card__image" src="/img/services/1c-10.jpg" alt="" width="488" height="240">
+                  </figure>
+                  <h3 class="article-card__title styled">
+                    <a class="styled" href="">Внедрение ПП «1С:Бухгалтерия предприятия КОРП» в компании ООО «ЭТАМ РУС»</a>
+                  </h3>
+                  <dl class="article-card__desc-list">
+                    <dt class="article-card__desc-term">Использованные 1С продукты:</dt>
+                    <dd class="article-card__desc-details">1С:Бухгалтерия предприятия КОРП</dd>
+                  
+                    <dt class="article-card__desc-term">Компания:</dt>
+                    <dd class="article-card__desc-details">ООО «ЭТАМ РУС»</dd>
+                  
+                    <dt class="article-card__desc-term">Отрасль:</dt>
+                    <dd class="article-card__desc-details">Торговля розничной одеждой в специализированных магазинах</dd>
+                  </dl>
+                  <a class="article-card__button styled" href="">Подробнее о кейсе</a>
+                </article>
+              </div>
+              <div class="successful-cases__slide swiper-slide">
+                <article class="article-card">
+                  <figure class="article-card__figure">
+                    <img class="article-card__image" src="/img/services/1c-11.jpg" alt="" width="488" height="240">
+                  </figure>
+                  <h3 class="article-card__title styled">
+                    <a class="styled" href="">Внедрение ПП «1С:Бухгалтерия предприятия КОРП» в компании ООО «Парексель интернэшнл (РУС)»</a>
+                  </h3>
+                  <dl class="article-card__desc-list">
+                    <dt class="article-card__desc-term">Использованные 1С продукты:</dt>
+                    <dd class="article-card__desc-details">1С:Бухгалтерия предприятия КОРП, редакция 3.0</dd>
+                  
+                    <dt class="article-card__desc-term">Компания:</dt>
+                    <dd class="article-card__desc-details">ООО «Парексель интернэшнл (РУС)»</dd>
+                  
+                    <dt class="article-card__desc-term">Отрасль:</dt>
+                    <dd class="article-card__desc-details">Научные исследования и разработки в области естественных и технических наук в сфере медицины, фармацевтики</dd>
+                  </dl>
+                  <a class="article-card__button styled" href="">Подробнее о кейсе</a>
+                </article>
+              </div>
+              <div class="successful-cases__slide swiper-slide">
+                <article class="article-card">
+                  <figure class="article-card__figure">
+                    <img class="article-card__image" src="/img/services/1c-10.jpg" alt="" width="488" height="240">
+                  </figure>
+                  <h3 class="article-card__title styled">
+                    <a class="styled" href="">Внедрение ПП «1С:Бухгалтерия предприятия КОРП» в компании ООО «ЭТАМ РУС»</a>
+                  </h3>
+                  <dl class="article-card__desc-list">
+                    <dt class="article-card__desc-term">Использованные 1С продукты:</dt>
+                    <dd class="article-card__desc-details">1С:Бухгалтерия предприятия КОРП</dd>
+                  
+                    <dt class="article-card__desc-term">Компания:</dt>
+                    <dd class="article-card__desc-details">ООО «ЭТАМ РУС»</dd>
+                  
+                    <dt class="article-card__desc-term">Отрасль:</dt>
+                    <dd class="article-card__desc-details">Торговля розничной одеждой в специализированных магазинах</dd>
+                  </dl>
+                  <a class="article-card__button styled" href="">Подробнее о кейсе</a>
+                </article>
+              </div>
+              <div class="successful-cases__slide swiper-slide">
+                <article class="article-card">
+                  <figure class="article-card__figure">
+                    <img class="article-card__image" src="/img/services/1c-11.jpg" alt="" width="488" height="240">
+                  </figure>
+                  <h3 class="article-card__title styled">
+                    <a class="styled" href="">Внедрение ПП «1С:Бухгалтерия предприятия КОРП» в компании ООО «Парексель интернэшнл (РУС)»</a>
+                  </h3>
+                  <dl class="article-card__desc-list">
+                    <dt class="article-card__desc-term">Использованные 1С продукты:</dt>
+                    <dd class="article-card__desc-details">1С:Бухгалтерия предприятия КОРП, редакция 3.0</dd>
+                  
+                    <dt class="article-card__desc-term">Компания:</dt>
+                    <dd class="article-card__desc-details">ООО «Парексель интернэшнл (РУС)»</dd>
+                  
+                    <dt class="article-card__desc-term">Отрасль:</dt>
+                    <dd class="article-card__desc-details">Научные исследования и разработки в области естественных и технических наук в сфере медицины, фармацевтики</dd>
+                  </dl>
+                  <a class="article-card__button styled" href="">Подробнее о кейсе</a>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="content__block">
+          <h2>Наша команда</h2>
+          <ul class="team-list team-list--2-col styled" role="list">
+            <li class="team-list__item">
+              <div class="expert">
+                <div class="expert__avatar">
+                  <img class="expert__img lazy" data-src="/img/team-section/1.png" alt="Полина Виксне" width="180" height="180" loading="lazy">
+                </div>
+                <h3 class="expert__name styled">
+                  <a class="expert__link styled" href="">Полина Виксне</a>
+                </h3>
+                <span class="expert__position">Управляющий партнер, Аудит</span>
+              </div>
+            </li>
+            <li class="team-list__item">
+              <div class="expert">
+                <div class="expert__avatar">
+                  <img class="expert__img lazy" data-src="/img/team-section/2.png" alt="Ирина Татарцева" width="180" height="180" loading="lazy">
+                </div>
+                <h3 class="expert__name styled">
+                  <a class="expert__link styled" href="/page/team/irina-tatartseva/">Ирина Татарцева</a>
+                </h3>
+                <span class="expert__position">Партнер, Аудит</span>
+              </div>
+            </li>
+            <li class="team-list__item">
+              <div class="expert">
+                <div class="expert__avatar">
+                  <img class="expert__img lazy" data-src="/img/team-section/3.png" alt="Сергей Харитонов" width="180" height="180" loading="lazy">
+                </div>
+                <h3 class="expert__name styled">
+                  <a class="expert__link styled" href="">Сергей Харитонов</a>
+                </h3>
+                <span class="expert__position">Управляющий партнер, Аудит</span>
+              </div>
+            </li>
+            <li class="team-list__item">
+              <div class="expert">
+                <div class="expert__avatar">
+                  <img class="expert__img lazy" data-src="/img/team-section/4.png" alt="Евгений Авдеев" width="180" height="180" loading="lazy">
+                </div>
+                <h3 class="expert__name styled">
+                  <a class="expert__link styled" href="">Евгений Авдеев</a>
+                </h3>
+                <span class="expert__position">Партнер, Аудит</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="content__block">
+          <h2>Сертификаты сотрудников</h2>
+          <details-utils animate force-open>
+            <details class="c-accordion c-accordion--gray">
+              <summary class="c-accordion__summary">
+                <h3 class="c-accordion__title styled">1С:Профессионал <span class="gray">(12)</span></h3>
+              </summary>
+              <div class="c-accordion__content-wrap">
+                <div class="c-accordion__content">
+                  <ul class="c-list styled" role="list">
+                    <li>
+                      <a class="c-list__link styled" href="" data-hystmodal="#modal-cert">
+                        <span>1С:Профессионал. Бухгалтерия 8</span>
+                        <svg aria-hidden="true" width="15" height="12">
+                          <use xlink:href="/img/sprite.svg#right-arrow"></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="c-list__link styled" href="" data-hystmodal="#modal-cert">
+                        <span>1С:Профессионал. Бухгалтерский учет вер. 7.7</span>
+                        <svg aria-hidden="true" width="15" height="12">
+                          <use xlink:href="/img/sprite.svg#right-arrow"></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="c-list__link styled" href="" data-hystmodal="#modal-cert">
+                        <span>1С:Профессионал. Документооборот 8</span>
+                        <svg aria-hidden="true" width="15" height="12">
+                          <use xlink:href="/img/sprite.svg#right-arrow"></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="c-list__link styled" href="" data-hystmodal="#modal-cert">
+                        <span>1С:Профессионал. ЕВР Управление предприятием ред. 2.5</span>
+                        <svg aria-hidden="true" width="15" height="12">
+                          <use xlink:href="/img/sprite.svg#right-arrow"></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="c-list__link styled" href="" data-hystmodal="#modal-cert">
+                        <span>1С:Профессионал. Зарплата и управление персоналом 8</span>
+                        <svg aria-hidden="true" width="15" height="12">
+                          <use xlink:href="/img/sprite.svg#right-arrow"></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="c-list__link styled" href="" data-hystmodal="#modal-cert">
+                        <span>1С:Профессионал. Оперативный учет вер. 7.7</span>
+                        <svg aria-hidden="true" width="15" height="12">
+                          <use xlink:href="/img/sprite.svg#right-arrow"></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="c-list__link styled" href="" data-hystmodal="#modal-cert">
+                        <span>1С:Профессионал. Платформа 1С:Предприятие 8.1</span>
+                        <svg aria-hidden="true" width="15" height="12">
+                          <use xlink:href="/img/sprite.svg#right-arrow"></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="c-list__link styled" href="" data-hystmodal="#modal-cert">
+                        <span>1С:Профессионал. Платформа 1С:Предприятие 8.2</span>
+                        <svg aria-hidden="true" width="15" height="12">
+                          <use xlink:href="/img/sprite.svg#right-arrow"></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="c-list__link styled" href="" data-hystmodal="#modal-cert">
+                        <span>1С:Профессионал. Платформа 1С:Предприятие 8.3</span>
+                        <svg aria-hidden="true" width="15" height="12">
+                          <use xlink:href="/img/sprite.svg#right-arrow"></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="c-list__link styled" href="" data-hystmodal="#modal-cert">
+                        <span>1С:Профессионал. Расчет вер. 7.7</span>
+                        <svg aria-hidden="true" width="15" height="12">
+                          <use xlink:href="/img/sprite.svg#right-arrow"></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="c-list__link styled" href="" data-hystmodal="#modal-cert">
+                        <span>1С:Профессионал. Стандарты МСФО (ред. 2007 г.). Подсистема "МСФО" 1С:УПП</span>
+                        <svg aria-hidden="true" width="15" height="12">
+                          <use xlink:href="/img/sprite.svg#right-arrow"></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="c-list__link styled" href="" data-hystmodal="#modal-cert">
+                        <span>1С:Профессионал. Управление производственным предприятием 8</span>
+                        <svg aria-hidden="true" width="15" height="12">
+                          <use xlink:href="/img/sprite.svg#right-arrow"></use>
+                        </svg>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </details>
+          </details-utils>
+          <details-utils animate>
+            <details class="c-accordion c-accordion--gray">
+              <summary class="c-accordion__summary">
+                <h3 class="c-accordion__title styled">1С:Специалист <span class="gray">(9)</span></h3>
+              </summary>
+              <div class="c-accordion__content-wrap">
+                <div class="c-accordion__content">
+                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit modi quibusdam reiciendis tempore natus culpa delectus assumenda inventore ea totam.</p>
+                </div>
+              </div>
+            </details>
+          </details-utils>
+          <details-utils animate>
+            <details class="c-accordion c-accordion--gray">
+              <summary class="c-accordion__summary">
+                <h3 class="c-accordion__title styled">1С:Эксперт <span class="gray">(1)</span></h3>
+              </summary>
+              <div class="c-accordion__content-wrap">
+                <div class="c-accordion__content">
+                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit modi quibusdam reiciendis tempore natus culpa delectus assumenda inventore ea totam.</p>
+                </div>
+              </div>
+            </details>
+          </details-utils>
+        </div>
+      </div>
+      <aside class="article__aside">
+        <nav class="document-toc document-toc--aside">
+          <h2 class="document-toc__heading">Услуги</h2>
+          <ul class="document-toc__list" role="list">
+            <li class="document-toc__item">
+              <a class="document-toc__link document-toc__link--main" href="/page/services/audit/">Аудит</a>
+            </li>
+            <li class="document-toc__item">
+              <a class="document-toc__link document-toc__link--main" href="/page/services/outsourcing/">Аутсорсинг</a>
+            </li>
+            <li class="document-toc__item">
+              <a class="document-toc__link document-toc__link--main document-toc__link--current" href="/page/services/outsourcing/">Внедрение и сопровождение программ 1С</a>
+              <ul class="document-toc__list" role="list">
+                <li class="document-toc__item">
+                  <a class="document-toc__link" href="">Внедрение и доработка 1С продуктов</a>
+                </li>
+                <li class="document-toc__item">
+                  <a class="document-toc__link" href="">Перевод с одной учетной записи на другую</a>
+                </li>
+                <li class="document-toc__item">
+                  <a class="document-toc__link" href="">Автоматизация бизнес-процессов на базе 1С</a>
+                </li>
+                <li class="document-toc__item">
+                  <a class="document-toc__link" href="">Интеграция с различными системами</a>
+                </li>
+                <li class="document-toc__item">
+                  <a class="document-toc__link" href="">Сопровождение систем включая обновление, консультирование и т.д.</a>
+                </li>
+                <li class="document-toc__item">
+                  <a class="document-toc__link" href="">Предоставление удаленного доступа к системе на базе технологии 1С-фреш</a>
+                </li>
+                <li class="document-toc__item">
+                  <a class="document-toc__link" href="">Визуализация данных на базе Yandex Data Lens</a>
+                </li>
+                <li class="document-toc__item">
+                  <a class="document-toc__link" href="">Готовые решения по отслеживанию кадровых процессов и т.д.</a>
+                </li>
+              </ul>
+            </li>
+            <li class="document-toc__item">
+              <a class="document-toc__link document-toc__link--main" href="/page/services/tax/">Налоговое консультирование</a>
+            </li>
+            <li class="document-toc__item">
+              <a class="document-toc__link document-toc__link--main" href="/page/services/anti-crisis-support-and-sanctions-consulting/">Антикризисная поддержка бизнеса</a>
+            </li>
+            <li class="document-toc__item">
+              <a class="document-toc__link document-toc__link--main" href="/page/services/financial-advisory/">Финансовое консультрование</a>
+            </li>
+            <li class="document-toc__item">
+              <a class="document-toc__link document-toc__link--main" href="/page/services/legal/">Юридические услуги</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="article__sticky">
+          <div class="contacts-card contacts-card--compact contacts-card--hidden-on-touch">
+            <div class="contacts-card__content contacts-card__content--compact">
+              <h2 class="contacts-card__title contacts-card__title--compact title title--secondary">Связаться <br> с нами</h2>
+              <a class="contacts-card__tel contacts-card__tel--compact" href="tel:+74957925245">+7 (495) 792 52 45 </a>
+              <a class="contacts-card__email contacts-card__email--compact" href="mailto:bd@marillion.ru">bd@marillion.ru </a>
+              <a class="contacts-card__location contacts-card__location--compact" href="https://www.google.com/maps/place/Mazars/@55.7592523,37.6658805,19z/data=!4m5!3m4!1s0x46b54a6b80482ced:0x198f0075f6770477!8m2!3d55.7594076!4d37.6656047" target="_blank" rel="noopener">Москва, Нижний Сусальный пер. 5, стр. 19</a>
+              <a class="contacts-card__button contacts-card__button--compact button button--sm-p" href="#request-form" data-hystmodal="#modal-form">Свяжитесь с нами</a>
+            </div>
+            <div class="contacts-card__figure contacts-card__figure--compact">
+              <img class="contacts-card__image contacts-card__image--compact lazy" src="/img/contacts/cover-compact.jpg" alt="" width="280" height="404">
+            </div>
+          </div>
+        </div>
+      </aside>
+    </div>
+    <div class="contacts-card">
+      <div class="contacts-card__content clamp-offset">
+        <h2 class="contacts-card__title title title--primary">Связаться с нами</h2>
+        <a class="contacts-card__tel" href="tel:+74957925245">+7 (495) 792 52 45 </a>
+        <a class="contacts-card__email" href="mailto:bd@marillion.ru">bd@marillion.ru </a>
+        <a class="contacts-card__location" href="https://www.google.com/maps/place/Mazars/@55.7592523,37.6658805,19z/data=!4m5!3m4!1s0x46b54a6b80482ced:0x198f0075f6770477!8m2!3d55.7594076!4d37.6656047" target="_blank" rel="noopener">Москва, Нижний Сусальный пер. 5, стр. 19</a>
+        <a class="contacts-card__button button button--sm-p" href="#request-form" data-hystmodal="#modal-form">Свяжитесь с нами</a>
+      </div>
+      <div class="contacts-card__figure">
+        <img class="contacts-card__image lazy" data-src="/img/contact-section/contacts-card.jpg" alt="" width="684" height="459">
+      </div>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="footer__container container">
+      <div class="footer__grid">
+        <a class="footer__logo logo" href="/">
+          <img class="logo__img" src="/img/logo.svg" alt="Логотип Мариллион" width="272" height="38">
+        </a>
+        <ul class="footer__social social-links" role="list">
+          <li class="social-links__item">
+            <a class="social-links__link" href="https://t.me/marillionru" target="_blank" rel="noopener nofollow" title="Наш Телеграм">
+              <span class="sr-only">Наш Телеграм</span>
+              <svg aria-hidden="true" width="18" height="15">
+                <use xlink:href="/img/sprite.svg#tg"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-links__item">
+            <a class="social-links__link" href="https://www.linkedin.com/company/2535755" target="_blank" rel="noopener nofollow" title="Наш linkedin">
+              <span class="sr-only">Наш linkedin</span>
+              <svg aria-hidden="true" width="16" height="16">
+                <use xlink:href="/img/sprite.svg#in"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-links__item">
+            <a class="social-links__link" href="https://www.youtube.com/channel/UC0eGYfnKmBNzh0YN6sSPK6w" target="_blank" rel="noopener nofollow" title="Наш youtube">
+              <span class="sr-only">Наш канал youtube</span>
+              <svg aria-hidden="true" width="20" height="14">
+                <use xlink:href="/img/sprite.svg#yt"></use>
+              </svg>           
+            </a>
+          </li>
+          <li class="social-links__item">
+            <a class="social-links__link" href="https://vk.com/marillion_careers" target="_blank" rel="noopener nofollow" title="Наш Vk">
+              <span class="sr-only">Наш канал Vk</span>
+              <svg aria-hidden="true" width="20" height="13">
+                <use xlink:href="/img/sprite.svg#vk"></use>
+              </svg>         
+            </a>
+          </li>
+        </ul>
+        <div class="footer__item footer__item--company">
+          <h3 class="footer__header">О компании</h3>
+          <ul class="footer__list" role="list">
+            <li><a href="/page/contacts/">Контакты</a></li>
+            <li><a href="/page/team/">Наше руководство</a></li>
+            <li><a href="/page/news/">Новости</a></li>
+          </ul>
+        </div>
+        <div class="footer__item footer__item--services">
+          <h3 class="footer__header">Услуги</h3>
+          <ul class="footer__list" role="list">
+            <li><a href="/page/services/audit/">Аудит</a></li>
+            <li><a href="/page/services/outsourcing/">Аутсорсинг</a></li>
+            <li><a href="/page/services/tax/">Налоговое консультирование</a></li>
+            <li><a href="/page/services/anti-crisis-support-and-sanctions-consulting/">Антикризисная поддержка бизнеса</a></li>
+            <li><a href="/page/services/legal/">Юридические услуги</a></li>
+            <li><a href="/page/services/financial-advisory/">Финансовое консультирование и оценка</a></li>
+          </ul>
+        </div>
+        <div class="footer__item footer__item--contacts">
+          <h3 class="footer__header">Связаться с нами</h3>
+          <ul class="footer__list" role="list">
+            <li><a href="/page/contacts/">Контакты</a></li>
+            
+            
+            <li><a href="/page/contacts/" data-hystmodal="#modal-form">Свяжитесь с нами</a></li>
+            <li><a href="#subscribe">Подписаться на рассылку</a></li>
+          </ul>
+        </div>
+        <div class="footer__item footer__item--legally">
+          <h3 class="footer__header">Юридическая информация</h3>
+          <ul class="footer__list" role="list">
+            <li><a href="/page/legal-data/">Раскрытие юридической информации</a></li>
+            <li><a href="/attachments/mazaraudit.pdf" target="_blank">Сведения об  ООО Мазар Аудит</a></li>
+            <li><a href="/page/data-mazar-service">Сведения об АО Мазар Аудиторские услуги</a></li>
+            <li><a href="/page/data-marillion">Сведения об ООО АК Мариллион</a></li>
+          </ul>
+        </div>
+        <a class="footer__cookie accent-color uppercase" href="http://marilli-on.ru/doc/Cookies-policy-rus.pdf" target="_blank" rel="noopener noreferrer">Правила обработки cookie</a>
+        <a class="footer__privacy accent-color uppercase" href="http://marilli-on.ru/doc/data-privacy-rus.pdf" target="_blank" rel="noopener noreferrer">Политика конфиденциальности</a>
+        <span class="footer__copy">© 2022 Мариллион. Все права защищены</span>
+      </div>
+    </div>
+  </footer>
+  <div class="hystmodal" id="modal-form" aria-hidden="true">
+    <div class="hystmodal__wrap">
+        <div class="hystmodal__window" role="dialog" aria-modal="true">
+            <button data-hystclose class="hystmodal__close">
+              <svg aria-hidden="true" width="18" height="18">
+                <use xlink:href="/img/sprite.svg#cross"></use>
+              </svg>
+            </button>
+            <h2 class="hystmodal__title title title--primary accent-color">Свяжитесь с нами</h2>
+            <p>Задайте интересующие вас вопросы или запросите коммерческое предложение, заполнив форму ниже, <br> и наши специалисты оперативно свяжутся с вами. </p>
+            <form class="hystmodal__form form" id="request-form" enctype="multipart/form-data">
+              <div class="form__group">
+                <label class="form__label">
+                  <span class="sr-only">Название компании</span>
+                  <input type="text" name="company-name" id="company-name" placeholder="Название компании *" required="">
+                </label>
+                <label class="form__label">
+                  <span class="sr-only">ФИО</span>
+                  <input type="text" name="name" id="name" placeholder="ФИО *" required="">
+                </label>
+                <label class="form__label">
+                  <span class="sr-only">Email</span>
+                  <span class="form__notice">Пожалуйста, указывайте корпоративный адрес электронной почты при заполнении формы.</span>
+                  <input type="email" name="email" id="email" placeholder="Email *" required="">
+                </label>
+                <label class="form__label">
+                  <span class="sr-only">Введите номер телефона</span>
+                  <input type="tel" name="tel" id="tel" placeholder="+7 (999) 999-99-99" inputmode="numeric">
+                </label>
+                <label class="form__label">
+                  <span class="sr-only">Как вы нас нашли?</span>
+                  <input type="text" name="question" id="question" placeholder="Как вы нас нашли?">
+                </label>
+                <label class="form__label">
+                  <textarea name="message" id="message" rows="2" placeholder="Ваше сообщение" maxlength="500"></textarea>
+                </label>
+              </div>
+              <div class="form__actions" id="agreement">
+                <div class="upload-file__wrapper">
+                  <input
+                    type="file"
+                    name="files[]"
+                    id="upload-file__input_1"
+                    class="upload-file__input sr-only"
+                    accept=".jpg, .jpeg, .png, .doc, .docx, .pdf">
+                  <label class="upload-file__label" for="upload-file__input_1">
+                    <svg class="upload-file__icon" aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M11.2 4.3602e-06C12.1343 -6.42193e-05 13.0483 0.272541 13.8299 0.784384C14.6115 1.29623 15.2267 2.02505 15.6001 2.88145C15.9735 3.73786 16.0887 4.68461 15.9318 5.60558C15.7748 6.52655 15.3525 7.38169 14.7166 8.06612L14.5646 8.2213L7.58354 15.202L7.54114 15.2419L7.49635 15.2779C6.92766 15.7682 6.19471 16.0254 5.44437 15.998C4.69404 15.9707 3.98176 15.6608 3.45029 15.1304C2.91881 14.6001 2.6074 13.8885 2.57848 13.1383C2.54955 12.388 2.80523 11.6546 3.29429 11.0849L3.41348 10.9537L3.42548 10.9449L9.257 5.10252C9.40689 4.95232 9.61031 4.86781 9.8225 4.86759C10.0347 4.86736 10.2383 4.95144 10.3885 5.10132C10.5387 5.2512 10.6232 5.4546 10.6234 5.66679C10.6237 5.87898 10.5396 6.08256 10.3897 6.23276L4.55819 12.0752L4.54859 12.0816C4.31322 12.3329 4.18059 12.6633 4.17686 13.0076C4.17313 13.3519 4.29858 13.6851 4.52845 13.9415C4.75832 14.1979 5.07593 14.3588 5.41862 14.3925C5.7613 14.4262 6.10419 14.3303 6.37964 14.1237L6.47723 14.0437L6.47803 14.0445L13.4391 7.08545L13.5662 6.95347C14.1263 6.33792 14.4245 5.5284 14.3975 4.69665C14.3706 3.86491 14.0206 3.0764 13.4218 2.4984C12.8231 1.92041 12.0227 1.59842 11.1905 1.60075C10.3583 1.60307 9.55972 1.92953 8.96422 2.51087L8.84023 2.63885L8.82584 2.64845L1.36565 10.1114C1.29133 10.1857 1.2031 10.2446 1.10602 10.2848C1.00893 10.325 0.904884 10.3456 0.799813 10.3456C0.694743 10.3455 0.590709 10.3248 0.493651 10.2846C0.396594 10.2443 0.308412 10.1854 0.234143 10.111C0.159873 10.0367 0.10097 9.9485 0.0607956 9.85142C0.0206213 9.75434 -3.70904e-05 9.6503 4.99901e-08 9.54523C7.50584e-05 9.33305 0.0844427 9.12958 0.234543 8.97959L7.68033 1.5302L7.71713 1.4958C8.16527 1.02253 8.70534 0.645752 9.30424 0.388546C9.90313 0.131339 10.5482 -0.000875244 11.2 4.3602e-06Z" fill="currentColor"/>
+                    </svg>                        
+                    <span class="upload-file__text">Прикрепить файл (до 50 мб)</span>
+                  </label>
+              </div>
+                <button class="form__button button button--fullwidth" type="submit">Отправить сообщение</button>
+                <div class="form__agreement">
+                  <span>Нажимая кнопку отправить, вы соглашаетесь c  <a href="/doc/data-privacy-rus.pdf" target="_blank">политикой конфиденциальности</a> и правилами обработки и хранения <a href="/doc/Agreement-on-Personal-data-processing-rus.pdf" target="_blank">персональных данных</a></span>
+                </div>
+              </div>
+            </form>
+        </div>
+    </div>
+  </div>
+  <div class="hystmodal" id="modal-cert" aria-hidden="true">
+    <div class="hystmodal__wrap">
+        <div class="hystmodal__window" role="dialog" aria-modal="true">
+            <button data-hystclose class="hystmodal__close">
+              <svg aria-hidden="true" width="18" height="18">
+                <use xlink:href="/img/sprite.svg#cross"></use>
+              </svg>
+            </button>
+            <h2 class="hystmodal__title title title--primary accent-color">1С:Профессионал. Бухгалтерия 8</h2>
+            <img class="lazy" src="/img/services/cert.jpg" width="500" height="706" alt="Сертификат">
+        </div>
+    </div>
+  </div>
+  <div class="cookie" hidden>
+    <div class="cookie__content">
+      <button data-cookie-close class="cookie__close">
+        <svg aria-hidden="true" width="18" height="18">
+          <use xlink:href="/img/sprite.svg#cross"></use>
+        </svg>
+      </button>
+      <h3 class="cookie__title">Использование файлов cookie</h3>
+      <p>В целях повышения удобства пользования сайтом мы используем файлы cookie, чтобы улучшить работу сайта. Оставаясь на сайте, вы соглашаетесь с условиями использования файлов cookie.</p>
+      <button class="cookie__button button" data-cookie-close type="button">Принять и закрыть</button>
+    </div>
+</div>
+  <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.8.3/dist/lazyload.min.js"></script>
+  <script type="module" src="/js/details-utils.js"></script>
+  <script src="/js/hystmodal.min.js"></script>
+  <script src="/js/inputmask.min.js"></script>
+  <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
+  <script src="/js/ru-form.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script src="/js/script.js"></script>
+  <script src="https://unpkg.com/spacingjs" defer></script>
+</body>
+</html>

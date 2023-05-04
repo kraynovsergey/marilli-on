@@ -208,6 +208,73 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
+  //select dynamic width
+  function updateSelectWidth(select) {
+    let selectedOption = select.options[select.selectedIndex];
+    let hiddenDiv = document.createElement('div');
+
+    hiddenDiv.style.cssText = "position: absolute; visibility: hidden; height: auto; width: auto; white-space: nowrap;";
+    hiddenDiv.textContent = selectedOption.textContent;
+    document.body.appendChild(hiddenDiv);
+
+    let newWidth = hiddenDiv.offsetWidth + 10;
+    select.style.width = newWidth + 'px';
+
+    document.body.removeChild(hiddenDiv);
+  }
+
+  function onWidthSelectChange() {
+    updateSelectWidth(this);
+  }
+
+  window.addEventListener('DOMContentLoaded', function () {
+    let selects = document.querySelectorAll('.dynamic-width');
+
+    selects.forEach(function (select) {
+      updateSelectWidth(select);
+      select.addEventListener('change', onWidthSelectChange);
+      select.addEventListener('resize', onWidthSelectChange);
+    });
+  });
+
+  //cases swiper
+  const casesSwiper = document?.querySelector(".successful-cases__swiper");
+
+  if(casesSwiper) {
+    const swiper = new Swiper(casesSwiper, {
+      slidesPerView: 1,
+      slidesPerGroup:1,
+      spaceBetween:20,
+      speed:500,
+      watchOverflow: true,
+  
+      navigation: {
+        nextEl: '.successful-cases__button--next',
+        prevEl: '.successful-cases__button--prev',
+      },
+
+      breakpoints: {
+        650: {
+          slidesPerView: 2,
+          slidesPerGroup:2,
+          spaceBetween: 40,
+        },
+			},
+    });
+
+    swiper.on('slideChangeTransitionStart', function () {
+      if (swiper.activeIndex === 0) {
+        swiper.params.rewind = false;
+        swiper.navigation.prevEl[0].disabled = true;
+        swiper.update();
+        
+      } else {
+        swiper.params.rewind = true;
+        swiper.update();
+      }
+    });
+  }
+
   //cookie
   let cookieClose = document.querySelectorAll('[data-cookie-close]');
   cookieClose.forEach(close => {
